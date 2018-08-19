@@ -1085,7 +1085,7 @@ function send_http_status($code) {
         404 => 'Not Found',
         // Server Error 5xx
         500 => 'Internal Server Error',
-        503 => 'Extend Unavailable',
+        503 => 'Service Unavailable',
     );
     if(isset($_status[$code])) {
         header('HTTP/1.1 '.$code.' '.$_status[$code]);
