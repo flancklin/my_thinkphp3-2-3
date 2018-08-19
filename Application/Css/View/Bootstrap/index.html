@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 响应式网站，页面宽度等于手机实际宽度 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>try Bootstrap </title>
+
+    <!-- Bootstrap -->
+    <link href="__PUBLIC__/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        /*圆点*/
+        .dots li{width:10px; height:10px;font-size:0px;line-height:0px;border-radius:50%}
+        /*数字*/
+        .numbox li{width:20px; height:20px; line-height:20px; font-size:13px;font-family:Arial;font-weight:bold; text-indent:inherit}
+        .numbox li.active{color:#fff}
+        /*长方条*/
+        .rectangle li{width:40px; height:10px;font-size:0px;line-height:0px}
+    </style>
+</head>
+<body>
+<div class="line"></div>
+<div id="tab_demo" class="HuiTab">
+    <div class="tabBar clearfix"><span>选项卡一</span><span>选项卡二</span><span>自适应宽度</span></div>
+    <div class="tabCon">内容一</div>
+    <div class="tabCon">内容二</div>
+    <div class="tabCon">内容三</div>
+</div>
+
+<div id="slider-3" >
+    <div class="slider container">
+        <div class="bd">
+            <ul>
+                <li><a href="#" target="_blank"><img src="http://img0.imgtn.bdimg.com/it/u=3972169330,4211815266&fm=27&gp=0.jpg" ></a></li>
+                <li><a href="#" target="_blank"><img src="http://img0.imgtn.bdimg.com/it/u=3972169330,4211815266&fm=27&gp=0.jpg" ></a></li>
+                <li><a href="#" target="_blank"><img src="http://img0.imgtn.bdimg.com/it/u=3972169330,4211815266&fm=27&gp=0.jpg" ></a></li>
+                <li><a href="#" target="_blank"><img src="http://img0.imgtn.bdimg.com/it/u=3972169330,4211815266&fm=27&gp=0.jpg" ></a></li>
+            </ul>
+        </div>
+        <ol class="hd cl dots">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ol>
+    </div>
+</div>
+
+<div class="container">
+    <nav class="navbar navbar-default" style="overflow-y: scroll;height: 200px">
+        <ul class="nav navbar-nav">
+            <li style="width: 100%;height: 200px;border: 5px solid red;"><a style="padding: 0;" href="#"><img  style="width: 100%;height: 200px;" src="http://img0.imgtn.bdimg.com/it/u=3972169330,4211815266&fm=27&gp=0.jpg" alt=""></a></li>
+            <li style="width: 100%;height: 200px;border: 5px solid red;"><a style="padding: 0;" href="#"><img  style="width: 100%;height: 200px;" src="http://img4.imgtn.bdimg.com/it/u=2316242837,3672164063&fm=27&gp=0.jpg"></a></li>
+            <li style="width: 100%;height: 200px;border: 5px solid red;"><a style="padding: 0;" href="#"><img  style="width: 100%;height: 200px;" src="http://img2.imgtn.bdimg.com/it/u=3248613314,2791633569&fm=27&gp=0.jpg" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="row">
+        <div class="col-xs-3">
+            <h5>内容</h5>
+            最近重温Bootstrap，想把它吃透！就从头开始学习，从github上下载源码，按照其中readme.md文件中的方法把源码中docs部署在本地。期间遇到了点问题，这里记录一下。按照readme.md中的说法，他们使用的是jekyll这个东东来host的。为了使用这个玩意儿，本地要有ruby环境。关于这一点readme.md中说的很详细，并没有出现问题，原文如下：
+        </div>
+        <div class="col-xs-5">
+            <h5>内容</h5>
+            最近重温Bootstrap，想把它吃透！就从头开始学习，从github上下载源码，按照其中readme.md文件中的方法把源码中docs部署在本地。期间遇到了点问题，这里记录一下。按照readme.md中的说法，他们使用的是jekyll这个东东来host的。为了使用这个玩意儿，本地要有ruby环境。关于这一点readme.md中说的很详细，并没有出现问题，原文如下：
+        </div>
+        <div class="col-xs-4">
+            <h5>内容</h5>
+            最近重温Bootstrap，想把它吃透！就从头开始学习，从github上下载源码，按照其中readme.md文件中的方法把源码中docs部署在本地。期间遇到了点问题，这里记录一下。按照readme.md中的说法，他们使用的是jekyll这个东东来host的。为了使用这个玩意儿，本地要有ruby环境。关于这一点readme.md中说的很详细，并没有出现问题，原文如下：
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="__PUBLIC__/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="http://lib.h-ui.net/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js"></script>
+</body>
+<script>
+    jQuery.Huitab =function(tabBar,tabCon,class_name,tabEvent,i){
+        var $tab_menu=$(tabBar);
+        // 初始化操作
+        $tab_menu.removeClass(class_name);
+        $(tabBar).eq(i).addClass(class_name);
+        $(tabCon).hide();
+        $(tabCon).eq(i).show();
+
+        $tab_menu.bind(tabEvent,function(){
+            $tab_menu.removeClass(class_name);
+            $(this).addClass(class_name);
+            var index=$tab_menu.index(this);
+            $(tabCon).hide();
+            $(tabCon).eq(index).show()})}
+    $(function(){
+        $.Huitab("#tab_demo .tabBar span","#tab_demo .tabCon","current","click","1");
+        jQuery("#slider-3 .slider").slide({mainCell:".bd ul",titCell:".hd li",trigger:"click",effect:"leftLoop",autoPlay:true,delayTime:700,interTime:7000,pnLoop:false,titOnClassName:"active"})});
+</script>
+</html>
