@@ -1,5 +1,5 @@
 <?php
-namespace Home\Service;
+namespace Extend\Extend;
 
 
 /**
@@ -9,9 +9,9 @@ namespace Home\Service;
  *
  *
  * Class VrifyCodeService
- * @package Home\Service
+ * @package Home\Extend
  */
-class VerifyCodeService
+class VerifyCodeExtend
 {
     protected $config =	array(
         'seKey'     =>  'ThinkPHP.CN',   // 验证码加密密钥

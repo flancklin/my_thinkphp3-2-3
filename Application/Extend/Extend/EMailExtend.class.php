@@ -1,13 +1,13 @@
 <?php
-namespace Home\Service;
+namespace Extend\Extend;
 
 /**
  * Class EMailService
- * @package Home\Service
+ * @package Home\Extend
  *
  * 可能需要打开ssl模块
  */
-class EMailService
+class EMailExtend
 {
     public $ErrorInfo = '';
     function send($address, $title, $message) {

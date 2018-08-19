@@ -1,17 +1,17 @@
 <?php
-namespace Home\Controller;
+namespace Extend\Controller;
 
 
-use Home\Service\QrCodeService;
+use Extend\Extend\QrCodeExtend;
 use Think\Controller;
 
 class QrCodeController extends Controller{
     public function image(){
-        $imageUrl = QrCodeService::createPng();
+        $imageUrl = QrCodeExtend::createPng();
         echo '<img src="'.$imageUrl .'">';
     }
 
     public function show(){
-        QrCodeService::justShow();
+        QrCodeExtend::justShow();
     }
 }

@@ -1,14 +1,14 @@
 <?php
-namespace Home\Controller;
+namespace Logic\Controller;
 
 
-use Home\Service\AuthMenu;
+use Logic\Logic\AuthMenuLogic;
 use Think\Controller;
 
 class AdminMenuController extends Controller
 {
     public function index(){
-        $menuHandle = new AuthMenu();
+        $menuHandle = new AuthMenuLogic();
         $a = $menuHandle->getMenuTreeData();
         var_dump($a);
     }

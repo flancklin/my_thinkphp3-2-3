@@ -1,12 +1,10 @@
 <?php
-namespace Home\Service;
+namespace Logic\Logic;
 
 
-use Home\Model\AuthMenuModel;
+use Logic\Model\AuthMenuModel;
 
-class AuthMenu{
-    public $errMes = '';
-    public $errSql = '';
+class AuthMenuLogic extends Logic {
     const IS_DOCUMENT_YES  = 1;
     const IS_DOCUMENT_NO   = 0;
 

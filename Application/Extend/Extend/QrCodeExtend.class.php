@@ -1,6 +1,6 @@
 <?php
 
-namespace Home\Service;
+namespace Extend\Extend;
 
 /**
  * 专门对二维码的生成处理
@@ -9,9 +9,9 @@ namespace Home\Service;
  *3.生成图片的带有logo的二维码
  *4.仅仅展示带有logo的二维码
  * Class QrCodeService
- * @package Home\Service
+ * @package Home\Extend
  */
-class QrCodeService
+class QrCodeExtend
 {
 
     //1.生成真实图片，获得访问图片的url链接

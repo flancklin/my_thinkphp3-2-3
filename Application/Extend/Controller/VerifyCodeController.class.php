@@ -1,13 +1,13 @@
 <?php
-namespace Home\Controller;
+namespace Extend\Controller;
 
 
-use Home\Service\VerifyCodeService;
+use Extend\Extend\VerifyCodeExtend;
 use Think\Controller;
 
 class VerifyCodeController extends Controller{
     public function index(){
-        $handle = new VerifyCodeService();
+        $handle = new VerifyCodeExtend();
         $handle ->entry();
     }
 }
