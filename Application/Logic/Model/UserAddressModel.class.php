@@ -93,4 +93,31 @@ class UserAddressModel extends Model{
 //        array('town_id','require','必须选择乡镇'),
         array('address_desc','require','必须选择地址描述',self::MUST_VALIDATE),
     );
+
+
+    /**
+     * 数据库设计
+     *
+    DROP TABLE IF EXISTS `t_user_address`;
+    CREATE TABLE `t_user_address` (
+    `address_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户的地址的唯一标识',
+    `uid` int(11) DEFAULT NULL COMMENT '用户ID',
+    `username` varchar(20) DEFAULT NULL COMMENT '地址-收件人',
+    `user_tel` varchar(32) DEFAULT NULL COMMENT '地址-收件人电话（手机+座机）',
+    `country_id` int(6) NOT NULL DEFAULT '1' COMMENT '地址-国家.默认1-中国',
+    `province_id` int(6) NOT NULL DEFAULT '0' COMMENT '地址-省份',
+    `city_id` int(6) NOT NULL DEFAULT '0' COMMENT '地址-市',
+    `county_id` int(6) NOT NULL DEFAULT '0' COMMENT '地址-县郡',
+    `town_id` int(6) NOT NULL DEFAULT '0' COMMENT '地址-乡镇',
+    `village_id` int(6) NOT NULL DEFAULT '0' COMMENT '地址-小区或者村或者街道',
+    `address_desc` varchar(50) NOT NULL DEFAULT '' COMMENT '地址-门牌之类的描述',
+    `address_type` tinyint(2) DEFAULT '0' COMMENT '地址的类型。0-未选择，1-家庭，2-公司',
+    `address_default` tinyint(2) DEFAULT '0' COMMENT '是否是默认地址。0-不是，1-默认地址',
+    `address_status` tinyint(2) DEFAULT '1' COMMENT '地址状态。0-删除，1-正常使用',
+    `create_time` int(10) DEFAULT NULL COMMENT '创建这条记录的时间',
+    `update_time` int(10) DEFAULT '0' COMMENT '修改地址的最新时间',
+    PRIMARY KEY (`address_id`)
+    ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+     *
+     */
 }
