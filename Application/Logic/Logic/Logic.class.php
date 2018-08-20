@@ -33,6 +33,15 @@ class Logic{
         $this->errSql = $errSql;
         if($logLevel){
          //log   写日志
+            $data = [
+                'code'               => $this->code,
+                'errMes'             => $this->errMes,
+                'errSql'             => $this->errSql,
+                'logLevel'           => $logLevel,
+                'param'              => $param,
+                'showErrSql'         => $this->showErrSql,
+                'showSelectEmpTySql' => $this->showSelectEmptySql,
+            ];
         }
     }
 
@@ -81,7 +90,7 @@ class Logic{
      */
     public function insertData($data){
         if(empty($data)){
-            $this->writeError(self::CODE_ERROR_PARAM, '数据为空');
+            $this->writeError(self::CODE_ERROR_PARAM, '参数为空');
             return false;
         }
         $handleModel = $this->handleModel();
