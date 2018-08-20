@@ -2,37 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee8eab9-fd39-471a-894f-d374fbae0c1d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Logic/Common/function.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Logic/Conf/reg.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Logic/Controller/UserAddressController.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Logic/Logic/Logic.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Logic/Logic/UserAddressLogic.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Logic/Model/AddressModel.class.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/Home/Controller/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/Home/Model/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/Home/View/Index/try.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/Home/View/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/Home/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Common/functions.php" afterPath="$PROJECT_DIR$/ThinkPHP/Common/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Org/Net/Http.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Org/Net/Http.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Controller/RestController.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Controller/RestController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Mode/Api/functions.php" afterPath="$PROJECT_DIR$/ThinkPHP/Mode/Api/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Mode/Lite/functions.php" afterPath="$PROJECT_DIR$/ThinkPHP/Mode/Lite/functions.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Home/Common/index.html" afterPath="$PROJECT_DIR$/Application/Logic/Common/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Home/Conf/config.php" afterPath="$PROJECT_DIR$/Application/Logic/Conf/config.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Home/Conf/dbconfig.php" afterPath="$PROJECT_DIR$/Application/Logic/Conf/dbconfig.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Home/Conf/index.html" afterPath="$PROJECT_DIR$/Application/Logic/Conf/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Home/Controller/AdminMenuController.class.php" afterPath="$PROJECT_DIR$/Application/Logic/Controller/AdminMenuController.class.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Home/Controller/EMailController.class.php" afterPath="$PROJECT_DIR$/Application/Extend/Controller/EMailController.class.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Home/Controller/QrCodeController.class.php" afterPath="$PROJECT_DIR$/Application/Extend/Controller/QrCodeController.class.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Home/Controller/VerifyCodeController.class.php" afterPath="$PROJECT_DIR$/Application/Extend/Controller/VerifyCodeController.class.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Home/Model/AuthMenuModel.class.php" afterPath="$PROJECT_DIR$/Application/Logic/Model/AuthMenuModel.class.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Home/Service/AuthMenu.class.php" afterPath="$PROJECT_DIR$/Application/Logic/Logic/AuthMenuLogic.class.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Home/Service/EMailService.class.php" afterPath="$PROJECT_DIR$/Application/Extend/Extend/EMailExtend.class.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Home/Service/QrCodeService.class.php" afterPath="$PROJECT_DIR$/Application/Extend/Extend/QrCodeExtend.class.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Home/Service/VerifyCodeService.class.php" afterPath="$PROJECT_DIR$/Application/Extend/Extend/VerifyCodeExtend.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Logic/Controller/UserAddressController.class.php" afterPath="$PROJECT_DIR$/Application/Logic/Controller/UserAddressController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Logic/Logic/Logic.class.php" afterPath="$PROJECT_DIR$/Application/Logic/Logic/Logic.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Logic/Logic/UserAddressLogic.class.php" afterPath="$PROJECT_DIR$/Application/Logic/Logic/UserAddressLogic.class.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Logic/Model/AddressModel.class.php" afterPath="$PROJECT_DIR$/Application/Logic/Model/UserAddressModel.class.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,11 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AuthMenuLogic.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Logic/Logic/AuthMenuLogic.class.php">
+      <file leaf-file-name="Logic.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Logic/Logic/Logic.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-286">
-              <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+            <state relative-caret-position="762">
+              <caret line="93" column="51" lean-forward="false" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -57,21 +31,11 @@
       <file leaf-file-name="UserAddressLogic.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Logic/Logic/UserAddressLogic.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1438">
-              <caret line="81" column="5" lean-forward="false" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+            <state relative-caret-position="658">
+              <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
               <folding>
-                <element signature="e#29#58#0#PHP" expanded="true" />
+                <element signature="e#31#64#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Logic.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Application/Logic/Logic/Logic.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -86,11 +50,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddressModel.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Logic/Model/AddressModel.class.php">
+      <file leaf-file-name="UserAddressModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Logic/Model/UserAddressModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1092">
-              <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+            <state relative-caret-position="156">
+              <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Model.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="747">
+              <caret line="317" column="9" lean-forward="true" selection-start-line="317" selection-start-column="9" selection-end-line="317" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -99,7 +73,7 @@
       <file leaf-file-name="AdminMenuController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Logic/Controller/AdminMenuController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
+            <state relative-caret-position="234">
               <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
               <folding>
                 <element signature="e#36#66#0#PHP" expanded="true" />
@@ -111,8 +85,8 @@
       <file leaf-file-name="UserAddressController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Logic/Controller/UserAddressController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="520">
+              <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
               <folding>
                 <element signature="e#35#68#0#PHP" expanded="true" />
               </folding>
@@ -154,9 +128,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>qr</find>
-      <find>qrc</find>
-      <find>qrco</find>
       <find>qrcode</find>
       <find>qrcode_</find>
       <find>qrcode_i</find>
@@ -167,7 +138,6 @@
       <find>_before</find>
       <find>n _before</find>
       <find>_before_update</find>
-      <find>_before_insert</find>
       <find>_after_</find>
       <find>_after</find>
       <find>n get</find>
@@ -184,6 +154,10 @@
       <find>_before_</find>
       <find>UserAddress</find>
       <find>n ha</find>
+      <find>n limi</find>
+      <find>AddressModel</find>
+      <find>n add</find>
+      <find>_before_insert</find>
     </findStrings>
     <dirStrings>
       <dir>E:\php\wamp64\www\self\Application\Home\Controller</dir>
@@ -197,8 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Home/Service/AuthMenu.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Model/AuthMenuModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/AdminMenu.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/QrcodeController.class.php" />
         <option value="$PROJECT_DIR$/Public/index.php" />
@@ -243,11 +215,13 @@
         <option value="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/Application/Logic/Controller/UserAdressController.class.php" />
         <option value="$PROJECT_DIR$/Application/Logic/Logic/AuthMenuLogic.class.php" />
-        <option value="$PROJECT_DIR$/Application/Logic/Logic/UserAddressLogic.class.php" />
         <option value="$PROJECT_DIR$/Application/Logic/Conf/reg.php" />
         <option value="$PROJECT_DIR$/Application/Logic/Model/AddressModel.class.php" />
+        <option value="$PROJECT_DIR$/Application/Logic/Logic/UserAddressLogic.class.php" />
         <option value="$PROJECT_DIR$/Application/Logic/Controller/UserAddressController.class.php" />
         <option value="$PROJECT_DIR$/Application/Logic/Logic/Logic.class.php" />
+        <option value="$PROJECT_DIR$/Application/Logic/Model/UserAddressModel.class.php" />
+        <option value="$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php" />
       </list>
     </option>
   </component>
@@ -282,8 +256,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -506,6 +478,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -642,21 +616,21 @@
       <workItem from="1534641123429" duration="25000" />
       <workItem from="1534646668157" duration="11785000" />
       <workItem from="1534665003096" duration="10222000" />
+      <workItem from="1534726163173" duration="5005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59011000" />
+    <option name="totallyTimeSpent" value="64016000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21666667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13541667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63492066" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15208334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -670,6 +644,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63492066" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
@@ -792,13 +767,7 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/ss/H-ui/lib/html5shiv.js" />
-    <entry file="file://$PROJECT_DIR$/Application/Front/View/Index/try.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Front/View/Index/try.html" />
     <entry file="file://$PROJECT_DIR$/Application/Css/View/Hui/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="728">
@@ -838,7 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1040">
           <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -864,7 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -920,7 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="366" column="20" lean-forward="false" selection-start-line="366" selection-start-column="20" selection-end-line="366" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,14 +894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
           <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="39" column="25" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -950,7 +908,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Logic/Logic/AuthMenuLogic.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-286">
+        <state relative-caret-position="104">
           <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
           <folding />
         </state>
@@ -982,7 +940,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Logic/Controller/AdminMenuController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
+        <state relative-caret-position="234">
           <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding>
             <element signature="e#36#66#0#PHP" expanded="true" />
@@ -1000,26 +958,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Logic/Logic/UserAddressLogic.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1438">
-          <caret line="81" column="5" lean-forward="false" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+        <state relative-caret-position="658">
+          <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
           <folding>
-            <element signature="e#29#58#0#PHP" expanded="true" />
+            <element signature="e#31#64#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Logic/Model/AddressModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Logic/Controller/UserAddressController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="520">
+          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding>
             <element signature="e#35#68#0#PHP" expanded="true" />
           </folding>
@@ -1028,8 +978,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Logic/Logic/Logic.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        <state relative-caret-position="762">
+          <caret line="93" column="51" lean-forward="false" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Logic/Model/UserAddressModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="317" column="9" lean-forward="true" selection-start-line="317" selection-start-column="9" selection-end-line="317" selection-end-column="9" />
           <folding />
         </state>
       </provider>

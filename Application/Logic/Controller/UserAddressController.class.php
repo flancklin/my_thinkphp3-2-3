@@ -2,8 +2,6 @@
 namespace Logic\Controller;
 
 use Logic\Logic\UserAddressLogic;
-use Logic\Model\AddressModel;
-use Logic\Model\AuthMenuModel;
 use Think\Controller;
 
 class UserAddressController extends Controller{
@@ -11,6 +9,7 @@ class UserAddressController extends Controller{
         $data = [];
         $data['uid']          = 2;//300139;
         $data['username']     = '张三';
+        $data['user_tel']     = '18236956986';
         $data['country_id']   = 1;
         $data['province_id']  = 2;
         $data['city_id']      = 3;
@@ -18,7 +17,9 @@ class UserAddressController extends Controller{
         $data['town_id']      = 5;
         $data['address_desc'] = '你好';
         $handle = new UserAddressLogic($data['uid']);
-        var_dump($handle->selectData(['address_id'=> ['gt', 0]]));
+
+        var_dump($handle->insertData($data));
         var_dump($handle->errMes);
+        var_dump($handle->errSql);
     }
 }
