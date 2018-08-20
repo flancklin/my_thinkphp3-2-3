@@ -41,14 +41,18 @@ class UserAddressLogic extends Logic {
             $this->writeError(self::CODE_ERROR_PARAM, '地址信息错误');
             return false;
         }
+        $where = [];
+        $where['address_id']    = $this->addressId;
+        $where['uid']           = $this->uid;
+        $data = [];
+        $data['address_status'] = UserAddressModel::ADDRESS_STATUS_DEL;
+
         $handleAddress = $this->handleModel();
-        $result = $handleAddress->where(['uid' => $this->uid, 'address_id' => $this->addressId])->find();
-        if(empty($result)){
-            return true;
-        }
-        $result = $handleAddress->where(['uid' => $this->uid, 'address_id' => $this->addressId])->setField(['address_status' => UserAddressModel::ADDRESS_STATUS_DEL]);
-        if(!$result){
+        $result = $handleAddress->where($where)->save($data);
+        if($result === false){
             $this->writeError(self::CODE_ERROR_UPDATE, '操作失败', $this->showErrSql ? $handleAddress->getLastSql() : '');
+        }elseif($result === 0){//数据库中没有找到这一条记录
+            $result = true;
         }
         return $result;
     }
@@ -76,11 +80,11 @@ class UserAddressLogic extends Logic {
         }
         //改/写数据库
         $where = [];
-        $where['uid']        = $this->uid;
         $where['address_id'] = $this->addressId;
-        $result = $handleAddress->save($data, $where);
-        if(!$result){
-            $this->writeError(self::CODE_ERROR_UPDATE, '操作失败',$this->showErrSql ? $handleAddress->getLastSql() : '');
+        $where['uid']        = $this->uid;
+        $result = $handleAddress->where($where)->save($data);
+        if(!$result){//result =0 或者false
+            $this->writeError(self::CODE_ERROR_UPDATE, '操作失败',$this->showErrSql ? $handleAddress->getLastSql() : '', '', ['result' => $result, 'param' => $data]);
         }
         return $result;
     }

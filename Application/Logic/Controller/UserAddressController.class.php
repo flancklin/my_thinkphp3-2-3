@@ -16,9 +16,9 @@ class UserAddressController extends Controller{
         $data['county_id']    = 4;
         $data['town_id']      = 5;
         $data['address_desc'] = '你好';
-        $handle = new UserAddressLogic($data['uid']);
+        $handle = new UserAddressLogic($data['uid'], 6);
 
-        var_dump($handle->insertData($data));
+        var_dump($handle->deleteAddress());
         var_dump($handle->errMes);
         var_dump($handle->errSql);
     }

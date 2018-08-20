@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee8eab9-fd39-471a-894f-d374fbae0c1d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Logic/Model/UserAddressModel.class.php" afterPath="$PROJECT_DIR$/Application/Logic/Model/UserAddressModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Logic/Controller/UserAddressController.class.php" afterPath="$PROJECT_DIR$/Application/Logic/Controller/UserAddressController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Logic/Logic/UserAddressLogic.class.php" afterPath="$PROJECT_DIR$/Application/Logic/Logic/UserAddressLogic.class.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,12 +26,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserAddressModel.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserAddressLogic.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Logic/Logic/UserAddressLogic.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="662">
+              <caret line="53" column="46" lean-forward="false" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+              <folding>
+                <element signature="e#31#64#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserAddressModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Logic/Model/UserAddressModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="98" column="12" lean-forward="false" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
+            <state relative-caret-position="312">
+              <caret line="106" column="44" lean-forward="false" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserAddressController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Logic/Controller/UserAddressController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="18" column="54" lean-forward="false" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+              <folding>
+                <element signature="e#35#68#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,11 +153,11 @@
         <option value="$PROJECT_DIR$/Application/Logic/Logic/AuthMenuLogic.class.php" />
         <option value="$PROJECT_DIR$/Application/Logic/Conf/reg.php" />
         <option value="$PROJECT_DIR$/Application/Logic/Model/AddressModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Logic/Logic/UserAddressLogic.class.php" />
-        <option value="$PROJECT_DIR$/Application/Logic/Controller/UserAddressController.class.php" />
         <option value="$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php" />
         <option value="$PROJECT_DIR$/Application/Logic/Logic/Logic.class.php" />
         <option value="$PROJECT_DIR$/Application/Logic/Model/UserAddressModel.class.php" />
+        <option value="$PROJECT_DIR$/Application/Logic/Controller/UserAddressController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Logic/Logic/UserAddressLogic.class.php" />
       </list>
     </option>
   </component>
@@ -526,12 +552,12 @@
       <workItem from="1534641123429" duration="25000" />
       <workItem from="1534646668157" duration="11785000" />
       <workItem from="1534665003096" duration="10222000" />
-      <workItem from="1534726163173" duration="5773000" />
+      <workItem from="1534726163173" duration="6589000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64784000" />
+    <option name="totallyTimeSpent" value="65600000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -717,6 +743,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1040">
           <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -797,6 +824,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="366" column="20" lean-forward="false" selection-start-line="366" selection-start-column="20" selection-end-line="366" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -866,31 +894,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Logic/Logic/UserAddressLogic.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-          <folding>
-            <element signature="e#31#64#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="302" column="37" lean-forward="true" selection-start-line="302" selection-start-column="37" selection-end-line="302" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Logic/Controller/UserAddressController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="e#35#68#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -904,9 +912,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Logic/Model/UserAddressModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="98" column="12" lean-forward="false" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
+        <state relative-caret-position="312">
+          <caret line="106" column="44" lean-forward="false" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Logic/Controller/UserAddressController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="18" column="54" lean-forward="false" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+          <folding>
+            <element signature="e#35#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Logic/Logic/UserAddressLogic.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="53" column="46" lean-forward="false" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+          <folding>
+            <element signature="e#31#64#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
