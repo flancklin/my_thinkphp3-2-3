@@ -30,12 +30,6 @@ class UserAddressModel extends Model{
          $this->_before_insert_and_update_data($data);
     }
     private function _before_insert_and_update_data(&$data){
-        if(isset($data['address_type']) && !in_array($data['address_type'], [self::ADDRESS_TYPE_OTHER, self::ADDRESS_TYPE_HOME, self::ADDRESS_TYPE_COMPANY]))
-            $data['address_type'] = self::ADDRESS_TYPE_OTHER;
-        if(isset($data['address_default']) && !in_array($data['address_default'], [self::ADDRESS_DEFAULT_NO, self::ADDRESS_DEFAULT_YES]))
-            $data['address_default'] = self::ADDRESS_DEFAULT_NO;
-        if(isset($data['address_status']) && !in_array($data['_before_insert'], [self::ADDRESS_STATUS_DEL, self::ADDRESS_STATUS_OK]))
-            $data['address_status'] = self::ADDRESS_STATUS_OK;
         if($this->encodeTelInDb && isset($data['user_tel']))
             $data['user_tel'] = encodeTel($data['user_tel'], $this->encodeTelSalt);
         $data['update_time'] = time();
@@ -92,6 +86,9 @@ class UserAddressModel extends Model{
         array('county_id','/^[1-9](\d*)?$/','必须选择区县',self::MUST_VALIDATE),
 //        array('town_id','require','必须选择乡镇'),
         array('address_desc','require','必须选择地址描述',self::MUST_VALIDATE),
+        array('address_type', array(0,1,2), '地址类型错误', self::EXISTS_VALIDATE, 'in'),//存在字段就验证
+        array('address_default', array(0,1), '默认地址值错误', self::EXISTS_VALIDATE, 'in'),
+        array('address_status', array(0,1), '地址状态错误', self::EXISTS_VALIDATE, 'in')
     );
 
 
