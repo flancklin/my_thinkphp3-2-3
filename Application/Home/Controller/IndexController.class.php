@@ -1,6 +1,6 @@
 <?php
-namespace Home\Controller;
 
+namespace Home\Controller;
 
 
 use Think\Controller;
@@ -13,6 +13,8 @@ use Think\Controller;
  */
 class IndexController extends Controller {
 
-	public function index(){
-	}
+const a= [33,434];
+    public function index() {
+        var_dump(array_merge(['a'=>1,'b'=>3],['a'=>4,'c'=>'9']));
+    }
 }
