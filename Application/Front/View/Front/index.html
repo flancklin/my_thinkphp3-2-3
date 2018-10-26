@@ -1,0 +1,164 @@
+<!DOCTYPE html><!--声明doc的type是 HTML。【本声明必须在文档的第一行】【没有结束标签】【大小写不敏感】-->
+<html lang="zh"><!--HTML 的 lang 属性可用于网页或部分网页的语言。这对搜索引擎和浏览器是有帮助的。-->
+<head>
+    <!--编码格式，告诉给浏览器用什么方式来读这页代码。否者乱码-->
+    <meta charset="UTF-8">
+    <!--设置可视窗口的宽，高，分辨率，缩放率【chm/前端/html/meta/viewport】-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <!--格式检测：如不用检测手机号格式(自动把一串数字当手机号还可以点击拨打行为)【chm/前端/html/meta/format-detection】-->
+    <meta name="format-detection" content="telphone=no, email=no, address=no">
+    <!--winphone系统a、input标签被点击时产生的半透明灰色背景-->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!--不使用页面缓存-->
+    <meta http-equiv="Cache-Control" content="no-cache">
+
+
+    <!--苹果端：添加到主屏幕后，全屏显示。-->
+    <meta name="apple-touch-fullscreen" content="yes">
+    <!--苹果端：删除默认的苹果工具栏和菜单栏。默认yes。不需要显示no。默认是显示-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--苹果端：是控制状态栏显示样式。默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）。
+        注意： 若值为“black-translucent”将会占据页面px位置，浮在页面上方（会覆盖页面20px高度–iphone4和itouch4的Retina屏幕为40px）-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+    <link rel="stylesheet" href="/Public/Front/Front/Css/base_mobile.css?3232">
+    <!--【swiper官方文档】https://www.swiper.com.cn/api/autoplay/19.html-->
+    <link rel="stylesheet" href="/Public/Front/Front/Css/swiper.min.css">
+    <style>
+        /*头部搜索*/
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 44px;
+            z-index: 10000;
+            line-height: 44px;
+        }
+        /*幻灯片轮播 banner*/
+        .banner{
+            height: 50vw;
+            overflow: hidden;
+        }
+        .banner img{
+            width: 100%;
+            float: left;
+        }
+        /*只有一行的菜单导航*/
+        .nav_line{
+            line-height: 2em;
+            overflow: hidden;
+            overflow-x: auto;
+            font-size: .8em;
+        }
+        .nav_line a{
+            width: 20%;
+            float: left;
+            text-align: center;
+        }
+        .nav_line a span{
+            font-size: .8em;
+            text-overflow: clip;
+        }
+
+        .icon{
+            display: block;
+            width: 2.5em;
+            height: 2.5em;
+            margin-top: 12px;
+            position: relative;
+            left: 28.5%;
+        }
+        .block{
+            background-color: green;
+            margin:15px 5px 0 15px;
+        }
+        .block>div{
+            float: left;
+        }
+        .block_l{
+            width: 35%;
+        }
+        .block_l img{
+            width: 100%;
+        }
+        .block_r{
+            width: 65%;
+        }
+    </style>
+</head>
+<body>
+<header class="bg_opacity">
+    我是头部
+</header>
+
+<div class="banner swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/Public/Front/Front/Img/front_baner.png" alt=""></div>
+        <div class="swiper-slide"><img src="/Public/Front/Front/Img/front_baner2.png" alt=""></div>
+        <div class="swiper-slide"><img src="/Public/Front/Front/Img/front_baner.png" alt=""></div>
+        <div class="swiper-slide"><img src="/Public/Front/Front/Img/front_baner2.png" alt=""></div>
+    </div>
+</div>
+<div class="nav_line bg_white">
+    <ul>
+        <li><a href="jascript:return;"><img src="/Public/Front/Front/Img/front_baner.png" alt="" class="icon"><span>四川</span></a></li>
+        <li><a href="jascript:return;"><img src="/Public/Front/Front/Img/front_baner.png" alt="" class="icon"><span>重庆</span></a></li>
+        <li><a href="jascript:return;"><img src="/Public/Front/Front/Img/front_baner.png" alt="" class="icon"><span>广州</span></a></li>
+        <li><a href="jascript:return;"><img src="/Public/Front/Front/Img/front_baner.png" alt="" class="icon"><span>上海</span></a></li>
+        <li><a href="jascript:return;"><img src="/Public/Front/Front/Img/front_baner.png" alt="" class="icon"><span>北疆</span></a></li>
+        <li><a href="jascript:return;"><img src="/Public/Front/Front/Img/front_baner.png" alt="" class="icon"><span>内蒙</span></a></li>
+        <li><a href="jascript:return;"><img src="/Public/Front/Front/Img/front_baner.png" alt="" class="icon"><span>西藏</span></a></li>
+        <li><a href="jascript:return;"><img src="/Public/Front/Front/Img/front_baner.png" alt="" class="icon"><span>士农工商士</span></a></li>
+        <li><a href="jascript:return;"><img src="/Public/Front/Front/Img/front_baner.png" alt="" class="icon"><span>士农工商士</span></a></li>
+        <li><a href="jascript:return;"><img src="/Public/Front/Front/Img/front_baner.png" alt="" class="icon"><span>士农工商士</span></a></li>
+    </ul>
+</div>
+<div class="content">
+    <div class="block">
+        <div class="block_l">
+            <img src="/Public/Front/Front/Img/front_baner.png" alt="">
+        </div>
+        <div class="block_r">
+            <div>1</div>
+            <div>2</div>
+            <div>33333333333333333333333333333333333333333333333333333</div>
+            <div>33333333333333333333333333333333333333333333333333333</div>
+            <div>33333333333333333333333333333333333333333333333333333</div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="block_l">
+            <img src="/Public/Front/Front/Img/front_baner.png" alt="">
+        </div>
+        <div class="block_r">
+            <div>1</div>
+            <div>2</div>
+            <div>333333333333333333333333333333333333333333333</div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="block_l">
+            <img src="/Public/Front/Front/Img/front_baner.png" alt="">
+        </div>
+        <div class="block_r">
+            <div>1</div>
+            <div>2</div>
+            <div>333333333333333333333333333333333333333333333333333333333333</div>
+        </div>
+    </div>
+</div>
+<script src="/Public/Front/Front/Js/swiper.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: {
+         delay: 3000,
+         stopOnLastSlide: false,
+         disableOnInteraction: true
+         }
+    });
+</script>
+</body>
+</html>

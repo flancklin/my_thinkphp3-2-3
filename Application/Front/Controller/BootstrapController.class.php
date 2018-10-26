@@ -1,5 +1,5 @@
 <?php
-namespace Css\Controller;
+namespace Front\Controller;
 
 
 use Think\Controller;
