@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html class="bgc" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telphone=no, email=no, address=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <title>{$title}</title>
+    <script>
+        var docEl = document.documentElement;
+        docEl.style.fontSize = docEl.clientWidth / 6.4 + 'px';
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="/Public/Front/Item/index1/style4_16.css">
+    <link rel="stylesheet" href="/Public/Front/Item/index1/style_01.css">
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        .more {
+            margin: 10px;
+            text-align: center;
+            background: #fff;
+            padding: 5px;
+        }
+
+        .wrap_nav {
+            background-color: #fff;
+            padding: 0 8px;
+            border-bottom: 1px solid #d0d0d0;
+        }
+
+        .wrap_nav .nav_hd {
+            overflow: hidden;
+            overflow-x: auto;
+        }
+
+        .wrap_nav .nav_hd div span {
+            margin-right: -6px;
+            width: 80px;
+            display: inline-block;
+            padding: 13px 0;
+            color: #777;
+            position: relative;
+            text-align: center;
+        }
+
+        .wrap_nav .nav_hd div span.on {
+            color: #333;
+        }
+
+        .wrap_nav .nav_hd div span.on:after {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 4px;
+            background-color: #FF7D0D;
+            -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+            z-index: 10;
+        }
+
+        .product_list {
+            background-color: #fff;
+        }
+
+        .product_nav {
+            display: -webkit-box;
+            -webkit-box-pack: center;
+            -webkit-box-align: start;
+            padding: 7px 0;
+        }
+
+        .product_nav span {
+            display: inline-block;
+            padding: 6px 8px;
+        }
+
+        .product_nav span.on {
+            border-radius: 25px;
+            color: #fff;
+            background-color: #D4A95A;
+        }
+
+        .product_nav > span:nth-child(2) {
+            margin: 0 15px;
+        }
+
+        .product_list ul {
+            display: block;
+        }
+
+        .product_list ul li {
+            display: block;
+            position: relative;
+        }
+
+        .product_list ul li:after {
+            content: '';
+            left: 0;
+            bottom: 0;
+            right: auto;
+            top: auto;
+            height: 1px;
+            width: 100%;
+            background-color: #d0d0d0;
+            display: block;
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+        }
+
+        .product_list ul li dl {
+            display: -webkit-box;
+            -webkit-box-pack: center;
+            -webkit-box-align: start;
+            padding: 10px 8px 8px;
+        }
+
+        .product_list ul li dl dt {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+        }
+
+        .product_list ul li dl dd {
+            width: 35%;
+            margin-right: 10px;
+        }
+
+        .product_list ul li dl dd figure {
+            position: relative;
+            width: 100%; /* height: 0; */
+            overflow: hidden;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 1px solid #d0d0d0;
+            padding-bottom: 70%;
+            border-radius: 5px;
+        }
+
+        .product_list ul li dl dd figure em {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 12px;
+            padding: 2px 5px;
+            background-color: #FFBC37;
+            border-top-left-radius: 5px;
+        }
+
+        .product_list ul li dl dt {
+            position: relative;
+        }
+
+        .product_list ul li dl dt h2 {
+            font-size: 16px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            line-height: 20px;
+        }
+
+        .product_list ul li dl dt div.time_site {
+            display: -webkit-box;
+            -webkit-box-pack: center;
+            -webkit-box-align: start;
+            margin-top: 4px;
+        }
+
+        .product_list ul li dl dt div.time_site p {
+            font-size: 12px;
+            color: #FF5B38;
+            background-color: #FFF2E9;
+            border-radius: 3px;
+            padding: 2px 5px;
+        }
+
+        .product_list ul li dl dt div.time_site span {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            display: block;
+            text-align: right;
+            font-size: 12px;
+        }
+
+        .product_list ul li dl dt div.time_site span em {
+            display: block;
+            color: #777;
+        }
+
+        .product_list ul li dl dt div.price_buy {
+            display: -webkit-box;
+            -webkit-box-pack: center;
+            -webkit-box-align: start;
+            margin-top: 5px;
+        }
+
+        .product_list ul li dl dt div.price_buy span {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            display: block;
+        }
+
+        .product_list ul li dl dt div.price_buy span p {
+            display: inline-block;
+            font-size: 12px;
+            color: #FF5B38;
+        }
+
+        .product_list ul li dl dt div.price_buy span em {
+            font-size: 20px;
+            color: #FF5B38;
+            font-weight: 600;
+        }
+
+        .product_list ul li dl dt div.price_buy span del {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .product_list ul li dl dt div.price_buy button {
+            background-color: #FF5B38;
+            border: none;
+            color: #fff;
+            border-radius: 3px;
+            padding: 3px 10px;
+        }
+
+        .product_list ul li dl dt div.price_buy button.gray {
+            background-color: #9e8e8b;
+        }
+
+        .product_list ul li .reward {
+            padding: 0 8px 10px 8px;
+        }
+
+        .product_list ul li .reward span {
+            display: inline-block;
+            border: 1px solid #D4A95B;
+            font-size: 12px;
+            margin-right: 10px;
+            height: 18px;
+            overflow: hidden;
+        }
+
+        .product_list ul li .reward span p {
+            display: inline-block;
+            background-color: #D4A95B;
+            color: #fff;
+            padding: 0 5px;
+            height: 100%;
+            line-height: 18px;
+        }
+
+        .product_list ul li .reward span em {
+            color: #D4A95B;
+            padding: 0 5px;
+            display: inline-block;
+            height: 100%;
+            line-height: 18px;
+        }
+
+        .footer_conainer a p.on {
+            color: #D4A95A;
+        }
+
+        .search_head_box > .icon_search {
+            width: .6rem;
+        }
+
+    </style>
+</head>
+<body>
+<header class="head">
+    <div class="head_box">
+        <a class="head_item head_item_city" href="javascript:;">内江</a>
+        <a class="head_item head_item_search" href="javascript:;">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-sousuo"></use>
+            </svg>
+            搜索抢购</a>
+        <a class="head_item head_item_other" href="javascript:;"></a>
+    </div>
+</header>
+<div class="swiper" id="swiper" style="display:;">
+    <div class="swiper-container swiper-container-main">
+        <div class="swiper-wrapper" id="getThumb">
+
+        </div>
+    </div>
+</div>
+<div class="wrap_nav">
+    <div class="nav_hd">
+        <div id="category">
+            <span class="on">首页推荐</span>
+        </div>
+    </div>
+</div>
+<div class="product_list">
+    <div class="product_nav">
+        <span class="tabs_item_new on" data-type="ing">抢购中</span>
+        <span class="tabs_item_new" data-type="ready">即将开始</span>
+        <span class="tabs_item_new" data-type="over">已结束</span>
+    </div>
+    <ul class="store_list">
+        <li>
+            <dl>
+                <dd>
+                    <figure style="background-image: url()"><em>内江</em></figure>
+                </dd>
+                <dt>
+                <h2>测试项目活动测试项目活动测试项目活动测试项目活动测试项目活动</h2>
+                <div class="time_site"><p>8月24日&nbsp;23:59结束</p><span><em>内江北站</em><em>5km</em></span></div>
+                <div class="price_buy"><span><p>￥</p><em>39.9</em><del>￥120</del></span>
+                    <button>立即抢购</button>
+                </div>
+                </dt>
+            </dl>
+            <div class="reward">
+                <span><p>推广奖励</p><em>￥6.00</em></span><span><p>团长奖励</p><em>￥2.00</em></span>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="search">
+    <div class="search_head">
+        <div class="search_head_box">
+            <svg class="icon icon_search" aria-hidden="true">
+                <use xlink:href="#icon-sousuo"></use>
+            </svg>
+            <form class="search_form" action="{:U('category2')}" method="get"><input class="search_text" name="word"
+                                                                                       type="search"
+                                                                                       placeholder="请输入抢购活动名称"></form>
+            <svg class="icon icon_close" aria-hidden="true">
+                <use xlink:href="#icon-quxiao"></use>
+            </svg>
+        </div>
+        <div class="search_head_cancel">取消</div>
+    </div>
+    <div class="search_body">
+        <dl class="search_body_item search_hot">
+            <dt class="search_body_title">热门搜索</dt>
+            <dd>
+                <ul class="search_hot_ul">
+
+                </ul>
+            </dd>
+        </dl>
+        <dl class="search_body_item search_history">
+            <dt class="search_body_title">历史搜索</dt>
+            <volist name="search" id="vos">
+                <dd onclick="location='/TeamBuy/Index/category2?word={$vos.key}'">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-sousuo"></use>
+                    </svg>
+                    {$vos.key}
+                </dd>
+            </volist>
+        </dl>
+    </div>
+</div>
+<div class="empty" id="nodata" style="display: none;">
+    <div class="empty-icon"></div>
+    <div class="empty-title">期待中</div>
+</div>
+<div class="more" style="display: none;background-color: transparent" id="endData">好啦，这就是底线，不要再拉啦！Y(^_^)Y</div>
+<footer class="footer">
+    <div class="footer_conainer">
+        <a class="footer_item" href="/TeamBuy"><img src="http://www.7typ.cn/Public/Home/images/selected_huodong2.png"
+                                                    style="width: 20px;">
+            <p class="on">特价抢购</p></a>
+        <a class="footer_item" href="/TeamBuy/Index/index2"><img src="http://www.7typ.cn/Public/Home/images/dianpu.png"
+                                                                 style="width: 20px;">
+            <p>商家分类</p></a>
+        <a class="footer_item" href="/TeamBuy/Index/user"><img src="http://www.7typ.cn/Public/Home/images/my.png" style="width: 20px;">
+            <p>个人中心</p></a>
+    </div>
+</footer>
+<script type="text/javascript" src="/Public/Front/Item/index1/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/Front/Item/index1/swiper-3.4.1.jquery.min.js"></script>
+<script type="text/javascript" src="/Public/Front/Item/index1/layer.js"></script>
+<script type="text/javascript" src="/Public/Front/Item/index1/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="/Public/Front/Item/index1/common.js"></script>
+<script>
+    var shareUid = 110,//"{$shareUid}",
+        shareUid = shareUid * 1,
+        type1 = 'hot',
+        page = 1,
+        isScrollLoading = false;
+    var ttt = "{$_GET['ttt']}";
+    var listUrl = "<?php echo U('index1Api_getTeamBuyList');?>"
+    $(function () {
+        wx.config({
+            //debug:true,
+            appId: '{$signPackage["appId"]}',
+            timestamp: '{$signPackage["timestamp"]}',
+            nonceStr: '{$signPackage["nonceStr"]}',
+            signature: '{$signPackage["signature"]}',
+            jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'hideMenuItems', 'getLocation', 'openLocation']
+        });
+        getList(page, type1);
+        getIndexApi();
+        getProductCate();
+
+
+//        $(".nav_hd div span").on("click",function(){
+//            $(this).addClass('on').siblings().removeClass('on');
+//        });
+
+        $('.tabs_item_new').on('click', function () {
+            $("#endData").hide();
+            $(".store_list").html("");
+            $('.tabs_item_new').removeClass('on');
+            $(this).addClass('on');
+            page = 1;
+            isScrollLoading = false;
+            getList(page, type1);
+        });
+        $(window).scroll(function () {
+            if (isScrollLoading === false) {
+                if (($("body").height() - $("body").scrollTop()) <= (document.documentElement.clientHeight * 3 / 2)) {
+                    isScrollLoading = true;
+                    getList(++page, type1);
+                    isScrollLoading = false;
+                }
+            }
+        });
+
+        $('.head_item_search').on("click", function () {
+            $('.search').show();
+            $('.search_text').focus();
+        });
+        $('.search_text').on("input", function () {
+            if ($(this).val().length > 0) {
+                $('.icon_close').css("display", "block");
+            } else {
+                $('.icon_close').hide();
+            }
+        });
+        $('.icon_close').on("click", function () {
+            $('.search_text').val('').focus();
+            $(this).hide();
+        });
+        $('.search_head_cancel').on("click", function () {
+            $('.search').hide();
+        });
+
+        $(document).on("scroll", function () {
+            if ($('body').scrollTop() > $('.swiper').height()) {
+                $('.head_box').css("background", "#f60");
+            } else {
+                $('.head_box').removeAttr("style");
+            }
+        });
+
+        if (isWeixin()) {
+            doShare();
+        }
+    });
+    function getList(page, type1) {
+        var latLngSetTime = cache.get('lat_lng_set_time'),
+            nowTime = new Date().getTime();
+        if (isWeixin() && (!latLngSetTime || (latLngSetTime && nowTime - latLngSetTime > 180000))) {//三分钟有效
+            getLatAndLng();
+        }
+        var type = $('.product_nav .on').data('type');
+        var agentID = cache.get('agentID');
+        var lat = cache.get('lat');
+        var lng = cache.get('lng');
+        var flagLatAndLng = (!lat && !lng);
+        $.ajax({
+            beforeSend: function () {
+//                loind=layer.open({type: 2,content: '加载中'});
+            },
+            type: "POST",
+            async: true,
+            dataType: "json",
+            url: listUrl,
+            data: {page: page, type1: type1, type2: type, agentID: agentID, lat: lat, lng: lng},
+            success: function (ret) {
+                $('#nodata').hide();
+                if (ret.status) {
+                    if (ret.data.length < 10) {
+                        isScrollLoading = 'over';
+                    }
+
+                    $('#nodata').hide();
+                    render(ret.data, flagLatAndLng);
+                } else {
+                    isScrollLoading = 'over';
+                    if (page == 1) {
+                        scache.clear('categoryHtml');
+                        $('#nodata').show();
+                        isScrollLoading = 'none';
+                    } else {
+                        $('#nodata').hide();
+                    }
+                }
+                if (isScrollLoading == 'over') {
+                    $('#endData').show();
+                }
+            },
+            complete: function () {
+//                layer.close(loind);
+            }
+        });
+    }
+
+
+    function render(ret, flagLatAndLng) {
+        var tmpl = "";
+        for (var i = 0; i < ret.length; i++) {
+            tmpl += '<li><a href="javascript:void(0);" onclick="location=\'/TeamBuy/Detail/detail/id/' + ret[i]['id'] + '\'">'
+                + '<dl><dd><figure style="background-image: url(' + ret[i]['thumb'][0] + ')">'
+//            +'<em>内江</em>'
+                + '</figure></dd><dt>'
+                + '<h2>' + ret[i]['title'] + '</h2>'
+                + '<div class="time_site"><p>' + (ret[i]['showStartDate'] ? ret[i]['startdate'] : ret[i]['enddate']) + '</p><span>'
+                + '<em>' + ret[i]['store_info']['tname'] + '</em>'
+                + '<em >' + ret[i]['store_info']['tokm'] + '</em>'
+                + '</span></div><div class="price_buy">'
+                + '<span><p>￥</p><em>' + ret[i]['money'] + '</em>&nbsp;<del>￥' + ret[i]['originalPrice'] + '</del></span>';
+            if (ret[i]['stock'] * 1 == -999999 || ret[i]['stock'] * 1 > ret[i]['number'] * 1) {
+                if (ret[i]['oriEndDate'] && ret[i]['oriEndDate'] <= parseInt((new Date()).getTime() / 1000)) {
+                    tmpl += '<button class="gray">已结束</button>';
+                } else {
+                    tmpl += '<button onclick="location=\'/TeamBuy/detail/detail/id/' + ret[i]['id'] + '\'">立即抢购</button>';
+                }
+            } else {
+                tmpl += '<button class="gray">份额售罄</button>';
+            }
+            tmpl += '</div></dt></dl>';
+            if (shareUid) {
+                tmpl += '<div class="reward"><span><p style="background-color:#FF5B38;">推广奖励</p><em>￥' + ret[i]['directMoney'] + '</em></span><span><p>业绩</p><em>￥' + ret[i]['achievement'] + '</em></span></div>'
+            }
+            tmpl += '</a></li>';
+        }
+        $(".store_list").append(tmpl);
+    }
+    function getIndexApi() {
+        $.ajax({
+            type: "POST",
+            async: true,
+            dataType: "json",
+            url: "{:U('index1Api_indexApi')}",
+            data: {agentID: cache.get('agentID')},
+            success: function (ret) {
+                if (ret.status) {
+                    data = ret.data.hot_search;
+                    list = ret.data.love_banner;
+                    var thumb = '';
+                    for (i in list) {
+                        thumb += '<div class="swiper-slide"><a href="' + ((list[i].url != '' && list[i].url != undefined) ? list[i].url : 'javascript:;') + '"><img src="' + list[i].img + '"></a></div>'
+                    }
+                    $('#getThumb').append(thumb);
+                    var mainSwiper = new Swiper('.swiper-container-main', {
+                        direction: 'horizontal',
+                        autoplay: 3000,
+                        autoplayDisableOnInteraction: false,
+                        loop: true
+                    });
+                    var article = ret.data.article
+                    articleHtml = '';
+                    for (i in article) {
+                        articleHtml += '<div class="swiper-slide"><a href="/Face/Face/noticeDetail?id=' + article[i].id + '">' + article[i].title + '</a></div>'
+                    }
+                    $('#article .swiper-wrapper').html(articleHtml);
+
+                    var navSwiper = new Swiper('.swiper-container-notice', {
+                        direction: 'vertical',
+                        autoplay: 3000,
+                        speed: 800,
+                        autoplayDisableOnInteraction: false,
+                        loop: true
+                    });
+                    var hotml = '';
+                    for (i in data) {
+                        hotml += '<li><a href="/TeamBuy/Index/category2?word=' + data[i].key + '">' + data[i].key + '</a></li>';
+                    }
+                    $('.search_hot_ul').append(hotml);
+
+                    if (ret.data.indexTop == "swiper") {
+                        $('#swiper').show();
+                    } else {
+                        $('#snatch').show();
+                    }
+                    $('#jackpotMoney').text(ret.data.jackpotMoney);
+                    $('#dayVoucher').text(ret.data.dayVoucher);
+                    $('#number').text(ret.data.number);
+                    // $('#loveTotal').text(ret.loveTotal);
+                }
+            }
+        });
+    }
+    function getProductCate() {
+        $.ajax({
+            type: "POST",
+            async: true,
+            dataType: "json",
+            url: "{:U('index1Api_getAgentTeamBuyCate')}",
+            data: {area_m_id: cache.get('area_m_id')},
+
+            success: function (ret) {
+                if (ret.status) {
+
+                    list = ret.data;
+                    var listHmtl = '';
+                    var num = 0;
+                    for (var i = 0; i < ret.count; i++) {
+                        num = (i + 1) * 10;
+                        if (num > list.length) {
+                            num = list.length;
+                        }
+                        for (var j = i * 10; j < num; j++) {
+                            if (list[j].pid > 0) {
+                                listHmtl += '<span onclick="location=\'/TeamBuy/Index/category2/cateid/' + list[j].cid + '\'" data-cateid="' + list[j].cid + '">' + list[j].name + '</span>';
+                            } else {
+                                listHmtl += '<span onclick="location=\'/TeamBuy/Index/category2/id/' + list[j].cid + '\'" data-cateid="' + list[j].cid + '">' + list[j].name + '</span>';
+                            }
+                        }
+                    }
+                    $('#category').append(listHmtl);
+                    var w = $(".nav_hd div span").width();
+                    var a = $(".nav_hd div span").length;
+                    $(".nav_hd div").css("width", w * a);
+                }
+            }
+        });
+    }
+    function isWeixin() {
+        var ua = window.navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function doShare() {
+        var Share = new Object();
+        Share.title = "米哆哆-特价推荐";
+        Share.desc = '抢购，划算，优惠，想不到的价格';
+        Share.imgUrl = "{$shareThumb}";
+        var link = "http://" + document.domain + "/{MODULE_NAME}/{CONTROLLER_NAME}/{ACTION_NAME}?share_uid=" + "{$shareUid}";
+        Share.link = link;
+        wx.ready(function () {
+            //console.log(Share)
+            wx.onMenuShareAppMessage({
+                title: Share.title,
+                desc: Share.desc,
+                link: Share.link,
+                imgUrl: Share.imgUrl,
+                type: 'link',
+                dataUrl: '',
+                success: function () {
+                    share_success(1)
+                }
+            });
+            wx.onMenuShareTimeline({
+                title: Share.title + '-' + Share.desc,
+                desc: Share.desc,
+                link: Share.link,
+                imgUrl: Share.imgUrl,
+                success: function () {
+                    share_success(2)
+                }
+            });
+            wx.onMenuShareQQ({
+                title: Share.title, desc: Share.desc, link: Share.link, imgUrl: Share.imgUrl, success: function () {
+                    share_success(3)
+                }
+            });
+            wx.onMenuShareWeibo({
+                title: Share.title, desc: Share.desc, link: Share.link, imgUrl: Share.imgUrl, success: function () {
+                    share_success(4)
+                }
+            });
+        });
+        function share_success(t) {
+        }
+    }
+    function getLatAndLng() {
+        wx.ready(function () {
+            wx.getLocation({
+                type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+                success: function (res) {
+                    var latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+                    var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+                    var speed = res.speed; // 速度，以米/每秒计
+                    var accuracy = res.accuracy; // 位置精度
+
+                    $.ajax({
+                        url: 'http://api.map.baidu.com/geoconv/v1/?coords=' + longitude + ',' + latitude + '&from=1&ak=B6zK2tD62hhwniyowNN46HU1&output=json',
+                        type: "get",
+                        dataType: "jsonp",
+                        jsonp: "callback",
+                        success: function (data) {
+                            var y = data.result[0].y;
+                            var x = data.result[0].x;
+                            cache.set('lat', y);
+                            cache.set('lng', x);
+                            cache.set('lat_lng_set_time', new Date().getTime());
+//                            getcity(y,x);
+//                            getList(page);
+                        }
+                    });
+                }
+            });
+        })
+        return true;
+    }
+</script>
+</body>
+</html>
