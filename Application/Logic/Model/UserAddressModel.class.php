@@ -36,13 +36,13 @@ class UserAddressModel extends BaseModel {
     public function before_insert_and_update(&$data, $option = '', $isInsertMore = false) {
         if ($isInsertMore) {
             foreach ($data as $d) {
-                if ($this->encodeTelInDb && isset($d['user_tel']))
-                    $d['user_tel'] = encodeTel($d['user_tel'], $this->encodeTelSalt);
+                if (C('encode_Tel_in_db') && isset($d['user_tel']))
+                    $d['user_tel'] = encodeTel($d['user_tel']);
                 $d['update_time'] = time();
             }
         } else {
-            if ($this->encodeTelInDb && isset($data['user_tel']))
-                $data['user_tel'] = encodeTel($data['user_tel'], $this->encodeTelSalt);
+            if (C('encode_Tel_in_db') && isset($data['user_tel']))
+                $data['user_tel'] = encodeTel($data['user_tel']);
             $data['update_time'] = time();
         }
     }

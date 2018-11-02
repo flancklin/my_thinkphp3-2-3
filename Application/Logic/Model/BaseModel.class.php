@@ -5,8 +5,6 @@ namespace Logic\Model;
 use Think\Model;
 
 class BaseModel extends Model {
-    protected $encodeTelInDb = true;     //手机号在数据库中是否加密存储了
-    protected $encodeTelSalt = 'my_salt';//加密撒盐码
 
     const REG_TEL_MOBILE = '/^(0\d{2,3}-\d{7,8})|(1[34589]\d{9})$/';//手机支持13，14，15，18号段得
     const REG_TEL = '/^0\d{2,3}-\d{7,8}$/';//座机号

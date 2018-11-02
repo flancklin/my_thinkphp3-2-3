@@ -6,8 +6,8 @@
  * Time: 14:09
  */
 
-function encodeTel($tel, $salt = ''){
-    return $tel+1;
+function encodeTel($tel){
+    return $tel.C('encode_tel_salt');
 }
 function decodeTel($tel, $salt = ''){
     return $tel-1;
