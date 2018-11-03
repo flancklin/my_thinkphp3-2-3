@@ -1,0 +1,186 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.1/css/jquery-weui.min.css">
+    <style>
+        .sui_search{
+            width: 100%;
+            height: 3em;
+            position: absolute;
+            opacity: 0.6;
+            z-index: 10000;
+        }
+        .sui_banner{
+            height: 33%;
+        }
+        .sui_banner img{
+            width: 100%;
+        }
+        .sui_list img{
+            width: 270px;
+        }
+        .sui_footer .weui-footer{
+            background-color: #fff2ea;
+        }
+        .sui_footer .weui-footer_fixed-bottom{
+            bottom: 0;
+        }
+        .sui_footer_white{
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div  class="sui_search">
+    <div class="weui-search-bar" id="searchBar">
+        <form class="weui-search-bar__form">
+            <div class="weui-search-bar__box">
+                <i class="weui-icon-search"></i>
+                <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+            </div>
+            <label class="weui-search-bar__label" id="searchText">
+                <i class="weui-icon-search"></i>
+                <span>搜索</span>
+            </label>
+        </form>
+        <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+    </div>
+</div>
+<div class="sui_banner">
+    <div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1n3rZHFXXXXX9XFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i4/TB10rkPGVXXXXXGapXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1kQI3HpXXXXbSXFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+<div class="sui_category">
+    <div class="weui-grids">
+        <a href="" class="weui-grid js_grid">
+            <div class="weui-grid__icon">
+                <img src="http://jqweui.com/images/icon_nav_button.png" alt="">
+            </div>
+            <p class="weui-grid__label">
+                Button
+            </p>
+        </a>
+        <a href="" class="weui-grid js_grid">
+            <div class="weui-grid__icon">
+                <img src="http://jqweui.com/images/icon_nav_cell.png" alt="">
+            </div>
+            <p class="weui-grid__label">
+                List
+            </p>
+        </a>
+        <a href="" class="weui-grid js_grid">
+            <div class="weui-grid__icon">
+                <img src="http://jqweui.com/images/icon_nav_cell.png" alt="">
+            </div>
+            <p class="weui-grid__label">
+                List
+            </p>
+        </a>
+    </div>
+</div>
+<div class="sui_list">
+    <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i4/TB10rkPGVXXXXXGapXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg">
+            </div>
+            <div class="weui-cell__bd">
+                <div>yi</div>
+                <div>二</div>
+                <div>三十</div>
+                <div>yi</div>
+                <div>二</div>
+                <div>三十</div>
+                <div>yi</div>
+                <div>二</div>
+                <div>三十</div>
+                <div>yi</div>
+                <div>二</div>
+                <div>三十</div> <div>yi</div>
+                <div>二</div>
+                <div>三十</div>
+                <p>标题文字</p>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1n3rZHFXXXXX9XFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg"></div>
+            <div class="weui-cell__bd">
+                <p>标题文字</p>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1n3rZHFXXXXX9XFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg"></div>
+            <div class="weui-cell__bd">
+                <p>标题文字</p>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1n3rZHFXXXXX9XFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg"></div>
+            <div class="weui-cell__bd">
+                <p>标题文字</p>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1n3rZHFXXXXX9XFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg"></div>
+            <div class="weui-cell__bd">
+                <p>标题文字</p>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><img src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1n3rZHFXXXXX9XFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg"></div>
+            <div class="weui-cell__bd">
+                <p>标题文字</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sui_footer_white">
+</div>
+<div class="sui_footer">
+    <div class="weui-footer weui-footer_fixed-bottom">
+        <div class="weui-grids">
+            <a href="" class="weui-grid js_grid">
+                <div class="weui-grid__icon">
+                    <img src="http://jqweui.com/images/icon_nav_button.png" alt="">
+                </div>
+                <p class="weui-grid__label">
+                    Button
+                </p>
+            </a>
+            <a href="" class="weui-grid js_grid">
+                <div class="weui-grid__icon">
+                    <img src="http://jqweui.com/images/icon_nav_cell.png" alt="">
+                </div>
+                <p class="weui-grid__label">
+                    List
+                </p>
+            </a>
+            <a href="" class="weui-grid js_grid">
+                <div class="weui-grid__icon">
+                    <img src="http://jqweui.com/images/icon_nav_cell.png" alt="">
+                </div>
+                <p class="weui-grid__label">
+                    List
+                </p>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+<script type='text/javascript' src='https://www.swiper.com.cn/dist/js/swiper.min.js?v=407' charset='utf-8'></script>
+<script>
+    $(function () {
+        new Swiper('.swiper-container', {
+            autoplay: true,//可选选项，自动滑动
+        })
+    })
+</script>
+</html>
