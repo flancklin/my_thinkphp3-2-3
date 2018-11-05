@@ -7,6 +7,7 @@ use Think\Log;
 use Think\Model;
 
 class Logic {
+    //【???事务】考虑有没有必要开启事务
     /**
      * 对数据库的操作CURD
      * C---create(createOne/createMore)
@@ -76,8 +77,8 @@ class Logic {
      * @param int $pageSize
      * @return bool
      */
-    public function readMore($where = [], $field = '', $orderBy = '', $page = 0, $pageSize = 0) {
-        $model = $this->model();
+    public function readMore($dbTable, $where = [], $field = '', $orderBy = '', $page = 0, $pageSize = 0) {
+        $model = $this->model($dbTable);
         if ($model === false) return false;
         $where && $model->where($where);
         $field && $model->field($field);
@@ -95,8 +96,8 @@ class Logic {
      * @param string $order
      * @return bool
      */
-    public function readOne($where = [], $field = '', $order = '') {
-        $model = $this->model();
+    public function readOne($dbTable,$where = [], $field = '', $order = '') {
+        $model = $this->model($dbTable);
         if ($model === false) return false;
         $where && $model->where($where);
         $field && $model->field($field);
@@ -109,17 +110,15 @@ class Logic {
     /**
      * 添加一条记录
      * @param $data
+     * @param string $dbTable//为空则表示是当前logic对应的表
      * @return bool
      */
-    public function createOne($data) {
+    public function createOne($dbTable, $data) {
         if (empty($data)) {
-            $this->writeError(
-                self::CODE_ERROR_PARAM,
-                '数据为空',
-                '添加单条记录，数据为空');
+            $this->writeError(self::CODE_ERROR_PARAM,'数据为空','添加单条记录，数据为空');
             return false;
         }
-        $model = $this->model();
+        $model = $this->model($dbTable);
         if ($model === false) return false;
         $data = $model->create($data, Model::MODEL_INSERT);
         if (!$data) {
@@ -151,15 +150,12 @@ class Logic {
      * @param $data
      * @return bool
      */
-    public function createMore($data) {
+    public function createMore($dbTable, $data) {
         if (empty($data) || !is_array($data)) {
-            $this->writeError(
-                self::CODE_ERROR_PARAM,
-                '数据为空',
-                '批量添加，数据为空');
+            $this->writeError(self::CODE_ERROR_PARAM,'数据为空','批量添加，数据为空');
             return false;
         }
-        $model = $this->model();
+        $model = $this->model($dbTable);
         if ($model === false) return false;
         //数据有效性验证（改得时候也是全部数据重新提交已一次，所以验证模式都是【model_insert】）
         foreach ($data as &$oneData) {
@@ -197,6 +193,73 @@ class Logic {
                 ['data' => $data]
             );
             return false;
+        }
+        return $result;
+    }
+
+    protected function delete($dbTable, $where, $upData, $deleteMore = false){
+        if(empty($where)){
+            $this->writeError(self::CODE_ERROR_PARAM,'删除条件不足','删除时where未为空[假删除]');
+            return false;
+        }
+        if(empty($upData)){
+            $this->writeError(self::CODE_ERROR_PARAM,'删除条件不足哦','删除时upData未为空[假删除]');
+            return false;
+        }
+        $model = $this->model($dbTable);
+        if(!$model) return false;
+        $model->where($where);
+        $deleteMore !== true || $model->limit(1);
+        $result = $model->save($upData);
+        //结果处理
+        if ($result === false) {
+            $this->writeError(
+                self::CODE_ERROR_DELETE,
+                '删除失败',
+                '执行删除失败：' . $model->getError(),
+                ['result' => $result, 'where' => $where, 'data' => $upData],
+                $this->isShowErrSql ? $model->getLastSql() : '',
+                Log::ALERT);
+        } elseif ($result === 0) {//数据库中没有找到这一条记录
+        }
+        return $result;
+    }
+    protected function update($dbTable, $where, $upData){
+        if(empty($where)){
+            $this->writeError(self::CODE_ERROR_PARAM,'更新条件不足','更新时where未为空');
+            return false;
+        }
+        if(empty($upData)){
+            $this->writeError(self::CODE_ERROR_PARAM,'更新条件不足哦','更新时upData未为空');
+            return false;
+        }
+        $model = $this->model($dbTable);
+        if(!$model) return false;
+
+        //检验数据
+        $upData = $model->create($upData, Model::MODEL_UPDATE);
+        if (!$upData) {
+            $this->writeError(
+                self::CODE_ERROR_PARAM,
+                empty($model->getError()) ? '修改失败' : $model->getError(),
+                '更新数据库，数据未通过验证规则:' . $model->getError(),
+                ['where' => $where, 'up_data' => $upData]
+            );
+            return false;
+        }
+        //修改数据库
+        $model->where($where);
+        $result = $model->save($upData);
+        //结果处理
+        if ($result === false) {
+            $this->writeError(
+                self::CODE_ERROR_DELETE,
+                '删除失败',
+                '执行删除失败：' . $model->getError(),
+                ['result' => $result, 'where' => $where, 'data' => $upData],
+                $this->isShowErrSql ? $model->getLastSql() : '',
+                Log::ALERT);
+        } elseif ($result === 0) {//数据库中没有找到这一条记录
         }
         return $result;
     }

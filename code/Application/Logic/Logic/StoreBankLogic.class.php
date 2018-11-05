@@ -3,8 +3,11 @@
 namespace Logic\Logic;
 
 
+use Logic\Model\BankCardModel;
 use Logic\Model\BaseModel;
+use Logic\Model\StoreBankModel;
 use Logic\Model\UserAddressModel;
+use Logic\Model\UserBankModel;
 use Think\Log;
 use Think\Model;
 
@@ -14,30 +17,27 @@ use Think\Model;
  * Date: 2018/8/19
  * Time: 14:39
  */
-class UserAddressLogic extends Logic {
-    public $uid = 0;
-    public $addressId = 0;
+class StoreBankLogic extends Logic {
+    private $storeId = 0;
+    private $bankId = 0;
 
-    public function __construct($uid, $addressId = 0) {
+    function __construct($storeId, $bankId = 0) {
         $this->construct = false;
-        $this->uid = $uid;
-        $this->addressId = $addressId;
-        if (empty($uid)) {
-            $this->writeError(self::CODE_ERROR_PARAM, '缺少用户信息', 'uid为空');
+        if(!preg_match(BaseModel::REG_POS_INTEGER, $storeId)){
+            $this->writeError(self::CODE_ERROR_PARAM, '缺少店铺信息', 'storeId为空');
             return false;
         }
-        if ($addressId && !preg_match(BaseModel::REG_POS_INTEGER, $addressId)) {
-            $this->writeError(self::CODE_ERROR_PARAM, '地址信息错误', '地址ID正则验证未通过');
+        if($bankId && !preg_match(BaseModel::REG_POS_INTEGER, $bankId)){
+            $this->writeError(self::CODE_ERROR_PARAM, '银行卡信息错误', '银行卡id未通过正则验证');
             return false;
         }
+        $this->storeId = $storeId;
+        $this->bankId = $bankId;
         $this->construct = true;
     }
-
-    protected function model() {
-        if (!$this->construct) return false;
-        return new UserAddressModel();
+    protected function model($dbTable = ''){
+        return new StoreBankModel();
     }
-
     /**
      * 添加一条记录
      * @param $data
@@ -65,7 +65,7 @@ class UserAddressLogic extends Logic {
             return false;
         }
         //写数据库
-        isset($data['default']) && $data['default'] == UserAddressModel::ADDRESS_DEFAULT_YES && $model->where(['uid' => $data['uid'], 'default' => UserAddressModel::ADDRESS_DEFAULT_YES])->setField(['default' => UserAddressModel::ADDRESS_DEFAULT_NO]);
+        isset($data['default']) && $data['default'] == UserBankModel::DEFAULT_YES && $model->where(['storeId' => $data['storeId'], 'default' => UserBankModel::DEFAULT_YES])->setField(['default' => UserBankModel::DEFAULT_NO]);
         $result = $model->data($data)->add();
         if (!$result) {
             $this->writeError(
@@ -79,7 +79,6 @@ class UserAddressLogic extends Logic {
         }
         return $result;
     }
-
     /**
      * 删除用户得地址（假删除）
      * @param bool $deleteMore 删除一条记录还是多条记录
@@ -89,11 +88,11 @@ class UserAddressLogic extends Logic {
         if (!$this->construct) return false;
         //整理数据
         $where = [];
-        $where['uid'] = $this->uid;
-        $this->addressId && $where['address_id'] = $this->addressId;
+        $where['storeId'] = $this->storeId;
+        $this->bankId && $where['bank_id'] = $this->bankId;
 
         $upData = [];
-        $upData['delete'] = UserAddressModel::ADDRESS_DELETE_YES;
+        $upData['delete'] = StoreBankModel::DELETE_YES;
         //写数据库
         $model = $this->model();
         $model->where($where);
@@ -126,12 +125,13 @@ class UserAddressLogic extends Logic {
             $this->writeError(self::CODE_ERROR_PARAM, '修改数据为空', '修改数据为空');
             return false;
         }
+        if(empty($this->bankId)){
+            $this->writeError(self::CODE_ERROR_PARAM, '银行卡信息为空', '修改数据为空');
+            return false;
+        }
         //整理数据
-        $this->addressId && $where['address_id'] = $this->addressId;
-        $where['uid'] = $this->uid;
+        $where['storeId'] = $this->storeId;
 
-        $upData['uid'] = $this->uid;
-        $this->addressId && $upData['address_id'] = $this->addressId;
         //检验数据
         $model = $this->model();
         $upData = $model->create($upData, Model::MODEL_UPDATE);
@@ -145,7 +145,7 @@ class UserAddressLogic extends Logic {
             return false;
         }
         //写数据库
-        isset($upData['default']) && $upData['default'] == UserAddressModel::ADDRESS_DEFAULT_YES && $model->where(['uid' => $where['uid'], 'default' => UserAddressModel::ADDRESS_DEFAULT_YES])->setField(['default' => UserAddressModel::ADDRESS_DEFAULT_NO]);
+        isset($upData['default']) && $upData['default'] == StoreBankModel::DEFAULT_YES && $model->where(['storeId' => $where['storeId'], 'default' => StoreBankModel::DEFAULT_YES])->setField(['default' => StoreBankModel::DEFAULT_NO]);
         $result = $model->where($where)->save($upData);
         //结果处理
         if (!$result) {//result =0 或者false
@@ -160,5 +160,4 @@ class UserAddressLogic extends Logic {
         }
         return $result;
     }
-
 }
