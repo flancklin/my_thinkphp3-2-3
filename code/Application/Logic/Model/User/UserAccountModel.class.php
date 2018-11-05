@@ -52,6 +52,7 @@ class UserAccountModel extends BaseModel {
     }
     //*********************[结束]后置操作*******************************************************************
     protected $_validate = array(
+        array('user_no', '18', '用户编码长度为18！！！', Model::MUST_VALIDATE, 'length', Model::MODEL_INSERT),
         //修改时判断uid
         array('uid', self::REG_POS_INTEGER, '用户Id非法！！！', Model::MUST_VALIDATE, 'regex', Model::MODEL_UPDATE),
         //money=''
@@ -64,7 +65,7 @@ class UserAccountModel extends BaseModel {
      * 数据库设计
      * CREATE TABLE `t_user_account` (
      * `uid` int(11) unsigned NOT NULL AUTO_INCREMENT,
-     * `user_no` varchar(15) NOT NULL COMMENT '用户对外编码。对外uid',
+     * `user_no` varchar(18) NOT NULL COMMENT '用户对外编码。对外uid',
      * `money` decimal(8,2) DEFAULT '0.00' COMMENT '用户余额',
      * `withdrawing` decimal(8,2) DEFAULT '0.00' COMMENT '用户提现中冻结资金',
      * `withdraw` decimal(8,2) DEFAULT '0.00' COMMENT '已提现的金额',

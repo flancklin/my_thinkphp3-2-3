@@ -6,6 +6,7 @@ use Logic\Model\BaseModel;
 use Logic\Model\User\UserAccountModel;
 use Logic\Model\User\UserAddressModel;
 use Logic\Model\User\UserBankModel;
+use Logic\Model\User\UserInfoModel;
 use Logic\Model\User\UserMoneyLogModel;
 
 /**
@@ -16,7 +17,7 @@ use Logic\Model\User\UserMoneyLogModel;
  */
 class UserLogic extends Logic {
     private $uid = 0;
-
+    //???有个地方。就是__construct中的uid。如果是对单个用户操作。不存在问题。如果是批量查询呢，很多用户的uid
     function __construct($uid = 0) {
         $this->construct = false;
         //???待处理，这个ACTION_NAME是错误的
@@ -44,9 +45,41 @@ class UserLogic extends Logic {
             case 'user_address':
                 return new UserAddressModel();
                 break;
+            case 'user_info':
+                return new UserInfoModel();
+                break;
             default:
+                $this->writeError(self::CODE_ERROR_PARAM, '数据库链接不能为空', 'dbTable类型不存在');
                 return false;
         }
+    }
+    public function createOneUser($data){
+        if(empty($data)){
+            $this->writeError(self::CODE_ERROR_PARAM, '缺少用户信息', 'data为空');
+            return false;
+        }
+        if(isset($data['mobile']) && $this->existUserMobile($data['mobile'])){//检查手机号的唯一性
+           return false;
+        }
+        $account = [];
+        $account['user_no'] = $this->buildNo();
+        //???事务
+        //账户表
+        $uid = $this->createOne('user_account', $account);
+        $result = false;
+        if($uid){
+            $data['uid'] = $uid;
+            //用户信息基础表
+            $result = $this->createOne('user_info', $data);
+        }
+        return $result;
+    }
+
+    private function buildNo(){
+        do{
+            $no = date('YmdHis').mt_rand(1000, 9999);
+        }while($this->readOne('user_account',['user_no' => $no]));
+        return $no;
     }
 
     //*****************************************【user_account账户表】开始***************************************************************************************//
@@ -290,4 +323,34 @@ class UserLogic extends Logic {
         return $result;
     }
     //*****************************************【user_address收货地址记录】结束***************************************************************************************//
+    //*****************************************【user_info收货地址记录】结束***************************************************************************************//
+    public function updateInfo( $upData, $where = []) {
+        if (!$this->construct) return false;
+        if (empty($upData)) {
+            $this->writeError(self::CODE_ERROR_PARAM, '修改数据为空', '修改数据为空');
+            return false;
+        }
+        //整理数据
+        $where['uid'] = $this->uid;
+        if(isset($upData['mobile']) && $this->existUserMobile($upData['mobile'])){//判断手机号的唯一性
+            return false;
+        }
+        return $this->update('user_address', $where, $upData);
+    }
+
+    public function existUserMobile($mobile){
+        if(empty($mobile)){
+            $this->writeError(self::CODE_ERROR_PARAM, '手机号参数为空', '手机号参数为空');
+            return false;
+        }
+        $existUserMobile = $this->readOne('user_info', ['mobile' => $mobile]);
+        if($existUserMobile){
+            $this->writeError(self::CODE_ERROR_PARAM, '手机号已被用户占用', '手机号已被用户占用');
+            return false;
+        }
+        return $existUserMobile;
+    }
+    //*****************************************【user_info收货地址记录】结束***************************************************************************************//
+
+
 }

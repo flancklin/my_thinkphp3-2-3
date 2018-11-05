@@ -8,7 +8,8 @@ class UserController extends Controller{
     public function add(){
         var_dump(111);
         $logic = new UserLogic(2);
-        $a = $logic->readMore('user_address');
+        $a = $logic->createOneUser(['nickname'=>'dfsad']);
         var_dump($a);
+        var_dump($logic->showErrMes);
     }
 }
