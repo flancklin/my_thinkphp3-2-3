@@ -1,0 +1,100 @@
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+	var Share = new Object();
+	// Share.id='25006';
+	// Share.link = window.location.href;
+	// if("{sp:ACTION_NAME}" == "detail"){
+	// 	Share.title = '我是{sp:$vote["id"]}号-{sp:$vote["title"]}'; 
+	// 	Share.desc = '我在参加第三届甜城网络美食节{sp$tpconf["conf"]["title"]}投票活动，请为我投一票吧！';
+	// 	Share.imgUrl = "{sp$vote['picurl']}";
+	// 	Share.link = "http://neijiang.7typ.cn/Vote/Site/detail/id/{sp:I('get.id')}/pid/{sp:I('get.pid')}/t/"+Math.random();
+	// }else if("{sp:ACTION_NAME}" == "index"){
+	// 	Share.title = "{sp$tpconf['conf']['title']}";
+	// 	Share.desc = "{sp$tpconf['conf']['sharedesc']}";
+	// 	Share.imgUrl = '{sp:$tpconf["conf"]["thumb"]}';
+	// }else if("{sp:ACTION_NAME}" == "zp"){
+	// 	Share.title = "{sp$tpconf['conf']['title']}";
+	// 	Share.desc = "{sp$tpconf['conf']['sharedesc']}";
+	// 	Share.imgUrl = '{sp:$tpconf["conf"]["sharepic"]}';
+	// }
+    
+	// wx.config({
+	// 	//debug:true,
+	// 	appId: '{sp:$signPackage["appId"]}',
+	// 	timestamp: '{sp:$signPackage["timestamp"]}',
+	// 	nonceStr: '{sp:$signPackage["nonceStr"]}',
+	// 	signature: '{sp:$signPackage["signature"]}',
+	// 	jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'hideMenuItems']
+	
+	// });
+	Share.id='704059';
+	Share.link = window.location.href;
+	if("{sp:ACTION_NAME}" == "detail"){
+		Share.title = '我是{sp:$vote["number"]}号-{sp:$vote["title"]}'; 
+		Share.desc = '我在参加{sp$tpconf["conf"]["title"]}投票活动，请为我投一票吧！';
+		Share.imgUrl = "{sp$vote['picurl']}";
+		Share.link = "http://neijiang.7typ.cn/Voter/Site/detail/id/{sp:I('get.id')}/pid/{sp:I('get.pid')}/t/"+Math.random();
+	}else if("{sp:ACTION_NAME}" == "index"){
+		Share.title = "{sp$tpconf['conf']['title']}";
+		Share.desc = "{sp$tpconf['conf']['sharedesc']}";
+		Share.imgUrl = '{sp:$tpconf["conf"]["thumb"]}';
+	}else if("{sp:ACTION_NAME}" == "zp"){
+		Share.title = "{sp$tpconf['conf']['title']}";
+		Share.desc = "{sp$tpconf['conf']['sharedesc']}";
+		Share.imgUrl = '{sp:$tpconf["conf"]["sharepic"]}';
+	}
+    
+	wx.config({
+		//debug:true,
+		appId: '{sp:$signPackage["appId"]}',
+		timestamp: '{sp:$signPackage["timestamp"]}',
+		nonceStr: '{sp:$signPackage["nonceStr"]}',
+		signature: '{sp:$signPackage["signature"]}',
+		jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'hideMenuItems']
+	
+	});
+	wx.ready(function () {
+        //alert(Share.title+'||'+Share.desc+'||'+Share.link);
+		wx.onMenuShareAppMessage({
+			title: Share.title,desc: Share.desc,link: Share.link,imgUrl: Share.imgUrl,type: 'link',dataUrl: '',success: function () {share_success(1,'发送给朋友')}
+		});
+		wx.onMenuShareTimeline({
+			title: Share.title,desc: Share.desc, link: Share.link,imgUrl: Share.imgUrl,success: function () {share_success(2,"分享到朋友圈")}
+		});
+		wx.onMenuShareQQ({title: Share.title,desc: Share.desc,link: Share.link,imgUrl: Share.imgUrl,success: function () {share_success(3) }
+		});
+		wx.onMenuShareWeibo({
+			title: Share.title, desc: Share.desc, link: Share.link, imgUrl: Share.imgUrl,success: function () {share_success(4)}
+		});
+	});
+	function share_success(t,tname){
+		var pid={sp:I('get.pid',0)};
+		var id={sp:I('get.id',0)};
+		$.ajax({
+			beforeSend: function() {
+				
+			},
+			type: 'post',
+			dataType: 'json',
+			data: {
+				shareid:Share.id,
+				id:id,
+				pid:pid,
+				type:t,
+				typename:tname
+			},
+			url: '/Voter/Dovote/share',
+			success: function(ret) {
+				if (ret.status) {
+					M._alert(ret.msg);               
+				} else{
+					M._alert(ret.msg);
+				}
+					
+			},
+			complete: function() {
+				
+			}
+		})
+	}
+</script>

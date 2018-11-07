@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telphone=no, email=no">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="320">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>幸运大抽奖</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Activity/voter/css/resetPhone.css?1">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Activity/voter/css/vote.css?4">
+    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_5wguvoue05jc3di.css?">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Activity/voter/css/alert.css">
+    <link rel="stylesheet" href="__PUBLIC__/Common/swiper/swiper-v4.4.1.min.css">
+    <style type="text/css">
+        .zj {
+            background: url("__PUBLIC__/Activity/voter/images/zj.png") no-repeat center center;
+            background-size: 90px;
+            width: 100px;
+            height: 75px;
+            position: absolute;
+            right: 0px;
+            bottom: -40px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content-head"><!--公用头部-->
+    <div class="swiper-container"><!--焦点图-->
+        <div class="swiper-wrapper">
+            <volist name="banner" id="vo">
+                <div class="swiper-slide"><a
+                    <if condition="$vo['url'] eq ''">href="javascript:void(0);"
+                        <else/>
+                        href="{$vo['url']}"
+                    </if>
+                    num='{:($i-1)}'><img src="{$vo['thumb']}" alt="焦点"></a></div>
+            </volist>
+        </div>
+    </div><!--焦点图结束-->
+
+</div><!--公用头部结束-->
+<div class="container" style="padding-bottom:70px">
+    <ul class="summary-ul flex-row">
+        <li class="flex1 fs16">浏览：<i>{:($tpconf['conf']['views']+$tpconf['views'])}</i>次</li>
+        <li class="flex1 fs16">摇奖：<i id="rollNums">{:($tpconf['conf']['yjnum']+$tpconf['yjnum'])}</i>次</li>
+    </ul>
+    <div class="ep-bgc">
+        <div class="p5 tac">
+            <h4 class="fs16">{$tpconf['conf']['title']}</h4>
+            <span style="display:none;">您的红包<span id="jifen">{$account['publicPoint']}</span>,<span
+                    onclick="location.href='/LoveStore/Index/loveShop'">去消费获得</span></span><br/>
+            <span class="c-red">若大转盘延迟加载，直接点击开始抽奖</span>
+        </div>
+    </div>
+
+
+    <div class="htmleaf-content" style="position: relative;">
+        <img src="__PUBLIC__/Activity/voter/images/shandian.png" id="shan-img" style="display:none;"/>
+        <img src="__PUBLIC__/Activity/voter/images/kulian.png" id="sorry-img" style="display:none;"/>
+        <div class="banner">
+            <div class="turnplate"
+                 style="background:url(__PUBLIC__/Activity/voter/images/turnplate-bg.png) no-repeat center center;background-size:100%;">
+                <canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
+                <img class="pointer" src="__PUBLIC__/Activity/voter/images/turnplate-pointer.png"/>
+            </div>
+        </div>
+        <if condition="$zplist['jxnum'] gt 0">
+            <div class="zj"></div>
+        </if>
+    </div>
+
+
+    <div class="btn-boxs flex-row" style="padding: 10px;">
+        <a class="btn btn-yellow" style="color:#fff" href="{:U('zplist',array('pid'=>I('get.pid')))}">查看中奖名单</a>
+        <a class="btn btn-yellow" style="color:#fff" href="{:U('myrecord',array('pid'=>I('get.pid')))}">我的中奖记录</a>
+    </div>
+    <volist name="tpconf['conf']['jiang']" id="vo">
+        <div class="ep-bgc">
+            <dl class="prize-list">
+                <dt><span class="c-red"><strong>{$i}等奖</strong>：{:($vo['num']==300?200:$vo['num'])}名</span>&nbsp;&nbsp;&nbsp;<strong>奖品</strong>：{$vo.name}
+                </dt>
+                <dd><img src="{$vo.img}" alt=""></dd>
+            </dl>
+        </div>
+    </volist>
+    <div class="ep-bgc">
+        <div class="p5-b1"><span>规则简介：</span>
+            <p>{$tpconf['conf']['cjmx']}</p></div>
+    </div>
+    <div class="ep-bgc">
+        <div class="p5-b1"><span>活动时间：</span>
+            <p>{$tpconf['conf']['starttime']}截止至{$tpconf['conf']['endtime']}</p></div>
+    </div>
+    <div class="btn-boxs tac">
+        <button class="btn btn-yellow" style="width: 90%;">快分享给您的朋友一起来抽奖吧</button>
+    </div>
+</div>
+
+<include file="footer"/>
+<script type="text/javascript" src="__PUBLIC__/Activity/voter/js/zp_heart.js?1"></script>
+<script>
+    var curr_jifen="{$account['publicPoint']}";
+    var use_jifen=false;
+    var ing=false;
+    var turnplate={
+        restaraunts:[],				//大转盘奖品名称
+        colors:[],					//大转盘奖品区块对应背景颜色
+        outsideRadius:192,			//大转盘外圆的半径
+        textRadius:155,				//大转盘奖品位置距离圆心的距离
+        insideRadius:68,			//大转盘内圆的半径
+        startAngle:0,				//开始角度
+
+        bRotate:false				//false:停止;ture:旋转
+    };
+
+    $(function(){
+        //动态添加大转盘的奖品与奖品区域背景颜色
+        turnplate.restaraunts = [ "谢谢参与", "二等奖", "谢谢参与", "三等奖", "谢谢参与" ,"一等奖"];
+        turnplate.colors = ["#FFF4D6", "#FFFFFF", "#FFF4D6", "#FFFFFF","#FFF4D6", "#FFFFFF"];
+
+        $('.pointer').click(function (){
+            if(ing)return;
+            var pid="{:I('get.pid')}";
+            $.ajax({
+                beforeSend: function() {
+                    ing=true;
+                },
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    pid:pid,
+                    uid:cache.get('memberID'),
+                    use_jifen:use_jifen
+                },
+                url: '/Voter/Dovote/zp',
+                success: function(ret) {
+                    use_jifen=false;
+                    if (ret.status) {
+                        $("#rollNums").text($("#rollNums").text()*1+1);
+                        var jxnum=ret.jxnum;
+                        if(jxnum>0){
+                            var arr = [1,3,5];
+                            var item=arr[Math.floor(Math.random()*arr.length)];
+                            if(jxnum==1)item=6;
+                            if(jxnum==2)item=2;
+                            if(jxnum==3)item=4;
+                            if(turnplate.bRotate)return;
+                            turnplate.bRotate = !turnplate.bRotate;
+                            //奖品数量等于10,指针落在对应奖品区域的中心角度[252, 216, 180, 144, 108, 72, 36, 360, 324, 288]
+                            rotateFn(item, ret.msg,jxnum,ret.use_jf);
+                        }else{
+                            var arr = [1,3,5];
+                            var item=arr[Math.floor(Math.random()*arr.length)];
+                            if(turnplate.bRotate)return;
+                            turnplate.bRotate = !turnplate.bRotate;
+                            //奖品数量等于10,指针落在对应奖品区域的中心角度[252, 216, 180, 144, 108, 72, 36, 360, 324, 288]
+                            rotateFn(item, ret.msg,jxnum,ret.use_jf);
+                        }
+                    } else {
+                        ing=false;
+                        if(ret.gotovote==true){
+                            M._confirm(ret.msg,['去投票',''],['取消',''],function(){
+                                //抽奖跳转
+                                location.href="{:U('index',array('pid'=>I('get.pid')))}";
+                            },'');
+                        }else{
+                            if(ret.use_jf=="true"){
+                                if(curr_jifen>0){
+                                    M._confirm(ret.msg+",当前红包："+curr_jifen,['1红包抽奖',''],['取消',''],function(){
+                                        //抽奖跳转
+                                        curr_jifen--;
+                                        $("#jifen").text(curr_jifen);
+                                        use_jifen=true;
+                                        $('.pointer').click();
+                                    },'');
+                                }else{
+                                    M._confirm(ret.msg,['查看活动商家',''],['取消',''],function(){
+                                        location.href="/LoveStore/Index/loveShop";
+                                    },'');
+                                }
+                            }else{
+                                if(curr_jifen>0){
+                                    if(ret.re_zp === "true"){
+                                        M._confirm(ret.msg+",当前红包："+curr_jifen,['1红包抽奖',''],['取消',''],function(){
+                                            curr_jifen--;
+                                            $("#jifen").text(curr_jifen);
+                                            use_jifen=true;
+                                            $('.pointer').click();
+                                        },'');
+                                    }else{
+                                        M._alert(ret.msg);
+                                    }
+                                }else{
+                                    M._confirm(ret.msg,['查看活动商家',''],['取消',''],function(){
+                                        location.href="/LoveStore/Index/loveShop";
+                                    },'');
+                                }
+
+                            }
+                        }
+                    }
+
+                },
+                complete: function() {
+
+                }
+            })
+
+        });
+    })
+
+
+    //旋转转盘 item:奖品位置; txt：提示语;
+    function rotateFn(item, txt, level,type){
+        var angles = item * (360/turnplate.restaraunts.length) - (360 / (turnplate.restaraunts.length*2));
+        if(angles<270){
+            angles = 270 - angles;
+        }else{
+            angles = 360 - angles + 270;
+        }
+        $('#wheelcanvas').stopRotate();
+        $('#wheelcanvas').rotate({
+            angle:0,
+            animateTo:angles+1800,
+            duration:8000,
+            callback:function (){
+                ing=false;
+                if(level>0){
+                    M._confirm(txt,['去查看',''],['取消',''],function(){
+                        //抽奖跳转
+                        location.href="{:U('myrecord',array('pid'=>I('get.pid')))}";
+                    },'');
+                }else{
+                    if(type=="true"){
+                        if(curr_jifen>0){
+                            M._confirm(txt+",当前红包："+curr_jifen,['1红包抽奖',''],['取消',''],function(){
+                                curr_jifen--;
+                                $("#jifen").text(curr_jifen);
+                                use_jifen=true;
+                                $('.pointer').click();
+                            },'');
+                        }else{
+                            M._confirm(txt,['查看活动商家',''],['取消',''],function(){
+                                location.href="http://neijiang.3066.7typ.cn/LoveStore/Index/loveShop";
+                            },'');
+                        }
+                    }else{
+                        M._alert(txt);
+                    }
+
+                }
+                turnplate.bRotate = !turnplate.bRotate;
+            }
+        });
+    };
+    function rotateTimeOut(){
+        $('#wheelcanvas').rotate({
+            angle:0,
+            animateTo:2160,
+            duration:8000,
+            callback:function (){
+                alert('网络超时，请检查您的网络设置！');
+            }
+        });
+    };
+    function rnd(n, m){
+        var random = Math.floor(Math.random()*(m-n+1)+n);
+        return random;
+
+    }
+    //页面所有元素加载完毕后执行drawRouletteWheel()方法对转盘进行渲染
+    window.onload=function(){
+        drawRouletteWheel();
+    };
+
+    function drawRouletteWheel() {
+        var canvas = document.getElementById("wheelcanvas");
+        if (canvas.getContext) {
+            //根据奖品个数计算圆周角度
+            var arc = Math.PI / (turnplate.restaraunts.length/2);
+            var ctx = canvas.getContext("2d");
+            //在给定矩形内清空一个矩形
+            ctx.clearRect(0,0,422,422);
+            //strokeStyle 属性设置或返回用于笔触的颜色、渐变或模式
+            ctx.strokeStyle = "#FFBE04";
+            //font 属性设置或返回画布上文本内容的当前字体属性
+            ctx.font = '16px Microsoft YaHei';
+            for(var i = 0; i < turnplate.restaraunts.length; i++) {
+                var angle = turnplate.startAngle + i * arc;
+                ctx.fillStyle = turnplate.colors[i];
+                ctx.beginPath();
+                //arc(x,y,r,起始角,结束角,绘制方向) 方法创建弧/曲线（用于创建圆或部分圆）
+                ctx.arc(211, 211, turnplate.outsideRadius, angle, angle + arc, false);
+                ctx.arc(211, 211, turnplate.insideRadius, angle + arc, angle, true);
+                ctx.stroke();
+                ctx.fill();
+                //锁画布(为了保存之前的画布状态)
+                ctx.save();
+
+                //----绘制奖品开始----
+                ctx.fillStyle = "#E5302F";
+                var text = turnplate.restaraunts[i];
+                var line_height = 17;
+                //translate方法重新映射画布上的 (0,0) 位置
+                ctx.translate(211 + Math.cos(angle + arc / 2) * turnplate.textRadius, 211 + Math.sin(angle + arc / 2) * turnplate.textRadius);
+
+                //rotate方法旋转当前的绘图
+                ctx.rotate(angle + arc / 2 + Math.PI / 2);
+
+                /** 下面代码根据奖品类型、奖品名称长度渲染不同效果，如字体、颜色、图片效果。(具体根据实际情况改变) **/
+                if(text.indexOf("M")>0){
+                    //流量包
+                    var texts = text.split("M");
+                    for(var j = 0; j<texts.length; j++){
+                        ctx.font = j == 0?'bold 20px Microsoft YaHei':'16px Microsoft YaHei';
+                        if(j == 0){
+                            ctx.fillText(texts[j]+"M", -ctx.measureText(texts[j]+"M").width / 2, j * line_height);
+                        }else{
+                            ctx.fillText(texts[j], -ctx.measureText(texts[j]).width / 2, j * line_height);
+                        }
+                    }
+                }else if(text.indexOf("M") == -1 && text.length>6){
+                    //奖品名称长度超过一定范围
+                    text = text.substring(0,6)+"||"+text.substring(6);
+                    var texts = text.split("||");
+                    for(var j = 0; j<texts.length; j++){
+                        ctx.fillText(texts[j], -ctx.measureText(texts[j]).width / 2, j * line_height);
+                    }
+                }else{
+                    //在画布上绘制填色的文本。文本的默认颜色是黑色
+                    //measureText()方法返回包含一个对象，该对象包含以像素计的指定字体宽度
+                    ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
+                }
+
+                //添加对应图标
+                if(text.indexOf("金币")>0){
+                    var img= document.getElementById("shan-img");
+                    img.onload=function(){
+                        ctx.drawImage(img,-15,10);
+                    };
+                    ctx.drawImage(img,-15,10);
+                }else if(text.indexOf("谢谢参与")>=0){
+                    var img= document.getElementById("sorry-img");
+                    img.onload=function(){
+                        ctx.drawImage(img,-15,10);
+                    };
+                    ctx.drawImage(img,-15,10);
+                }
+                //把当前画布返回（调整）到上一个save()状态之前
+                ctx.restore();
+                //----绘制奖品结束----
+            }
+        }
+    }
+</script>
+</body>
+</html>

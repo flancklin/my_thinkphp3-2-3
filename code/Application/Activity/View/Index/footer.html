@@ -1,0 +1,65 @@
+<style type="text/css">
+
+	.flex1 a i{
+		background: url("__PUBLIC__/Activity/voter/images/zhuye_icon.png") no-repeat center center;
+		background-size:20px; 
+		width:100%; 
+		height:20px;
+		display: block;
+	}
+	
+</style>
+	
+<footer>
+	<ul class="flex-row">
+		<li class="flex1">
+            <a href="/Face/Face/home"><i></i>主页</a>
+        </li>
+		<li class="flex1 <if condition="ACTION_NAME eq 'index'">fter-on</if>"><a href="{:U('index',array('pid'=>$pid))}"><svg class="icon" aria-hidden="true" style="font-size: 22px"><use xlink:href="#icon-toupiao1"></use></svg>投票页</a></li>
+			
+		
+		<li class="flex1 <if condition="ACTION_NAME eq 'ranking'">fter-on</if>"><a href="{:U('ranking',array('pid'=>$pid))}"><svg class="icon" aria-hidden="true" style="font-size: 22px;"><use xlink:href="#icon-vote"></use></svg>排行</a></li>
+		<li class="flex1 <if condition="ACTION_NAME eq 'join'">fter-on</if>"><a href="{:U('join',array('pid'=>$pid))}"  ><svg class="icon" aria-hidden="true"><use xlink:href="#icon-daqiawoyaocanjia"></use></svg>我要参加</a></li>
+		
+		<li class="flex1 <if condition="ACTION_NAME eq 'zp'">fter-on</if>"><a href="{:U('zp',array('pid'=>$pid))}"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhuanpan"></use></svg>大转盘</a></li>
+		
+	</ul>
+</footer>
+<script  src="__PUBLIC__/Common/jquery-v2.0.0.min.js"></script>
+<script  src="__PUBLIC__/Common/swiper/swiper-v4.4.1.min.js"></script>
+<script src="__PUBLIC__/Activity/voter/js/votecommon.js?1"></script>
+<script src="__PUBLIC__/Activity/voter/js/common2.js?{sp:time()}"></script>
+<script src="__PUBLIC__/Activity/voter/js/iconfont.js"></script>
+
+<script  src="__PUBLIC__/Common/layer-v3.1.1/mobile/layer.js"></script>
+
+<!-- <script src="/Public/voter/js/font_icon.js?1"></script> -->
+<script src="__PUBLIC__/Activity/voter/js/vote.js?1"></script>
+<!--<script src="/Public/scripts/focus.js"></script>-->
+<!--<script src="/Public/face/js/go-home.js?1439507822"></script>-->
+<script>
+	function checkLogin(obj){
+		if(cache.get('memberID')>0){
+			location.href=$(obj).attr('data');
+		}else{
+			location.href=$(obj).attr('data');
+			//bindingPhone();
+		} 
+	}	
+	if($(".swiper-slide").length > 1) {
+		var mySwiper = new Swiper ('.swiper-container', {
+			direction: 'horizontal',
+			autoplay: 3000,
+			autoplayDisableOnInteraction: false,
+			loop: true,
+		}) 
+	}else {
+		var mySwiper = new Swiper ('.swiper-container', {
+			direction: 'horizontal',
+			autoplayDisableOnInteraction: false,
+			loop: true,
+		}) 
+	}
+	
+</script>
+

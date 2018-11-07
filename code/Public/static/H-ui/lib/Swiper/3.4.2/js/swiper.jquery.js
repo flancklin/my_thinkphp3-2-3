@@ -174,37 +174,37 @@
             allowSwipeToNext: true,
             swipeHandler: null, //'.swipe-handler',
             noSwiping: true,
-            noSwipingClass: 'swiper-no-swiping',
+            noSwipingClass: 'swiper4-4-1-no-swiping',
             // Passive Listeners
             passiveListeners: true,
             // NS
-            containerModifierClass: 'swiper-container-', // NEW
-            slideClass: 'swiper-slide',
-            slideActiveClass: 'swiper-slide-active',
-            slideDuplicateActiveClass: 'swiper-slide-duplicate-active',
-            slideVisibleClass: 'swiper-slide-visible',
-            slideDuplicateClass: 'swiper-slide-duplicate',
-            slideNextClass: 'swiper-slide-next',
-            slideDuplicateNextClass: 'swiper-slide-duplicate-next',
-            slidePrevClass: 'swiper-slide-prev',
-            slideDuplicatePrevClass: 'swiper-slide-duplicate-prev',
-            wrapperClass: 'swiper-wrapper',
-            bulletClass: 'swiper-pagination-bullet',
-            bulletActiveClass: 'swiper-pagination-bullet-active',
-            buttonDisabledClass: 'swiper-button-disabled',
-            paginationCurrentClass: 'swiper-pagination-current',
-            paginationTotalClass: 'swiper-pagination-total',
-            paginationHiddenClass: 'swiper-pagination-hidden',
-            paginationProgressbarClass: 'swiper-pagination-progressbar',
-            paginationClickableClass: 'swiper-pagination-clickable', // NEW
-            paginationModifierClass: 'swiper-pagination-', // NEW
-            lazyLoadingClass: 'swiper-lazy',
-            lazyStatusLoadingClass: 'swiper-lazy-loading',
-            lazyStatusLoadedClass: 'swiper-lazy-loaded',
-            lazyPreloaderClass: 'swiper-lazy-preloader',
-            notificationClass: 'swiper-notification',
+            containerModifierClass: 'swiper4-4-1-container-', // NEW
+            slideClass: 'swiper4-4-1-slide',
+            slideActiveClass: 'swiper4-4-1-slide-active',
+            slideDuplicateActiveClass: 'swiper4-4-1-slide-duplicate-active',
+            slideVisibleClass: 'swiper4-4-1-slide-visible',
+            slideDuplicateClass: 'swiper4-4-1-slide-duplicate',
+            slideNextClass: 'swiper4-4-1-slide-next',
+            slideDuplicateNextClass: 'swiper4-4-1-slide-duplicate-next',
+            slidePrevClass: 'swiper4-4-1-slide-prev',
+            slideDuplicatePrevClass: 'swiper4-4-1-slide-duplicate-prev',
+            wrapperClass: 'swiper4-4-1-wrapper',
+            bulletClass: 'swiper4-4-1-pagination-bullet',
+            bulletActiveClass: 'swiper4-4-1-pagination-bullet-active',
+            buttonDisabledClass: 'swiper4-4-1-button-disabled',
+            paginationCurrentClass: 'swiper4-4-1-pagination-current',
+            paginationTotalClass: 'swiper4-4-1-pagination-total',
+            paginationHiddenClass: 'swiper4-4-1-pagination-hidden',
+            paginationProgressbarClass: 'swiper4-4-1-pagination-progressbar',
+            paginationClickableClass: 'swiper4-4-1-pagination-clickable', // NEW
+            paginationModifierClass: 'swiper4-4-1-pagination-', // NEW
+            lazyLoadingClass: 'swiper4-4-1-lazy',
+            lazyStatusLoadingClass: 'swiper4-4-1-lazy-loading',
+            lazyStatusLoadedClass: 'swiper4-4-1-lazy-loaded',
+            lazyPreloaderClass: 'swiper4-4-1-lazy-preloader',
+            notificationClass: 'swiper4-4-1-notification',
             preloaderClass: 'preloader',
-            zoomContainerClass: 'swiper-zoom-container',
+            zoomContainerClass: 'swiper4-4-1-zoom-container',
         
             // Observer
             observer: false,
@@ -220,33 +220,33 @@
             runCallbacksOnInit: true
             /*
             Callbacks:
-            onInit: function (swiper)
-            onDestroy: function (swiper)
-            onBeforeResize: function (swiper)
-            onAfterResize: function (swiper)
-            onClick: function (swiper, e)
-            onTap: function (swiper, e)
-            onDoubleTap: function (swiper, e)
-            onSliderMove: function (swiper, e)
-            onSlideChangeStart: function (swiper)
-            onSlideChangeEnd: function (swiper)
-            onTransitionStart: function (swiper)
-            onTransitionEnd: function (swiper)
-            onImagesReady: function (swiper)
-            onProgress: function (swiper, progress)
-            onTouchStart: function (swiper, e)
-            onTouchMove: function (swiper, e)
-            onTouchMoveOpposite: function (swiper, e)
-            onTouchEnd: function (swiper, e)
-            onReachBeginning: function (swiper)
-            onReachEnd: function (swiper)
-            onSetTransition: function (swiper, duration)
-            onSetTranslate: function (swiper, translate)
-            onAutoplayStart: function (swiper)
-            onAutoplayStop: function (swiper),
-            onLazyImageLoad: function (swiper, slide, image)
-            onLazyImageReady: function (swiper, slide, image)
-            onKeyPress: function (swiper, keyCode)
+            onInit: function (swiper4-4-1)
+            onDestroy: function (swiper4-4-1)
+            onBeforeResize: function (swiper4-4-1)
+            onAfterResize: function (swiper4-4-1)
+            onClick: function (swiper4-4-1, e)
+            onTap: function (swiper4-4-1, e)
+            onDoubleTap: function (swiper4-4-1, e)
+            onSliderMove: function (swiper4-4-1, e)
+            onSlideChangeStart: function (swiper4-4-1)
+            onSlideChangeEnd: function (swiper4-4-1)
+            onTransitionStart: function (swiper4-4-1)
+            onTransitionEnd: function (swiper4-4-1)
+            onImagesReady: function (swiper4-4-1)
+            onProgress: function (swiper4-4-1, progress)
+            onTouchStart: function (swiper4-4-1, e)
+            onTouchMove: function (swiper4-4-1, e)
+            onTouchMoveOpposite: function (swiper4-4-1, e)
+            onTouchEnd: function (swiper4-4-1, e)
+            onReachBeginning: function (swiper4-4-1)
+            onReachEnd: function (swiper4-4-1)
+            onSetTransition: function (swiper4-4-1, duration)
+            onSetTranslate: function (swiper4-4-1, translate)
+            onAutoplayStart: function (swiper4-4-1)
+            onAutoplayStop: function (swiper4-4-1),
+            onLazyImageLoad: function (swiper4-4-1, slide, image)
+            onLazyImageReady: function (swiper4-4-1, slide, image)
+            onKeyPress: function (swiper4-4-1, keyCode)
             */
         
         };
@@ -613,8 +613,8 @@
         function autoplay() {
             var autoplayDelay = s.params.autoplay;
             var activeSlide = s.slides.eq(s.activeIndex);
-            if (activeSlide.attr('data-swiper-autoplay')) {
-                autoplayDelay = activeSlide.attr('data-swiper-autoplay') || s.params.autoplay;
+            if (activeSlide.attr('data-swiper4-4-1-autoplay')) {
+                autoplayDelay = activeSlide.attr('data-swiper4-4-1-autoplay') || s.params.autoplay;
             }
             s.autoplayTimeoutId = setTimeout(function () {
                 if (s.params.loop) {
@@ -816,8 +816,8 @@
                             'margin-' + (s.isHorizontal() ? 'top' : 'left'),
                             (row !== 0 && s.params.spaceBetween) && (s.params.spaceBetween + 'px')
                         )
-                        .attr('data-swiper-column', column)
-                        .attr('data-swiper-row', row);
+                        .attr('data-swiper4-4-1-column', column)
+                        .attr('data-swiper4-4-1-row', row);
         
                 }
                 if (slide.css('display') === 'none') continue;
@@ -1044,7 +1044,7 @@
             s.updateRealIndex();
         };
         s.updateRealIndex = function(){
-            s.realIndex = parseInt(s.slides.eq(s.activeIndex).attr('data-swiper-slide-index') || s.activeIndex, 10);
+            s.realIndex = parseInt(s.slides.eq(s.activeIndex).attr('data-swiper4-4-1-slide-index') || s.activeIndex, 10);
         };
         
         /*=========================
@@ -1058,10 +1058,10 @@
             if (params.loop) {
                 // Duplicate to all looped slides
                 if (activeSlide.hasClass(s.params.slideDuplicateClass)) {
-                    s.wrapper.children('.' + s.params.slideClass + ':not(.' + s.params.slideDuplicateClass + ')[data-swiper-slide-index="' + s.realIndex + '"]').addClass(s.params.slideDuplicateActiveClass);
+                    s.wrapper.children('.' + s.params.slideClass + ':not(.' + s.params.slideDuplicateClass + ')[data-swiper4-4-1-slide-index="' + s.realIndex + '"]').addClass(s.params.slideDuplicateActiveClass);
                 }
                 else {
-                    s.wrapper.children('.' + s.params.slideClass + '.' + s.params.slideDuplicateClass + '[data-swiper-slide-index="' + s.realIndex + '"]').addClass(s.params.slideDuplicateActiveClass);
+                    s.wrapper.children('.' + s.params.slideClass + '.' + s.params.slideDuplicateClass + '[data-swiper4-4-1-slide-index="' + s.realIndex + '"]').addClass(s.params.slideDuplicateActiveClass);
                 }
             }
             // Next Slide
@@ -1079,16 +1079,16 @@
             if (params.loop) {
                 // Duplicate to all looped slides
                 if (nextSlide.hasClass(s.params.slideDuplicateClass)) {
-                    s.wrapper.children('.' + s.params.slideClass + ':not(.' + s.params.slideDuplicateClass + ')[data-swiper-slide-index="' + nextSlide.attr('data-swiper-slide-index') + '"]').addClass(s.params.slideDuplicateNextClass);
+                    s.wrapper.children('.' + s.params.slideClass + ':not(.' + s.params.slideDuplicateClass + ')[data-swiper4-4-1-slide-index="' + nextSlide.attr('data-swiper4-4-1-slide-index') + '"]').addClass(s.params.slideDuplicateNextClass);
                 }
                 else {
-                    s.wrapper.children('.' + s.params.slideClass + '.' + s.params.slideDuplicateClass + '[data-swiper-slide-index="' + nextSlide.attr('data-swiper-slide-index') + '"]').addClass(s.params.slideDuplicateNextClass);
+                    s.wrapper.children('.' + s.params.slideClass + '.' + s.params.slideDuplicateClass + '[data-swiper4-4-1-slide-index="' + nextSlide.attr('data-swiper4-4-1-slide-index') + '"]').addClass(s.params.slideDuplicateNextClass);
                 }
                 if (prevSlide.hasClass(s.params.slideDuplicateClass)) {
-                    s.wrapper.children('.' + s.params.slideClass + ':not(.' + s.params.slideDuplicateClass + ')[data-swiper-slide-index="' + prevSlide.attr('data-swiper-slide-index') + '"]').addClass(s.params.slideDuplicatePrevClass);
+                    s.wrapper.children('.' + s.params.slideClass + ':not(.' + s.params.slideDuplicateClass + ')[data-swiper4-4-1-slide-index="' + prevSlide.attr('data-swiper4-4-1-slide-index') + '"]').addClass(s.params.slideDuplicatePrevClass);
                 }
                 else {
-                    s.wrapper.children('.' + s.params.slideClass + '.' + s.params.slideDuplicateClass + '[data-swiper-slide-index="' + prevSlide.attr('data-swiper-slide-index') + '"]').addClass(s.params.slideDuplicatePrevClass);
+                    s.wrapper.children('.' + s.params.slideClass + '.' + s.params.slideDuplicateClass + '[data-swiper4-4-1-slide-index="' + prevSlide.attr('data-swiper4-4-1-slide-index') + '"]').addClass(s.params.slideDuplicatePrevClass);
                 }
             }
         
@@ -1338,7 +1338,7 @@
         
         // WP8 Touch Events Fix
         if (window.navigator.pointerEnabled || window.navigator.msPointerEnabled) {
-            (s.params.touchEventsTarget === 'container' ? s.container : s.wrapper).addClass('swiper-wp8-' + s.params.direction);
+            (s.params.touchEventsTarget === 'container' ? s.container : s.wrapper).addClass('swiper4-4-1-wp8-' + s.params.direction);
         }
         
         // Attach/detach events
@@ -1475,11 +1475,11 @@
                     slidesPerView = s.params.slidesPerView === 'auto' ? s.currentSlidesPerView() : s.params.slidesPerView;
                 if (s.params.loop) {
                     if (s.animating) return;
-                    realIndex = parseInt($(s.clickedSlide).attr('data-swiper-slide-index'), 10);
+                    realIndex = parseInt($(s.clickedSlide).attr('data-swiper4-4-1-slide-index'), 10);
                     if (s.params.centeredSlides) {
                         if ((slideToIndex < s.loopedSlides - slidesPerView/2) || (slideToIndex > s.slides.length - s.loopedSlides + slidesPerView/2)) {
                             s.fixLoop();
-                            slideToIndex = s.wrapper.children('.' + s.params.slideClass + '[data-swiper-slide-index="' + realIndex + '"]:not(.' + s.params.slideDuplicateClass + ')').eq(0).index();
+                            slideToIndex = s.wrapper.children('.' + s.params.slideClass + '[data-swiper4-4-1-slide-index="' + realIndex + '"]:not(.' + s.params.slideDuplicateClass + ')').eq(0).index();
                             setTimeout(function () {
                                 s.slideTo(slideToIndex);
                             }, 0);
@@ -1491,7 +1491,7 @@
                     else {
                         if (slideToIndex > s.slides.length - slidesPerView) {
                             s.fixLoop();
-                            slideToIndex = s.wrapper.children('.' + s.params.slideClass + '[data-swiper-slide-index="' + realIndex + '"]:not(.' + s.params.slideDuplicateClass + ')').eq(0).index();
+                            slideToIndex = s.wrapper.children('.' + s.params.slideClass + '[data-swiper4-4-1-slide-index="' + realIndex + '"]:not(.' + s.params.slideDuplicateClass + ')').eq(0).index();
                             setTimeout(function () {
                                 s.slideTo(slideToIndex);
                             }, 0);
@@ -2377,7 +2377,7 @@
                 var slide = $(this);
                 if (index < s.loopedSlides) appendSlides.push(el);
                 if (index < slides.length && index >= slides.length - s.loopedSlides) prependSlides.push(el);
-                slide.attr('data-swiper-slide-index', index);
+                slide.attr('data-swiper4-4-1-slide-index', index);
             });
             for (i = 0; i < appendSlides.length; i++) {
                 s.wrapper.append($(appendSlides[i].cloneNode(true)).addClass(s.params.slideDuplicateClass));
@@ -2388,7 +2388,7 @@
         };
         s.destroyLoop = function () {
             s.wrapper.children('.' + s.params.slideClass + '.' + s.params.slideDuplicateClass).remove();
-            s.slides.removeAttr('data-swiper-slide-index');
+            s.slides.removeAttr('data-swiper4-4-1-slide-index');
         };
         s.reLoop = function (updatePosition) {
             var oldIndex = s.activeIndex - s.loopedSlides;
@@ -2578,14 +2578,14 @@
         
                         if (s.params.flip.slideShadows) {
                             //Set shadows
-                            var shadowBefore = s.isHorizontal() ? slide.find('.swiper-slide-shadow-left') : slide.find('.swiper-slide-shadow-top');
-                            var shadowAfter = s.isHorizontal() ? slide.find('.swiper-slide-shadow-right') : slide.find('.swiper-slide-shadow-bottom');
+                            var shadowBefore = s.isHorizontal() ? slide.find('.swiper4-4-1-slide-shadow-left') : slide.find('.swiper4-4-1-slide-shadow-top');
+                            var shadowAfter = s.isHorizontal() ? slide.find('.swiper4-4-1-slide-shadow-right') : slide.find('.swiper4-4-1-slide-shadow-bottom');
                             if (shadowBefore.length === 0) {
-                                shadowBefore = $('<div class="swiper-slide-shadow-' + (s.isHorizontal() ? 'left' : 'top') + '"></div>');
+                                shadowBefore = $('<div class="swiper4-4-1-slide-shadow-' + (s.isHorizontal() ? 'left' : 'top') + '"></div>');
                                 slide.append(shadowBefore);
                             }
                             if (shadowAfter.length === 0) {
-                                shadowAfter = $('<div class="swiper-slide-shadow-' + (s.isHorizontal() ? 'right' : 'bottom') + '"></div>');
+                                shadowAfter = $('<div class="swiper4-4-1-slide-shadow-' + (s.isHorizontal() ? 'right' : 'bottom') + '"></div>');
                                 slide.append(shadowAfter);
                             }
                             if (shadowBefore.length) shadowBefore[0].style.opacity = Math.max(-progress, 0);
@@ -2597,7 +2597,7 @@
                     }
                 },
                 setTransition: function (duration) {
-                    s.slides.transition(duration).find('.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left').transition(duration);
+                    s.slides.transition(duration).find('.swiper4-4-1-slide-shadow-top, .swiper4-4-1-slide-shadow-right, .swiper4-4-1-slide-shadow-bottom, .swiper4-4-1-slide-shadow-left').transition(duration);
                     if (s.params.virtualTranslate && duration !== 0) {
                         var eventTriggered = false;
                         s.slides.eq(s.activeIndex).transitionEnd(function () {
@@ -2619,17 +2619,17 @@
                     var wrapperRotate = 0, cubeShadow;
                     if (s.params.cube.shadow) {
                         if (s.isHorizontal()) {
-                            cubeShadow = s.wrapper.find('.swiper-cube-shadow');
+                            cubeShadow = s.wrapper.find('.swiper4-4-1-cube-shadow');
                             if (cubeShadow.length === 0) {
-                                cubeShadow = $('<div class="swiper-cube-shadow"></div>');
+                                cubeShadow = $('<div class="swiper4-4-1-cube-shadow"></div>');
                                 s.wrapper.append(cubeShadow);
                             }
                             cubeShadow.css({height: s.width + 'px'});
                         }
                         else {
-                            cubeShadow = s.container.find('.swiper-cube-shadow');
+                            cubeShadow = s.container.find('.swiper4-4-1-cube-shadow');
                             if (cubeShadow.length === 0) {
-                                cubeShadow = $('<div class="swiper-cube-shadow"></div>');
+                                cubeShadow = $('<div class="swiper4-4-1-cube-shadow"></div>');
                                 s.container.append(cubeShadow);
                             }
                         }
@@ -2677,14 +2677,14 @@
                         slide.transform(transform);
                         if (s.params.cube.slideShadows) {
                             //Set shadows
-                            var shadowBefore = s.isHorizontal() ? slide.find('.swiper-slide-shadow-left') : slide.find('.swiper-slide-shadow-top');
-                            var shadowAfter = s.isHorizontal() ? slide.find('.swiper-slide-shadow-right') : slide.find('.swiper-slide-shadow-bottom');
+                            var shadowBefore = s.isHorizontal() ? slide.find('.swiper4-4-1-slide-shadow-left') : slide.find('.swiper4-4-1-slide-shadow-top');
+                            var shadowAfter = s.isHorizontal() ? slide.find('.swiper4-4-1-slide-shadow-right') : slide.find('.swiper4-4-1-slide-shadow-bottom');
                             if (shadowBefore.length === 0) {
-                                shadowBefore = $('<div class="swiper-slide-shadow-' + (s.isHorizontal() ? 'left' : 'top') + '"></div>');
+                                shadowBefore = $('<div class="swiper4-4-1-slide-shadow-' + (s.isHorizontal() ? 'left' : 'top') + '"></div>');
                                 slide.append(shadowBefore);
                             }
                             if (shadowAfter.length === 0) {
-                                shadowAfter = $('<div class="swiper-slide-shadow-' + (s.isHorizontal() ? 'right' : 'bottom') + '"></div>');
+                                shadowAfter = $('<div class="swiper4-4-1-slide-shadow-' + (s.isHorizontal() ? 'right' : 'bottom') + '"></div>');
                                 slide.append(shadowAfter);
                             }
                             if (shadowBefore.length) shadowBefore[0].style.opacity = Math.max(-progress, 0);
@@ -2715,9 +2715,9 @@
                     s.wrapper.transform('translate3d(0px,0,' + zFactor + 'px) rotateX(' + (s.isHorizontal() ? 0 : wrapperRotate) + 'deg) rotateY(' + (s.isHorizontal() ? -wrapperRotate : 0) + 'deg)');
                 },
                 setTransition: function (duration) {
-                    s.slides.transition(duration).find('.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left').transition(duration);
+                    s.slides.transition(duration).find('.swiper4-4-1-slide-shadow-top, .swiper4-4-1-slide-shadow-right, .swiper4-4-1-slide-shadow-bottom, .swiper4-4-1-slide-shadow-left').transition(duration);
                     if (s.params.cube.shadow && !s.isHorizontal()) {
-                        s.container.find('.swiper-cube-shadow').transition(duration);
+                        s.container.find('.swiper4-4-1-cube-shadow').transition(duration);
                     }
                 }
             },
@@ -2755,14 +2755,14 @@
                         slide[0].style.zIndex = -Math.abs(Math.round(offsetMultiplier)) + 1;
                         if (s.params.coverflow.slideShadows) {
                             //Set shadows
-                            var shadowBefore = s.isHorizontal() ? slide.find('.swiper-slide-shadow-left') : slide.find('.swiper-slide-shadow-top');
-                            var shadowAfter = s.isHorizontal() ? slide.find('.swiper-slide-shadow-right') : slide.find('.swiper-slide-shadow-bottom');
+                            var shadowBefore = s.isHorizontal() ? slide.find('.swiper4-4-1-slide-shadow-left') : slide.find('.swiper4-4-1-slide-shadow-top');
+                            var shadowAfter = s.isHorizontal() ? slide.find('.swiper4-4-1-slide-shadow-right') : slide.find('.swiper4-4-1-slide-shadow-bottom');
                             if (shadowBefore.length === 0) {
-                                shadowBefore = $('<div class="swiper-slide-shadow-' + (s.isHorizontal() ? 'left' : 'top') + '"></div>');
+                                shadowBefore = $('<div class="swiper4-4-1-slide-shadow-' + (s.isHorizontal() ? 'left' : 'top') + '"></div>');
                                 slide.append(shadowBefore);
                             }
                             if (shadowAfter.length === 0) {
-                                shadowAfter = $('<div class="swiper-slide-shadow-' + (s.isHorizontal() ? 'right' : 'bottom') + '"></div>');
+                                shadowAfter = $('<div class="swiper4-4-1-slide-shadow-' + (s.isHorizontal() ? 'right' : 'bottom') + '"></div>');
                                 slide.append(shadowAfter);
                             }
                             if (shadowBefore.length) shadowBefore[0].style.opacity = offsetMultiplier > 0 ? offsetMultiplier : 0;
@@ -2777,7 +2777,7 @@
                     }
                 },
                 setTransition: function (duration) {
-                    s.slides.transition(duration).find('.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left').transition(duration);
+                    s.slides.transition(duration).find('.swiper4-4-1-slide-shadow-top, .swiper4-4-1-slide-shadow-right, .swiper4-4-1-slide-shadow-bottom, .swiper4-4-1-slide-shadow-left').transition(duration);
                 }
             }
         };
@@ -2832,13 +2832,13 @@
                         _img.addClass(s.params.lazyStatusLoadedClass).removeClass(s.params.lazyStatusLoadingClass);
                         slide.find('.' + s.params.lazyPreloaderClass + ', .' + s.params.preloaderClass).remove();
                         if (s.params.loop && loadInDuplicate) {
-                            var slideOriginalIndex = slide.attr('data-swiper-slide-index');
+                            var slideOriginalIndex = slide.attr('data-swiper4-4-1-slide-index');
                             if (slide.hasClass(s.params.slideDuplicateClass)) {
-                                var originalSlide = s.wrapper.children('[data-swiper-slide-index="' + slideOriginalIndex + '"]:not(.' + s.params.slideDuplicateClass + ')');
+                                var originalSlide = s.wrapper.children('[data-swiper4-4-1-slide-index="' + slideOriginalIndex + '"]:not(.' + s.params.slideDuplicateClass + ')');
                                 s.lazy.loadImageInSlide(originalSlide.index(), false);
                             }
                             else {
-                                var duplicatedSlide = s.wrapper.children('.' + s.params.slideDuplicateClass + '[data-swiper-slide-index="' + slideOriginalIndex + '"]');
+                                var duplicatedSlide = s.wrapper.children('.' + s.params.slideDuplicateClass + '[data-swiper4-4-1-slide-index="' + slideOriginalIndex + '"]');
                                 s.lazy.loadImageInSlide(duplicatedSlide.index(), false);
                             }
                         }
@@ -3005,9 +3005,9 @@
                 if (s.params.uniqueNavElements && typeof s.params.scrollbar === 'string' && sb.track.length > 1 && s.container.find(s.params.scrollbar).length === 1) {
                     sb.track = s.container.find(s.params.scrollbar);
                 }
-                sb.drag = sb.track.find('.swiper-scrollbar-drag');
+                sb.drag = sb.track.find('.swiper4-4-1-scrollbar-drag');
                 if (sb.drag.length === 0) {
-                    sb.drag = $('<div class="swiper-scrollbar-drag"></div>');
+                    sb.drag = $('<div class="swiper4-4-1-scrollbar-drag"></div>');
                     sb.track.append(sb.drag);
                 }
                 sb.drag[0].style.width = '';
@@ -3351,7 +3351,7 @@
             }
             if (kc === 37 || kc === 39 || kc === 38 || kc === 40) {
                 var inView = false;
-                //Check that swiper should be inside of visible area of window
+                //Check that swiper4-4-1 should be inside of visible area of window
                 if (s.container.parents('.' + s.params.slideClass).length > 0 && s.container.parents('.' + s.params.slideActiveClass).length === 0) {
                     return;
                 }
@@ -3732,9 +3732,9 @@
             var p, pX, pY;
             var rtlFactor = s.rtl ? -1 : 1;
         
-            p = el.attr('data-swiper-parallax') || '0';
-            pX = el.attr('data-swiper-parallax-x');
-            pY = el.attr('data-swiper-parallax-y');
+            p = el.attr('data-swiper4-4-1-parallax') || '0';
+            pX = el.attr('data-swiper4-4-1-parallax-x');
+            pY = el.attr('data-swiper4-4-1-parallax-y');
             if (pX || pY) {
                 pX = pX || '0';
                 pY = pY || '0';
@@ -3767,13 +3767,13 @@
         }
         s.parallax = {
             setTranslate: function () {
-                s.container.children('[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y]').each(function(){
+                s.container.children('[data-swiper4-4-1-parallax], [data-swiper4-4-1-parallax-x], [data-swiper4-4-1-parallax-y]').each(function(){
                     setParallaxTransform(this, s.progress);
         
                 });
                 s.slides.each(function () {
                     var slide = $(this);
-                    slide.find('[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y]').each(function () {
+                    slide.find('[data-swiper4-4-1-parallax], [data-swiper4-4-1-parallax-x], [data-swiper4-4-1-parallax-y]').each(function () {
                         var progress = Math.min(Math.max(slide[0].progress, -1), 1);
                         setParallaxTransform(this, progress);
                     });
@@ -3781,9 +3781,9 @@
             },
             setTransition: function (duration) {
                 if (typeof duration === 'undefined') duration = s.params.speed;
-                s.container.find('[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y]').each(function(){
+                s.container.find('[data-swiper4-4-1-parallax], [data-swiper4-4-1-parallax-x], [data-swiper4-4-1-parallax-y]').each(function(){
                     var el = $(this);
-                    var parallaxDuration = parseInt(el.attr('data-swiper-parallax-duration'), 10) || duration;
+                    var parallaxDuration = parseInt(el.attr('data-swiper4-4-1-parallax-duration'), 10) || duration;
                     if (duration === 0) parallaxDuration = 0;
                     el.transition(parallaxDuration);
                 });
@@ -3854,7 +3854,7 @@
                     if (z.gesture.slide.length === 0) z.gesture.slide = s.slides.eq(s.activeIndex);
                     z.gesture.image = z.gesture.slide.find('img, svg, canvas');
                     z.gesture.imageWrap = z.gesture.image.parent('.' + s.params.zoomContainerClass);
-                    z.gesture.zoomMax = z.gesture.imageWrap.attr('data-swiper-zoom') || s.params.zoomMax ;
+                    z.gesture.zoomMax = z.gesture.imageWrap.attr('data-swiper4-4-1-zoom') || s.params.zoomMax ;
                     if (z.gesture.imageWrap.length === 0) {
                         z.gesture.image = undefined;
                         return;
@@ -4067,7 +4067,7 @@
                 }
                 else {
                     // Zoom In
-                    z.scale = z.currentScale = z.gesture.imageWrap.attr('data-swiper-zoom') || s.params.zoomMax;
+                    z.scale = z.currentScale = z.gesture.imageWrap.attr('data-swiper4-4-1-zoom') || s.params.zoomMax;
                     if (e) {
                         slideWidth = z.gesture.slide[0].offsetWidth;
                         slideHeight = z.gesture.slide[0].offsetHeight;
@@ -4408,8 +4408,8 @@
                       s.params.slidePrevClass
                     ].join(' '))
                     .removeAttr('style')
-                    .removeAttr('data-swiper-column')
-                    .removeAttr('data-swiper-row');
+                    .removeAttr('data-swiper4-4-1-column')
+                    .removeAttr('data-swiper4-4-1-row');
             }
         
             // Pagination/Bullets
@@ -4484,7 +4484,7 @@
         
 
     
-        // Return swiper instance
+        // Return swiper4-4-1 instance
         return s;
     };
     
@@ -4599,7 +4599,7 @@
     
 
     /*===========================
-    Add .swiper plugin from Dom libraries
+    Add .swiper4-4-1 plugin from Dom libraries
     ===========================*/
     function addLibraryPlugin(lib) {
         lib.fn.swiper = function (params) {
@@ -4685,4 +4685,4 @@ else if (typeof define === 'function' && define.amd) {
     });
 }
 
-//# sourceMappingURL=maps/swiper.jquery.js.map
+//# sourceMappingURL=maps/swiper4-4-1.jquery.js.map
