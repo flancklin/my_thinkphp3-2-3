@@ -15,6 +15,6 @@ class IndexController extends Controller {
 
 const a= [33,434];
     public function index() {
-        var_dump(array_merge(['a'=>1,'b'=>3],['a'=>4,'c'=>'9']));
+        var_dump(array_merge(['a'=>2222222222,'b'=>3],['a'=>4,'c'=>'9']));
     }
 }
