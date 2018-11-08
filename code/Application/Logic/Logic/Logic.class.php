@@ -70,22 +70,46 @@ class Logic {
 
     /**
      * 一次读取多条记录
+     * @param $dbTable
      * @param array $where
      * @param string $field
      * @param string $orderBy
      * @param int $page
      * @param int $pageSize
-     * @return bool
+     * @param string $backKeyValueField
+     * @return array
      */
-    public function readMore($dbTable, $where = [], $field = '', $orderBy = '', $page = 0, $pageSize = 0) {
+    public function readMore($dbTable, $where = [], $field = '', $orderBy = '', $page = 0, $pageSize = 0, $backKeyValueField = '') {
         $model = $this->model($dbTable);
-        if ($model === false) return false;
+        if ($model === false) return [];
+        if (
+            $field
+            && $backKeyValueField
+            && strpos($field, ',' . $backKeyValueField . ',') === false
+            && strpos($field, $backKeyValueField . ',') !== 0
+            && strpos($field, ',' . $backKeyValueField) !== (strlen($field) - 1)
+        ) {
+            $this->showErrMes = '键值对的field不在查询字段中';
+            return [];
+        }
         $where && $model->where($where);
         $field && $model->field($field);
         $orderBy && $model->order($orderBy);
         $page && $pageSize && $model->limit(($page - 1) * $pageSize, $pageSize);
         $result = $model->select();
         $result || $this->isShowSelectEmptySql && $this->errSql = $model->getLastSql();
+        if ($result && $backKeyValueField) {
+            if (!isset($result[0][$backKeyValueField])) {
+                $this->showErrMes = '键值对的field不在查询字段中哦';
+                return [];
+            }
+            $newResult = [];
+            foreach ($result as $re) {
+                $newResult[$re[$backKeyValueField]] = $re;
+            }
+            $result = $newResult;
+            unset($newResult);
+        }
         return $result;
     }
 
@@ -96,7 +120,7 @@ class Logic {
      * @param string $order
      * @return bool
      */
-    public function readOne($dbTable,$where = [], $field = '', $order = '') {
+    public function readOne($dbTable, $where = [], $field = '', $order = '') {
         $model = $this->model($dbTable);
         if ($model === false) return false;
         $where && $model->where($where);
@@ -110,12 +134,12 @@ class Logic {
     /**
      * 添加一条记录
      * @param $data
-     * @param string $dbTable//为空则表示是当前logic对应的表
+     * @param string $dbTable //为空则表示是当前logic对应的表
      * @return bool
      */
     public function createOne($dbTable, $data) {
         if (empty($data)) {
-            $this->writeError(self::CODE_ERROR_PARAM,'数据为空','添加单条记录，数据为空');
+            $this->writeError(self::CODE_ERROR_PARAM, '数据为空', '添加单条记录，数据为空');
             return false;
         }
         $model = $this->model($dbTable);
@@ -152,7 +176,7 @@ class Logic {
      */
     public function createMore($dbTable, $data) {
         if (empty($data) || !is_array($data)) {
-            $this->writeError(self::CODE_ERROR_PARAM,'数据为空','批量添加，数据为空');
+            $this->writeError(self::CODE_ERROR_PARAM, '数据为空', '批量添加，数据为空');
             return false;
         }
         $model = $this->model($dbTable);
@@ -197,17 +221,17 @@ class Logic {
         return $result;
     }
 
-    protected function delete($dbTable, $where, $upData, $deleteMore = false){
-        if(empty($where)){
-            $this->writeError(self::CODE_ERROR_PARAM,'删除条件不足','删除时where未为空[假删除]');
+    protected function delete($dbTable, $where, $upData, $deleteMore = false) {
+        if (empty($where)) {
+            $this->writeError(self::CODE_ERROR_PARAM, '删除条件不足', '删除时where未为空[假删除]');
             return false;
         }
-        if(empty($upData)){
-            $this->writeError(self::CODE_ERROR_PARAM,'删除条件不足哦','删除时upData未为空[假删除]');
+        if (empty($upData)) {
+            $this->writeError(self::CODE_ERROR_PARAM, '删除条件不足哦', '删除时upData未为空[假删除]');
             return false;
         }
         $model = $this->model($dbTable);
-        if(!$model) return false;
+        if (!$model) return false;
         $model->where($where);
         $deleteMore !== true || $model->limit(1);
         $result = $model->save($upData);
@@ -224,17 +248,18 @@ class Logic {
         }
         return $result;
     }
-    protected function update($dbTable, $where, $upData){
-        if(empty($where)){
-            $this->writeError(self::CODE_ERROR_PARAM,'更新条件不足','更新时where未为空');
+
+    protected function update($dbTable, $where, $upData) {
+        if (empty($where)) {
+            $this->writeError(self::CODE_ERROR_PARAM, '更新条件不足', '更新时where未为空');
             return false;
         }
-        if(empty($upData)){
-            $this->writeError(self::CODE_ERROR_PARAM,'更新条件不足哦','更新时upData未为空');
+        if (empty($upData)) {
+            $this->writeError(self::CODE_ERROR_PARAM, '更新条件不足哦', '更新时upData未为空');
             return false;
         }
         $model = $this->model($dbTable);
-        if(!$model) return false;
+        if (!$model) return false;
 
         //检验数据
         $upData = $model->create($upData, Model::MODEL_UPDATE);
