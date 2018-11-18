@@ -1,3 +1,14 @@
-
+<script type="text/javascript" src="__PUBLIC__/Common/jquery-v2.0.0.min.js"></script>
+<script>
+    $(function () {
+        var rightTitle = '';
+        $(".content_left h4").each(function (i,e) {
+            var mao = $(e).data('mao');
+            var title = $(e).html();
+            rightTitle += '<div><a href="#'+mao+'">'+(i+1)+'、'+title+'</a></div>';
+        })
+        $(".content_right").html(rightTitle);
+    })
+</script>
 </body>
 </html>
