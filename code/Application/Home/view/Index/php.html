@@ -1,0 +1,29 @@
+<include file="common/content_head"/>
+<div class="content_left">
+    <a name="bc_function">
+        <div class="content">
+            <h4>bc函数易错尝试</h4>
+            <div>
+                <pre>
+                    if(bcadd(0,0,2)){
+                        echo "yes";
+                    }else{
+                        echo "no";
+                    }
+                    输出结果会是no；
+                    因为bc函数是以字符串的形式运算的。
+                    bcadd(0,0,2)，0+0='0.00'，
+                    从数字角度可以等于false，但是从字符角度，它是有值的
+                </pre>
+            </div>
+        </div>
+        <div class="notes">
+            注意：bc函数是计算后的值是string，而不是int
+        </div>
+    </a>
+
+</div>
+<div class="content_right">
+    <div><a href="#bc_function">1、bc函数易错尝试</a></div>
+</div>
+<include file="common/content_footer"/>

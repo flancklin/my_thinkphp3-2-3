@@ -1,15 +1,50 @@
 <html>
 <head>
     <title>www</title>
+    <include file="common/style_clear"/>
+    <include file="common/style"/>
+    <!--<include file="Common@Common/header_team_buy_dis" />-->
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .index_left {
+            width: 20%;
+            height: 100%;
+            background-color: #d6f3ff;
+            float: left;
+            text-align: left;
+        }
+        .index_left a{
+            color: blue;
+        }
+        .index_left_content{
+            padding-top: 100px;
+            padding-left: 50px;
+        }
+
+        .index_right {
+            width: 80%;
+            height: 100%;
+            float: left
+        }
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
 </head>
-<body>
-sss
+<body class="">
+<div class="index_left">
+    <div class="index_left_content">
+        <include file="common/menu"/>
+    </div>
+</div>
+<div class="index_right">
+    <iframe src="{:U('php')}" frameborder="0" name="iframe_a"></iframe>
+</div>
 </body>
-<script type="text/javascript" src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js"></script>
-<script>
-    $.post("{sp:U('indexApi')}", {}, function (ret) {
-
-
-    })
-</script>
 </html>

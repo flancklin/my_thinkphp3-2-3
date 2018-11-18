@@ -1,0 +1,84 @@
+<include file="common/content_head"/>
+<div class="content_left">
+    <a name="submit_form">
+        <div class="content">
+            <h4>提交表单</h4>
+            <div>
+                <xmp>
+                   <input class="product_info" type="number" data-db="{sp$db}" data-name="pro_price" value="">
+                    product_info是数据库表名或者代名词；
+                    data-db是从数据库中读取的值，在添加时，肯定没有值；
+                    data-name是这个值在数据库中对应的字段或者代名词；
+                    表单不用form提交方式。用ajax提交。
+
+
+                    操作：
+                    <input class="a" type="number" data-db="1" data-name="price" value="1">
+                    <input class="a" type="text" data-db="2" data-name="name" value="2">
+                    <input class="a" type="text" data-db="3" data-name="desc" value="3">
+
+                    <input class="b" type="number" data-db="4" data-name="money" value="4">
+                    <input class="b" type="text" data-db="5" data-name="where" value="5">
+                    <input class="b" type="text" data-db="6" data-name="tel" value="6">
+                    <textarea class="b" data-db="333" data-name="ttt" cols="30" rows="10">333</textarea>
+                    <script src="__PUBLIC__/Common/jquery-v2.0.0.min.js"></script>
+                    <script>
+                        var val_a = {};
+                        var val_b = {};
+                        $(function () {
+                            $(".a").change(function () {
+                                var val = $(this).val();
+                                if($(this).data("db") != val){
+                                    val_a[$(this).data('name')] = $(this).val();
+                                }else{
+                                    delete val_a[$(this).data('name')];
+                                }
+                            })
+                            $(".b").change(function () {
+                                var val = $(this).val();
+                                if($(this).data("db") != val){
+                                    val_b[$(this).data('name')] = $(this).val();
+                                }else{
+                                    delete val_b[$(this).data('name')];
+                                }
+                            })
+                        })
+                        function goSave() {
+                            $.ajax({
+                                beforeSend: function () {
+
+                                },
+                                type: "POST",
+                                async: true,
+                                dataType: "json",
+                                url: "http://www.self.bd/code/index.php/Home/Index/a.html",
+                                data: { a: val_a,b:val_b},
+                                success: function (msg) {
+                                },
+                                complete: function () {
+
+                                }
+                            });
+                        }
+                    </script>
+                    后台收到的数据：
+                        a[name]:2dfsfs
+                        a[price]:
+                        a[desc]:3342
+                        b[money]:4432
+                        b[where]:54232
+                        b[tel]:643243
+                </xmp>
+            </div>
+        </div>
+        <div class="notes">
+            关键：class、data-db、data-name<br />
+            优势：可以写操作变更记录。几乎每次提交的数据都是真实改动了的。而没有改动的数据都没有二次提交
+        </div>
+    </a>
+
+</div>
+<div class="content_right">
+    <div><a href="#submit_form">1、提交表单</a></div>
+</div>
+<include file="common/content_footer"/>

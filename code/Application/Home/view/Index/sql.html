@@ -1,0 +1,23 @@
+<include file="common/content_head"/>
+<div class="content_left">
+    <a name="order_by_0">
+        <div class="content">
+            <h4>库存售罄排最后</h4>
+            <div>
+                <pre>
+                    select * from product where id >0 order by stock=number,rank desc
+                    解释：stock-库存，number-是已销售量。(当然若数据库记录的是：库存-销量，则order by stock=0,rank desc)
+                    排序规则：先stock!=number中的按rank降序排，再排stock=number
+                </pre>
+            </div>
+        </div>
+        <div class="notes">
+            注意：order by stock=0其实是把stock分为了两类，一类是为0，一类是不为0.按两类排序
+        </div>
+    </a>
+
+</div>
+<div class="content_right">
+    <div><a href="#order_by_0">1、库存售罄排最后</a></div>
+</div>
+<include file="common/content_footer"/>

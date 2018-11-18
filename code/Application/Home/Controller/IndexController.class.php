@@ -15,6 +15,19 @@ class IndexController extends Controller {
 
 const a= [33,434];
     public function index() {
-        var_dump(array_merge(['a'=>2222222222,'b'=>3],['a'=>4999,'c'=>'9']));
+        $this->display();
+    }
+    public function sql(){
+        $this->display();
+    }
+    public function php(){
+        $this->display();
+    }
+    public function tp(){
+        $this->display();
+    }
+
+    public function a(){
+        $this->ajaxReturn([I("param.")]);
     }
 }
