@@ -1,0 +1,84 @@
+
+<include file="common/content_head"/>
+<div class="content_left">
+    <a name="str_length">
+        <div class="content">
+            <h4 data-mao="str_length">php计算字符串长度</h4>
+            <div>
+                <pre>
+                    $str1 = 'afdf.3424?gdfd;';//ASCII编码
+                    $str2 = '我是a3.谁说的分。';//UTF-8
+                    var_dump(strlen($str1));    //15
+                    var_dump(strlen($str2));    //24=3 x 7 + 3
+                    var_dump(mb_strlen($str1)); //15(根据当前字符的编码自动计算)
+                    var_dump(mb_strlen($str2)); //10(查看当前字符的编码mb_detect_encoding($str))
+                    var_dump(mb_strlen($str2, 'UTF-8')); //10
+                </pre>
+            </div>
+        </div>
+        <div class="notes">
+            前提：安装PHP的时候安装了mbstring扩展
+        </div>
+    </a>
+
+    <a name="str_explode">
+        <div class="content">
+            <h4 data-mao="str_explode">字符串的分割</h4>
+            <div>
+                <pre>
+
+                <h5>chunk_split:</h5>
+                    $str = '我们tomorrow';
+                    var_dump(chunk_split($str, 4, '?'));//结果：我�?��to?morr?ow?。每隔3个字符插入一个符号（因为一个汉字长度占3，[们]字被强行切割了）
+
+                <h5>explode:</h5>
+                    $str = 'one|two|three|four|five';
+                    var_dump(explode('|', $str));//结果：["one","two","three","four","five"]，全部分割
+                    var_dump(explode('|', $str, 3));//结果：["one","two","three|four|five"]，部分分割。只分割成3份。
+                    var_dump(explode('|', $str, -2));//结果：["one","two","three"]，只要部分分割结果。不要最后2个
+                <h5>strtok- 标记分割字符串</h5><xmp>
+                         $str = "This is\tan example\nstring";
+                        /* 使用制表符和换行符作为分界符 */
+                        $s = strtok($str, " \n\t");
+
+                        while ($s !== false) {
+                            echo $s."<br />";
+                            $s = strtok(" \n\t");
+                        }
+                        echo $str; </xmp>
+                    结果：This
+                                is
+                                an
+                                example
+                                string
+                                This is	an example string
+                    <span class="notes">注意：这里是strtok($str ,$token)和strtok($str)套着用的</span>
+
+
+
+
+                    wordwrap — 打断字符串为指定数量的字串
+                    str_split — 将字符串转换为数组
+                </pre>
+            </div>
+        </div>
+        <div class="notes">
+            注意：
+        </div>
+    </a>
+
+    <a name="mao">
+        <div class="content">
+            <h4 data-mao="mao">title</h4>
+            <div>
+                <pre>
+                   content
+                </pre>
+            </div>
+        </div>
+        <div class="notes">notes</div>
+    </a>
+</div>
+<div class="content_right">
+</div>
+<include file="common/content_footer"/>

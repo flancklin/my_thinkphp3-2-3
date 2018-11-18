@@ -12,22 +12,18 @@ use Think\Controller;
  * @package Home\Controller
  */
 class IndexController extends Controller {
-
-const a= [33,434];
     public function index() {
         $this->display();
     }
-    public function sql(){
-        $this->display();
-    }
-    public function php(){
-        $this->display();
-    }
-    public function tp(){
-        $this->display();
-    }
+    public function t(){
+        $string = "This is\tan example\nstring";
+        /* 使用制表符和换行符作为分界符 */
+        $tok = strtok($string, " \n\t");
 
-    public function a(){
-        $this->ajaxReturn([I("param.")]);
+        while ($tok !== false) {
+            echo "Word=$tok<br />";
+            $tok = strtok(" \n\t");
+        }
+        echo $string;
     }
 }
