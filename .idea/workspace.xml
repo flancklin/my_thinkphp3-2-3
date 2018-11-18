@@ -3,33 +3,7 @@
   <component name="ChangeListManager">
     <list id="42d42a5a-fb1e-462b-8fea-440b659846e3" name="默认" comment="" />
     <list default="true" id="7ee8eab9-fd39-471a-894f-d374fbae0c1d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Reader/Excel2007.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Reader/Excel2007.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Reader/Excel5.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Reader/Excel5.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/Excel2007/Worksheet.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/Excel2007/Worksheet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Content.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Meta.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Meta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Settings.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Settings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Styles.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Styles.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Vendor/PHPMailer/class.phpmailer.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Vendor/PHPMailer/class.phpmailer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Vendor/PHPMailer/test/test_callback.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Vendor/PHPMailer/test/test_callback.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/Common/jquery-v2.0.0.min.js" afterPath="$PROJECT_DIR$/code/Public/Common/jquery-v2.0.0.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/Front/Item/index1/jquery.min.js" afterPath="$PROJECT_DIR$/code/Public/Front/Item/index1/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/lib/Swiper/3.4.2/js/swiper.jquery.js" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/lib/Swiper/3.4.2/js/swiper.jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/lib/Swiper/3.4.2/js/swiper.js" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/lib/Swiper/3.4.2/js/swiper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/lib/jquery/1.9.1/jquery.js" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/lib/jquery/1.9.1/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/lib/jquery/1.9.1/jquery.min.js" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/lib/jquery/1.9.1/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/lib/jselect-1.0.js" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/lib/jselect-1.0.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/css/H-ui.css" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/css/H-ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/js/H-ui.js" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/js/H-ui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/src/css/H-ui.css" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/src/css/H-ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/src/js/Bootstrap.datetimepicker.js" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/src/js/Bootstrap.datetimepicker.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/code/Application/Home/view/Index/html.html" afterPath="$PROJECT_DIR$/code/Application/Home/View/Index/html.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/code/Application/Home/view/Index/index.html" afterPath="$PROJECT_DIR$/code/Application/Home/View/Index/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/code/Application/Home/view/Index/sql.html" afterPath="$PROJECT_DIR$/code/Application/Home/View/Index/sql.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/code/Application/Home/view/Index/tp.html" afterPath="$PROJECT_DIR$/code/Application/Home/View/Index/tp.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/code/Application/Home/view/common/content_head.html" afterPath="$PROJECT_DIR$/code/Application/Home/View/common/content_head.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/code/Application/Home/view/common/style.html" afterPath="$PROJECT_DIR$/code/Application/Home/View/common/style.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/code/Application/Home/view/common/style_clear.html" afterPath="$PROJECT_DIR$/code/Application/Home/View/common/style_clear.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/env/git.sh" afterPath="$PROJECT_DIR$/env/git.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,11 +15,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/Application/Home/Controller/IndexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="598">
               <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="git.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/env/git.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -72,7 +56,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>非法数据对象</find>
       <find>非法数据对</find>
       <find>非法数据对象！</find>
       <find>_DATA_TYPE_INVALID_</find>
@@ -102,6 +85,7 @@
       <find>($dbTable</find>
       <find>pre</find>
       <find>class=&quot;div_li&quot;</find>
+      <find>HTML_CACHE_ON</find>
     </findStrings>
     <replaceStrings>
       <replace>{</replace>
@@ -113,6 +97,8 @@
       <dir>E:\php\wamp64\www\self\Application</dir>
       <dir>E:\php\wamp64\www\self\ThinkPHP</dir>
       <dir>E:\php\wamp64\www\self</dir>
+      <dir>E:\php\wamp64\www\self\code</dir>
+      <dir>E:\php\wamp64\www\self\ThinkPHP3.2.3</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -152,7 +138,6 @@
         <option value="$PROJECT_DIR$/code/Public/Activity/voter/need3/zp.css" />
         <option value="$PROJECT_DIR$/code/Application/Activity/View/Index/zp2.html" />
         <option value="$PROJECT_DIR$/code/Application/Activity/View/Index/zp3.html" />
-        <option value="$PROJECT_DIR$/env/git.sh" />
         <option value="$PROJECT_DIR$/code/Application/Logic/Logic/Logic.class.php" />
         <option value="$PROJECT_DIR$/code/Application/Logic/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/code/Application/Extend/Controller/ExcelController.class.php" />
@@ -172,6 +157,7 @@
         <option value="$PROJECT_DIR$/code/Application/Home/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/code/Application/Home/view/Index/test.html" />
         <option value="$PROJECT_DIR$/code/Application/Home/view/Index/design.html" />
+        <option value="$PROJECT_DIR$/env/git.sh" />
       </list>
     </option>
   </component>
@@ -230,113 +216,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
+              <option name="myItemId" value="env" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -509,12 +389,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173279000" />
+    <option name="totallyTimeSpent" value="173913000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -719,13 +600,6 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/git.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="63" lean-forward="false" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -938,6 +812,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
           <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/git.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
           <folding />
         </state>
       </provider>
