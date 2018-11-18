@@ -91,7 +91,7 @@ class PHPExcel_Writer_OpenDocument_Content extends PHPExcel_Writer_OpenDocument_
             $objWriter->writeAttribute('xmlns:rpt', 'http://openoffice.org/2005/report');
             $objWriter->writeAttribute('xmlns:of', 'urn:oasis:names:tc:opendocument:xmlns:of:1.2');
             $objWriter->writeAttribute('xmlns:xhtml', 'http://www.w3.org/1999/xhtml');
-            $objWriter->writeAttribute('xmlns:grddl', 'http://www.w3.org/2003/g/data-view#');
+            $objWriter->writeAttribute('xmlns:grddl', 'http://www.w3.org/2003/g/data-View#');
             $objWriter->writeAttribute('xmlns:tableooo', 'http://openoffice.org/2009/table');
             $objWriter->writeAttribute('xmlns:field', 'urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0');
             $objWriter->writeAttribute('xmlns:formx', 'urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0');

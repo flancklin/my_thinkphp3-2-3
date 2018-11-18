@@ -1031,12 +1031,12 @@ sup{top:-0.5em}sub{bottom:-0.25em}
 /*3.1.22 列表
 	Name:			style_ulolli
 	Example:
-<ul class="list-view">
+<ul class="list-View">
 	<li class="item">无序列表</li>
 	<li class="item">无序列表</li>
 	<li class="item">无序列表</li>
 </ul>
-<ol class="list-view">
+<ol class="list-View">
 	<li class="item">无序列表</li>
 	<li class="item">无序列表</li>
 	<li class="item">无序列表</li>

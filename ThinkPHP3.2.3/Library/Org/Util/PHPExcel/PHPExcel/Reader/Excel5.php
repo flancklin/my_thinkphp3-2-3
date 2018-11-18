@@ -4328,13 +4328,13 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
             $this->phpExcel->setActiveSheetIndex($this->phpExcel->getIndex($this->phpSheet));
         }
 
-        // bit: 11; mask: 0x0800; 0 = normal view, 1 = page break view
+        // bit: 11; mask: 0x0800; 0 = normal View, 1 = page break View
         $isPageBreakPreview = (bool) ((0x0800 & $options) >> 11);
 
         //FIXME: set $firstVisibleRow and $firstVisibleColumn
 
         if ($this->phpSheet->getSheetView()->getView() !== PHPExcel_Worksheet_SheetView::SHEETVIEW_PAGE_LAYOUT) {
-            //NOTE: this setting is inferior to page layout view(Excel2007-)
+            //NOTE: this setting is inferior to page layout View(Excel2007-)
             $view = $isPageBreakPreview ? PHPExcel_Worksheet_SheetView::SHEETVIEW_PAGE_BREAK_PREVIEW : PHPExcel_Worksheet_SheetView::SHEETVIEW_NORMAL;
             $this->phpSheet->getSheetView()->setView($view);
             if ($this->version === self::XLS_BIFF8) {
@@ -4398,7 +4398,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
         // offset: 0; size: 2; numerator of the view magnification
         $numerator = self::getInt2d($recordData, 0);
 
-        // offset: 2; size: 2; numerator of the view magnification
+        // offset: 2; size: 2; numerator of the View magnification
         $denumerator = self::getInt2d($recordData, 2);
 
         // set the zoom scale (in percent)

@@ -657,8 +657,8 @@ class PHPExcel_Reader_Excel2007 extends PHPExcel_Reader_Abstract implements PHPE
                                 if (isset($xmlSheet->sheetViews->sheetView['zoomScaleNormal'])) {
                                     $docSheet->getSheetView()->setZoomScaleNormal(intval($xmlSheet->sheetViews->sheetView['zoomScaleNormal']));
                                 }
-                                if (isset($xmlSheet->sheetViews->sheetView['view'])) {
-                                    $docSheet->getSheetView()->setView((string) $xmlSheet->sheetViews->sheetView['view']);
+                                if (isset($xmlSheet->sheetViews->sheetView['View'])) {
+                                    $docSheet->getSheetView()->setView((string) $xmlSheet->sheetViews->sheetView['View']);
                                 }
                                 if (isset($xmlSheet->sheetViews->sheetView['showGridLines'])) {
                                     $docSheet->setShowGridLines(self::boolean((string)$xmlSheet->sheetViews->sheetView['showGridLines']));

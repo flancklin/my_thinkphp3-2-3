@@ -76,7 +76,7 @@ class PHPExcel_Writer_OpenDocument_Styles extends PHPExcel_Writer_OpenDocument_W
             $objWriter->writeAttribute('xmlns:rpt', 'http://openoffice.org/2005/report');
             $objWriter->writeAttribute('xmlns:of', 'urn:oasis:names:tc:opendocument:xmlns:of:1.2');
             $objWriter->writeAttribute('xmlns:xhtml', 'http://www.w3.org/1999/xhtml');
-            $objWriter->writeAttribute('xmlns:grddl', 'http://www.w3.org/2003/g/data-view#');
+            $objWriter->writeAttribute('xmlns:grddl', 'http://www.w3.org/2003/g/data-View#');
             $objWriter->writeAttribute('xmlns:tableooo', 'http://openoffice.org/2009/table');
             $objWriter->writeAttribute('xmlns:css3t', 'http://www.w3.org/TR/css3-text/');
             $objWriter->writeAttribute('office:version', '1.2');

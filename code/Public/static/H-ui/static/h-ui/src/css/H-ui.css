@@ -1001,12 +1001,12 @@ sup{top:-0.5em}sub{bottom:-0.25em}
 /*3.1.22 列表
 	Name:			style_ulolli
 	Example:
-<ul class="list-view">
+<ul class="list-View">
 	<li class="item">无序列表</li>
 	<li class="item">无序列表</li>
 	<li class="item">无序列表</li>
 </ul>
-<ol class="list-view">
+<ol class="list-View">
 	<li class="item">无序列表</li>
 	<li class="item">无序列表</li>
 	<li class="item">无序列表</li>
@@ -1028,7 +1028,7 @@ ul.inline > li,ol.inline > li{display:inline-block;*display:inline;padding-right
 }
 
 /*排行榜*/
-/*<ol class="list-view list-top"><li class="item"><em class="num">1</em><a href="#">排行榜列表</a><span class="date">12</span></li></ol>*/
+/*<ol class="list-View list-top"><li class="item"><em class="num">1</em><a href="#">排行榜列表</a><span class="date">12</span></li></ol>*/
 .list-top > .item{padding-left: 30px}
 .list-top > .item .num{ position:absolute; top:11px; display:block; width:20px; height:20px; color:#fff; background-color:#5a98de; text-align:center}
 

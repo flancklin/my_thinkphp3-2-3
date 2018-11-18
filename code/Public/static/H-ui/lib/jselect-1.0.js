@@ -382,7 +382,7 @@
             if(i > 0) {
                 i-- 
                 cur = lis[i]
-                //判断元素是否in view
+                //判断元素是否in View
                 this.inView(cur, elem, 'up')
                 this.activate(cur) 
                 this.fireSelected(cur, elem.previousSibling.previousSibling) 
@@ -398,7 +398,7 @@
             if(i < lis.length - 1) {
                  i++ 
                  cur = lis[i]
-                 //判断元素是否in view
+                 //判断元素是否in View
                  this.inView(cur, elem, 'down') 
                  this.activate(cur)
                  this.fireSelected(cur, elem.previousSibling.previousSibling)

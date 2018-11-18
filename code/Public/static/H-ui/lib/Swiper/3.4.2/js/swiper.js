@@ -692,7 +692,7 @@
             var newHeight = 0;
             var i;
         
-            // Find slides currently in view
+            // Find slides currently in View
             if(s.params.slidesPerView !== 'auto' && s.params.slidesPerView > 1) {
                 for (i = 0; i < Math.ceil(s.params.slidesPerView); i++) {
                     var index = s.activeIndex + i;
@@ -703,7 +703,7 @@
                 activeSlides.push(s.slides.eq(s.activeIndex)[0]);
             }
         
-            // Find new height from heighest slide in view
+            // Find new height from heighest slide in View
             for (i = 0; i < activeSlides.length; i++) {
                 if (typeof activeSlides[i] !== 'undefined') {
                     var height = activeSlides[i].offsetHeight;

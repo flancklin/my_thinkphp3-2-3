@@ -3,20 +3,33 @@
   <component name="ChangeListManager">
     <list id="42d42a5a-fb1e-462b-8fea-440b659846e3" name="默认" comment="" />
     <list default="true" id="7ee8eab9-fd39-471a-894f-d374fbae0c1d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/Application/Home/view/Index/design.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/Application/Home/view/Index/html.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/Application/Home/view/Index/php.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/Application/Home/view/Index/sql.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/Application/Home/view/Index/test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/Application/Home/view/Index/tp.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/Application/Home/view/common/content_footer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/Application/Home/view/common/content_head.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/Application/Home/view/common/menu.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/Application/Home/view/common/style.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/Application/Home/view/common/style_clear.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Application/Home/Controller/IndexController.class.php" afterPath="$PROJECT_DIR$/code/Application/Home/Controller/IndexController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Application/Home/view/Index/index.html" afterPath="$PROJECT_DIR$/code/Application/Home/view/Index/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Reader/Excel2007.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Reader/Excel2007.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Reader/Excel5.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Reader/Excel5.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/Excel2007/Worksheet.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/Excel2007/Worksheet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Content.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Content.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Meta.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Meta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Settings.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Settings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Styles.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Org/Util/PHPExcel/PHPExcel/Writer/OpenDocument/Styles.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Vendor/PHPMailer/class.phpmailer.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Vendor/PHPMailer/class.phpmailer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Vendor/PHPMailer/test/test_callback.php" afterPath="$PROJECT_DIR$/ThinkPHP3.2.3/Library/Vendor/PHPMailer/test/test_callback.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/Common/jquery-v2.0.0.min.js" afterPath="$PROJECT_DIR$/code/Public/Common/jquery-v2.0.0.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/Front/Item/index1/jquery.min.js" afterPath="$PROJECT_DIR$/code/Public/Front/Item/index1/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/lib/Swiper/3.4.2/js/swiper.jquery.js" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/lib/Swiper/3.4.2/js/swiper.jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/lib/Swiper/3.4.2/js/swiper.js" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/lib/Swiper/3.4.2/js/swiper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/lib/jquery/1.9.1/jquery.js" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/lib/jquery/1.9.1/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/lib/jquery/1.9.1/jquery.min.js" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/lib/jquery/1.9.1/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/lib/jselect-1.0.js" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/lib/jselect-1.0.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/css/H-ui.css" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/css/H-ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/js/H-ui.js" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/js/H-ui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/src/css/H-ui.css" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/src/css/H-ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/src/js/Bootstrap.datetimepicker.js" afterPath="$PROJECT_DIR$/code/Public/static/H-ui/static/h-ui/src/js/Bootstrap.datetimepicker.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/code/Application/Home/view/Index/html.html" afterPath="$PROJECT_DIR$/code/Application/Home/View/Index/html.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/code/Application/Home/view/Index/index.html" afterPath="$PROJECT_DIR$/code/Application/Home/View/Index/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/code/Application/Home/view/Index/sql.html" afterPath="$PROJECT_DIR$/code/Application/Home/View/Index/sql.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/code/Application/Home/view/Index/tp.html" afterPath="$PROJECT_DIR$/code/Application/Home/View/Index/tp.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/code/Application/Home/view/common/content_head.html" afterPath="$PROJECT_DIR$/code/Application/Home/View/common/content_head.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/code/Application/Home/view/common/style.html" afterPath="$PROJECT_DIR$/code/Application/Home/View/common/style.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/code/Application/Home/view/common/style_clear.html" afterPath="$PROJECT_DIR$/code/Application/Home/View/common/style_clear.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +41,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/Application/Home/Controller/IndexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="598">
@@ -38,20 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/Application/Home/view/Index/test.html">
+      <file leaf-file-name="design.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/Application/Home/View/Index/design.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="56" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="design.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/code/Application/Home/view/Index/design.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
+            <state relative-caret-position="546">
               <caret line="75" column="58" lean-forward="false" selection-start-line="75" selection-start-column="58" selection-end-line="75" selection-end-column="58" />
               <folding />
             </state>
@@ -311,11 +314,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Index" />
+              <option name="myItemId" value="View" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -338,212 +337,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Front" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Weui" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Front" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Item" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Front" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hui" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Front" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Front" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Front" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bootstrap" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="self" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Front" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -716,16 +509,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172365000" />
+    <option name="totallyTimeSpent" value="173279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63492066" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20625" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -745,7 +538,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.121875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63492066" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20625" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1002,7 +794,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/Application/Home/view/common/style_clear.html">
+    <entry file="file://$PROJECT_DIR$/code/Application/Home/View/common/style_clear.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
@@ -1010,7 +802,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/Application/Home/view/common/style.html">
+    <entry file="file://$PROJECT_DIR$/code/Application/Home/View/common/style.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1018,7 +810,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/Application/Home/view/common/content_footer.html">
+    <entry file="file://$PROJECT_DIR$/code/Application/Home/View/common/content_footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
           <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
@@ -1026,7 +818,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/Application/Home/view/common/content_head.html">
+    <entry file="file://$PROJECT_DIR$/code/Application/Home/View/common/content_head.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
@@ -1034,7 +826,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/Application/Home/view/Index/index.html">
+    <entry file="file://$PROJECT_DIR$/code/Application/Home/View/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="685">
           <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
@@ -1042,7 +834,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/Application/Home/view/Index/html.html">
+    <entry file="file://$PROJECT_DIR$/code/Application/Home/View/Index/html.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="763">
           <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
@@ -1050,7 +842,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/Application/Home/view/Index/sql.html">
+    <entry file="file://$PROJECT_DIR$/code/Application/Home/View/Index/sql.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
@@ -1058,7 +850,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/Application/Home/view/Index/tp.html">
+    <entry file="file://$PROJECT_DIR$/code/Application/Home/View/Index/tp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
           <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
@@ -1066,7 +858,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/Application/Home/view/common/menu.html">
+    <entry file="file://$PROJECT_DIR$/code/Application/Home/View/common/menu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
@@ -1074,7 +866,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/Application/Home/view/Index/php.html">
+    <entry file="file://$PROJECT_DIR$/code/Application/Home/View/Index/php.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="16" column="22" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="39" />
@@ -1126,14 +918,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/Application/Home/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/Application/Home/view/Index/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -1142,10 +926,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/Application/Home/view/Index/design.html">
+    <entry file="file://$PROJECT_DIR$/code/Application/Home/View/Index/design.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
+        <state relative-caret-position="546">
           <caret line="75" column="58" lean-forward="false" selection-start-line="75" selection-start-column="58" selection-end-line="75" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/Application/Home/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>

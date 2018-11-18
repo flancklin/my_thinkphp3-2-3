@@ -60,7 +60,7 @@ class PHPExcel_Writer_OpenDocument_Settings extends PHPExcel_Writer_OpenDocument
 
             $objWriter->startElement('office:settings');
                 $objWriter->startElement('config:config-item-set');
-                    $objWriter->writeAttribute('config:name', 'ooo:view-settings');
+                    $objWriter->writeAttribute('config:name', 'ooo:View-settings');
                     $objWriter->startElement('config:config-item-map-indexed');
                         $objWriter->writeAttribute('config:name', 'Views');
                     $objWriter->endElement();

@@ -7463,7 +7463,7 @@ function($) {
 		if ('minView' in options) {
 			this.minView = options.minView;
 		} else if ('minView' in this.element.data()) {
-			this.minView = this.element.data('min-view');
+			this.minView = this.element.data('min-View');
 		}
 		this.minView = DPGlobal.convertViewMode(this.minView);
 
@@ -7471,7 +7471,7 @@ function($) {
 		if ('maxView' in options) {
 			this.maxView = options.maxView;
 		} else if ('maxView' in this.element.data()) {
-			this.maxView = this.element.data('max-view');
+			this.maxView = this.element.data('max-View');
 		}
 		this.maxView = DPGlobal.convertViewMode(this.maxView);
 
@@ -7479,7 +7479,7 @@ function($) {
 		if ('wheelViewModeNavigation' in options) {
 			this.wheelViewModeNavigation = options.wheelViewModeNavigation;
 		} else if ('wheelViewModeNavigation' in this.element.data()) {
-			this.wheelViewModeNavigation = this.element.data('view-mode-wheel-navigation');
+			this.wheelViewModeNavigation = this.element.data('View-mode-wheel-navigation');
 		}
 
 		this.wheelViewModeNavigationInverseDirection = false;
@@ -7487,21 +7487,21 @@ function($) {
 		if ('wheelViewModeNavigationInverseDirection' in options) {
 			this.wheelViewModeNavigationInverseDirection = options.wheelViewModeNavigationInverseDirection;
 		} else if ('wheelViewModeNavigationInverseDirection' in this.element.data()) {
-			this.wheelViewModeNavigationInverseDirection = this.element.data('view-mode-wheel-navigation-inverse-dir');
+			this.wheelViewModeNavigationInverseDirection = this.element.data('View-mode-wheel-navigation-inverse-dir');
 		}
 
 		this.wheelViewModeNavigationDelay = 100;
 		if ('wheelViewModeNavigationDelay' in options) {
 			this.wheelViewModeNavigationDelay = options.wheelViewModeNavigationDelay;
 		} else if ('wheelViewModeNavigationDelay' in this.element.data()) {
-			this.wheelViewModeNavigationDelay = this.element.data('view-mode-wheel-navigation-delay');
+			this.wheelViewModeNavigationDelay = this.element.data('View-mode-wheel-navigation-delay');
 		}
 
 		this.startViewMode = 2;
 		if ('startView' in options) {
 			this.startViewMode = options.startView;
 		} else if ('startView' in this.element.data()) {
-			this.startViewMode = this.element.data('start-view');
+			this.startViewMode = this.element.data('start-View');
 		}
 		this.startViewMode = DPGlobal.convertViewMode(this.startViewMode);
 		this.viewMode = this.startViewMode;
@@ -7510,7 +7510,7 @@ function($) {
 		if ('viewSelect' in options) {
 			this.viewSelect = options.viewSelect;
 		} else if ('viewSelect' in this.element.data()) {
-			this.viewSelect = this.element.data('view-select');
+			this.viewSelect = this.element.data('View-select');
 		}
 		this.viewSelect = DPGlobal.convertViewMode(this.viewSelect);
 

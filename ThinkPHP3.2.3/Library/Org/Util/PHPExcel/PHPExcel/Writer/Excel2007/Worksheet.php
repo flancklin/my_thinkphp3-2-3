@@ -231,7 +231,7 @@ class PHPExcel_Writer_Excel2007_Worksheet extends PHPExcel_Writer_Excel2007_Writ
 
         // View Layout Type
         if ($pSheet->getSheetView()->getView() !== PHPExcel_Worksheet_SheetView::SHEETVIEW_NORMAL) {
-            $objWriter->writeAttribute('view', $pSheet->getSheetView()->getView());
+            $objWriter->writeAttribute('View', $pSheet->getSheetView()->getView());
         }
 
         // Gridlines
