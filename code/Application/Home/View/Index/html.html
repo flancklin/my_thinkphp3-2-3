@@ -49,6 +49,27 @@
         </div>
         <div class="notes"></div>
     </a>
+    <a name="kuohao_xiegang">
+        <div class="content">
+            <h4 data-mao="kuohao_xiegang">js中的{ //在php中不能解析问题</h4>
+            <div>
+                <xmp>
+                    在html中写
+                    { //通过页面的物理路径访问没有错
+                    }
+                    但是在thinkphp3.2中通过控制器调用。{ //没法解析出来，导致页面展示会报错
+                    建议写法改为
+                    {
+                    //注释
+                    代码
+                    }
+                </xmp>
+            </div>
+        </div>
+        <div class="notes">1、当前仅在tp3.2中遇到。其他php有待考证,初步怀疑是tp模板替换的bug。<br />
+            2、此处的{ //中间的空格是人为加到。不然解析不出来，看不到</div>
+    </a>
+
     <a name="mao">
         <div class="content">
             <h4 data-mao="mao">1</h4>
