@@ -111,7 +111,7 @@
             <h4 data-mao="deal_array_element">sha</h4>
             <div>
                 <pre>
-                    /**
+                    /**对索引数组的简单处理
                     局限性：
                      * 1、$array 必须是索引数组。因为array_search返回key，array_splice根据位找到并删除
                      * 2、$array 中的元素坚决不能含有true('true'可以)。因为array_search查询任意非false值时，都能被匹配上。比如查找3的同时也会把true找出来(‘true’不会)
@@ -122,7 +122,7 @@
                      * @param bool $unique
                      * @return array|bool
                      */
-                   function dealArrElement($array, $delElement = '', $unique = false){
+                   function dealIndexArrayElement($array, $delElement = '', $unique = false){
                         if(!is_array($array)) return false;
                         if($delElement === true) return false;
 
@@ -131,7 +131,7 @@
                         $elementKey = array_search($delElement, $array);
                         if ($elementKey !== false){
                             array_splice($array, $elementKey, 1);
-                            return dealArrElement($array, $delElement);
+                            return dealIndexArrayElement($array, $delElement);
                         }
                         return $array;
                     }
