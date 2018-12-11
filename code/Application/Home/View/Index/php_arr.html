@@ -116,6 +116,7 @@
                      * 1、$array 必须是索引数组。因为array_search返回key，array_splice根据位找到并删除
                      * 2、$array 中的元素坚决不能含有true('true'可以)。因为array_search查询任意非false值时，都能被匹配上。比如查找3的同时也会把true找出来(‘true’不会)
                      * 3、$delElement 坚决不能是true('true'可以)。因为array_search查询true能匹配上所有的元素(除了false，连'false'都会被匹配上)
+                     * 最好的方法就是$array中不能有true和false以及‘true’和‘false’.0好像和false和true都能array_search匹配上，待进一步验证
                      * @param $array
                      * @param string $delElement
                      * @param bool $unique
