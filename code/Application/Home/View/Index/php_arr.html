@@ -1,0 +1,156 @@
+
+<include file="common/content_head"/>
+<div class="content_left">
+    <a name="special_arr_skill">
+        <div class="content">
+            <h4 data-mao="special_arr_skill">特殊关注数组的某些特性</h4>
+            <div>
+                <pre>
+                    1、在数组中true和‘true’是相同的，false和‘false’是不同的。数组3和‘3’是相同的
+                        比如函数：array_unique去重,array_search找元素位置
+                    2、关于数组元素位置的描述有三个：键(key)、位(offset)、指针
+                        array_search  查找元素，返回的是键(key)
+                        array_splice  移除元素，移除是根据位(offset)进行的
+                </pre>
+            </div>
+        </div>
+        <div class="notes">notes</div>
+    </a>
+    <a name="arr_del_one">
+        <div class="content">
+            <h4 data-mao="arr_del_one">删除数组中某个元素</h4>
+            <div>
+                <pre>
+                     $a = [
+                        0 => '01',
+                        1 => '10',
+                        2 => '20',
+                        3 => '20',
+                        4 => '404',
+                        6 => '0',
+                        '66',
+                        8 => 0,
+                        '88',
+                        '99'
+                    ];
+                    $k0=array_search(0, $a);//<span class="font_yellow">array_search 第三个参数strict=true表示区别参数类型。array_search(0, $a，true)=8</span>
+                    $k0s=array_search('0', $a);//<span class="font_yellow">查询的是key值而不是offset，返回的key=6而不是offset=5</span>
+                    echo "原值：";
+                    var_dump($a);
+                    var_dump($k0);
+                    var_dump($k0s);
+                    echo "去重：";
+                    $a = array_unique($a);//<span class="font_yellow">array_unique去重，去掉的是后面的3=>'20'，保留的前面的2=>'20'。而且没有重置key值</span>
+                    var_dump($a);
+                    echo "删0：";
+                    $delRes = array_splice($a, $k0, 1);
+                    var_dump($a);
+                    var_dump($delRes);
+                    <hr />
+                    原值：
+                        E:\php\wamp64\www\self\code\Application\Home\Controller\IndexController.class.php:32:
+                        array (size=10)
+                          0 => string '01' (length=2)
+                          1 => string '10' (length=2)
+                          2 => string '20' (length=2)
+                          3 => string '20' (length=2)
+                          4 => string '404' (length=3)
+                          6 => string '0' (length=1)
+                          7 => string '66' (length=2)
+                          8 => int 0
+                          9 => string '88' (length=2)
+                          10 => string '99' (length=2)
+                        E:\php\wamp64\www\self\code\Application\Home\Controller\IndexController.class.php:33:int 6
+                        E:\php\wamp64\www\self\code\Application\Home\Controller\IndexController.class.php:34:int 6
+                        去重：
+                        E:\php\wamp64\www\self\code\Application\Home\Controller\IndexController.class.php:37:
+                        array (size=8)
+                          0 => string '01' (length=2)
+                          1 => string '10' (length=2)
+                          2 => string '20' (length=2)
+                          4 => string '404' (length=3)
+                          6 => string '0' (length=1)
+                          7 => string '66' (length=2)
+                          9 => string '88' (length=2)
+                          10 => string '99' (length=2)
+                        删0：
+                        E:\php\wamp64\www\self\code\Application\Home\Controller\IndexController.class.php:40:
+                        array (size=7)
+                          0 => string '01' (length=2)
+                          1 => string '10' (length=2)
+                          2 => string '20' (length=2)
+                          3 => string '404' (length=3)
+                          4 => string '0' (length=1)
+                          5 => string '66' (length=2)
+                          6 => string '99' (length=2)
+                        E:\php\wamp64\www\self\code\Application\Home\Controller\IndexController.class.php:41:
+                        array (size=1)
+                          0 => string '88' (length=2)
+                </pre>
+            </div>
+        </div>
+        <div class="notes">1、array_unique(去重)-2、array_value(统一key和offset)-3、array_search(定位)-4、array_splice(删除)</div>
+    </a>
+    <a name="insert_element">
+        <div class="content">
+            <h4 data-mao="insert_element">在数组中指定位置插入元素(插入值+插入键值对)</h4>
+            <div>
+                <pre>
+                    <h2>指定位置插入某个值</h2>
+                     $ary = array('a'=>1,'b'=>2,'c'=>3,'d'=>4,'e'=>5,'f'=>6);
+                     $t = array_splice( $ary, 1,0,7 );
+                     var_dump($ary);//Array ( [a] => 1 [0] => 7 [b] => 2 [c] => 3 [d] => 4 [e] => 5 [f] => 6 )
+                     print_r($t);//Array ( )
+                </pre>
+            </div>
+        </div>
+        <div class="notes">notes</div>
+    </a>
+    <a name="deal_array_element">
+        <div class="content">
+            <h4 data-mao="deal_array_element">sha</h4>
+            <div>
+                <pre>
+                    /**
+                    局限性：
+                     * 1、$array 必须是索引数组。因为array_search返回key，array_splice根据位找到并删除
+                     * 2、$array 中的元素坚决不能含有true('true'可以)。因为array_search查询任意非false值时，都能被匹配上。比如查找3的同时也会把true找出来(‘true’不会)
+                     * 3、$delElement 坚决不能是true('true'可以)。因为array_search查询true能匹配上所有的元素(除了false，连'false'都会被匹配上)
+                     * @param $array
+                     * @param string $delElement
+                     * @param bool $unique
+                     * @return array|bool
+                     */
+                   function dealArrElement($array, $delElement = '', $unique = false){
+                        if(!is_array($array)) return false;
+                        if($delElement === true) return false;
+
+                        $unique === true && $array = array_unique($array);
+
+                        $elementKey = array_search($delElement, $array);
+                        if ($elementKey !== false){
+                            array_splice($array, $elementKey, 1);
+                            return dealArrElement($array, $delElement);
+                        }
+                        return $array;
+                    }
+                </pre>
+            </div>
+        </div>
+        <div class="notes">notes</div>
+    </a>
+    <a name="mao">
+        <div class="content">
+            <h4 data-mao="mao">title</h4>
+            <div>
+                <pre>
+                   content
+                </pre>
+            </div>
+        </div>
+        <div class="notes">notes</div>
+    </a>
+</div>
+<div class="content_right">
+</div>
+<include file="common/content_footer"/>
