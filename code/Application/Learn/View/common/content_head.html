@@ -1,0 +1,69 @@
+<!DOCTYPE html><!--声明doc的type是 HTML。【本声明必须在文档的第一行】【没有结束标签】【大小写不敏感】-->
+<html lang="zh"><!--HTML 的 lang 属性可用于网页或部分网页的语言。这对搜索引擎和浏览器是有帮助的。-->
+<head>
+    <!--编码格式，告诉给浏览器用什么方式来读这页代码。否者乱码-->
+    <meta charset="UTF-8">
+    <title>www</title>
+    <include file="common/style"/>
+    <!--<include file="Common@Common/header_team_buy_dis" />-->
+    <style>
+        *{
+            font-family:"微软雅黑";
+        }
+        a,
+        button,
+        input,
+        textarea,
+        select {
+            background:none;
+            /* 去除android a/button/input标签被点击时产生的边框 & 去除ios a标签被点击时产生的半透明灰色背景 */
+            -webkit-tap-highlight-color:rgba(255,0,0,0);
+            outline: none;
+            -webkit-appearance:none; /* webkit去除表单元素的默认样式 */
+            text-decoration:none;
+        }
+        body{
+            margin: 0;
+        }
+        .content_left {
+            width: 85%;
+            height: 100%;
+            float: left
+        }
+        .content_left>a{
+            display: block;
+            background: #d6f3ff;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .content_left>a .content{
+            padding-left: 50px;
+        }
+        .content_left>a .notes{
+            color: red;
+            padding-left: 25px;
+        }
+        .content_left>a:nth-child(2n)
+        {
+            background: #efffff;
+        }
+        .content_right {
+            position: fixed;
+            left: 85%;
+            width: 15%;
+            height: 100%;
+            float: left;
+            background-color: #eff8ff;
+            padding-top: 6%;
+            padding-left: 5px;
+        }
+        .content_right a{
+            margin-top: 10px;
+            display: block;
+        }
+        .font_yellow{
+            color: #a7a850;
+        }
+    </style>
+</head>
+<body class="bg">

@@ -1,0 +1,55 @@
+<include file="common/content_head"/>
+<div class="content_left">
+    <a name="bc_function">
+        <div class="content">
+            <h4 data-mao="bc_function">bc函数易错常识</h4>
+            <div>
+                <pre>
+                    if(bcadd(0,0,2)){
+                        echo "yes";
+                    }else{
+                        echo "no";
+                    }
+                    输出结果会是no；
+                    因为bc函数是以字符串的形式运算的。
+                    bcadd(0,0,2)，0+0='0.00'，
+                    从数字角度可以等于false，但是从字符角度，它是有值的
+                </pre>
+            </div>
+        </div>
+        <div class="notes">
+            注意：bc函数是计算后的值是string，而不是int
+        </div>
+    </a>
+    <a href="const">
+        <div class="content">
+            <h4 data-mao="const">const的值可为数组</h4>
+            <div>
+                <pre>
+                    在php5.6之前中定义const=[]是错误的。
+                    在PHP5.6之后中定义const=[]是对的
+                    MyClass {
+                        const B='23';
+                        const A= [33,434];
+                    }
+                </pre>
+            </div>
+        </div>
+        <div class="notes"></div>
+    </a>
+
+    <a name="mao">
+        <div class="content">
+            <h4 data-mao="mao">title</h4>
+            <div>
+                <pre>
+                   content
+                </pre>
+            </div>
+        </div>
+        <div class="notes">notes</div>
+    </a>
+</div>
+<div class="content_right">
+</div>
+<include file="common/content_footer"/>
