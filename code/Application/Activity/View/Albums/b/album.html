@@ -1,0 +1,211 @@
+<html>
+<head>
+    <title>相册集</title>
+    <link rel="stylesheet" type="text/css" href="./album.css"/>
+</head>
+<body>
+<div>
+    <a href="">我是底层图</a>
+</div>
+
+<div id="showAlbum">
+</div>
+<script type="text/j-template" id="tmp_album">
+    <div class="album">
+        <div class="header">
+            <div class="title fl">我的图库</div>
+            <div class="shut fr">X</div>
+        </div>
+        <div class="action">
+            <div class="operator fl">
+                <a data-go_mode="select" href="javascript:void(0);" class="btn switch hide">编辑模式</a>
+                <a data-go_mode="edit" href="javascript:void(0);" class="btn switch">选择模式</a>
+                <a href="javascript:void(0);" class="btn upload">上传图片</a>
+            </div>
+            <div class="search fr">
+                <input type="text" name="name" value="">
+                <a href="javascript:void(0);" class="btn">检索</a>
+            </div>
+        </div>
+        <div class="docker">
+            <div class="folder">
+                <div class="item parent_1 self_1" data-id="1" data-parent="0">
+                    <div class="name"><i></i><em>文件夹1</em>(2)</div>
+                    <b></b>
+                    <s></s>
+                </div>
+                <div class="item sub sub_1 self_2" data-id="2" data-parent="1">
+                    <div class="name"><i></i><em>文件夹2</em>(2)</div>
+                    <b></b>
+                    <s></s>
+                </div>
+                <div class="item parent_3 self_3" data-id="3" data-parent="0">
+                    <div class="name"><i></i><em>文件夹3</em>(2)</div>
+                    <b></b>
+                    <s></s>
+                </div>
+                <div class="item sub sub_3 self_4" data-id="4" data-parent="3">
+                    <div class="name"><i></i><em>文件夹4</em>(2)</div>
+                    <b></b>
+                    <s></s>
+                </div>
+            </div>
+            <div class="images">
+				<div class="list">
+					<div class="item self_1" data-id="1">
+						<img src="http://img-cdn.7typ.cn/FmTkr3KJom_Q7CLGpMIJ2ggR2ZOG">
+						<div class="name"> 1552981227 </div>
+						<b></b>
+						<s></s>
+					</div>
+					<div class="item self_2" data-id="2">
+						<img src="http://img-cdn.7typ.cn/FmTkr3KJom_Q7CLGpMIJ2ggR2ZOG">
+						<div class="name"> 1552981227 </div>
+						<b></b>
+						<s></s>
+					</div>
+					<div class="item self_3" data-id="3">
+						<img src="http://img-cdn.7typ.cn/FmTkr3KJom_Q7CLGpMIJ2ggR2ZOG">
+						<div class="name"> 1552981227 </div>
+						<b></b>
+						<s></s>
+					</div>
+					<div class="item self_4" data-id="4">
+						<img src="http://img-cdn.7typ.cn/FmTkr3KJom_Q7CLGpMIJ2ggR2ZOG">
+						<div class="name"> 1552981227 </div>
+						<b></b>
+						<s></s>
+					</div>
+					<div class="item self_5" data-id="5">
+						<img src="http://img-cdn.7typ.cn/FmTkr3KJom_Q7CLGpMIJ2ggR2ZOG">
+						<div class="name"> 1552981227 </div>
+						<b></b>
+						<s></s>
+					</div>
+					<div class="item self_6" data-id="6">
+						<img src="http://img-cdn.7typ.cn/FmTkr3KJom_Q7CLGpMIJ2ggR2ZOG">
+						<div class="name"> 1552981227 </div>
+						<b></b>
+						<s></s>
+					</div>
+				</div>
+				<div class="page">
+				</div>
+                
+            </div>
+        </div>
+        <div class="footer">
+		
+			<div class="submit">
+			<a class="btn" href="javascript:void(0);">确定</a>
+			</div>
+			<div class="s_show">			
+				<div class="item self_6" data-id="6"><span class="del">X</span><img src="http://img-cdn.7typ.cn/FmTkr3KJom_Q7CLGpMIJ2ggR2ZOG"></div>
+				<div class="item self_6" data-id="6"><img src="http://img-cdn.7typ.cn/FmTkr3KJom_Q7CLGpMIJ2ggR2ZOG"></div>
+			</div>
+		</div>
+    </div>
+</script>
+
+<script src="https://cdn.7typ.cn/Public/wx/js/jquery1.9.1.min.js?7"></script>
+<script type="text/javascript" src="./album.js"></script>
+<script>
+
+    var T = $("#showAlbum"),
+        O = ALBUM;
+	O.main_tmp = T;
+    T.html($("#tmp_album").html());
+
+$(".album .docker").css("height", window.document.body.offsetHeight*70/100-80);
+$(".album .folder").css("height", window.document.body.offsetHeight*70/100-80);
+
+$(".album .images .list").css("height", window.document.body.offsetHeight*70/100-80-30);
+    //切换编辑与选择模式
+    T.find(".action .switch").on("click", function () {
+        O.mode = $(this).data("go_mode");
+        T.find(".action").toggleClass("edit");
+        T.find(".docker").toggleClass("edit");
+        $(this).toggleClass("hide");
+        $(this).siblings().toggleClass("hide");
+		T.find(".selected").removeClass("selected");
+    })
+    //点击文件夹
+    T.find(".folder .item").on("click", function () {
+		ALBUM.now_obj = 'folder';
+		var id = $(this).data("id"),
+			name = $(this).find("em").html();
+		if(!id) return false;
+		switch(O.mode){
+				case "select"://选择模式下只能单选
+					if(ALBUM[O.mode].folder_id == id) return false;
+					ALBUM[O.mode].folder_id = id;
+					T.find(".folder .selected").removeClass("selected");
+					$(this).toggleClass("selected");
+				break;
+				case "edit"://支持多选
+					if($(this).hasClass("selected")){//取消
+						ALBUM.checkEsist(id, true);
+						$(this).removeClass("selected");
+					}else{//选择
+						(ALBUM[O.mode].folder.arr).push({id:id,name:name});
+						$(this).addClass("selected");						
+					}
+					ALBUM.freshFooter();
+				break;
+				default:
+		}        
+    });
+    T.find(".images .item").on("click", function () {
+		ALBUM.now_obj = 'images';
+        var id = $(this).data("id"),
+			url = $(this).find("img").attr("src");
+			name = $(this).find(".name").html();
+		if(!id) return false;
+		var hasSelected = $(this).hasClass("selected");
+		var delImg = false,
+			addImg = false;
+		if(hasSelected){
+			//取消
+			delImg = ALBUM.checkEsist(id,true);
+		}else{
+			switch(O.mode){
+				case "select"://选择模式
+					if(ALBUM.select.allow > 0){
+						//有限选择图片
+						if((ALBUM.select.images).length >= ALBUM.select.allow){
+							//到达可选上限，删除最初选的
+							delImg = (ALBUM.select.images).shift();
+						}
+					}
+					if(!ALBUM.checkEsist(id)){//数据集中没有才加，有就算了
+						addImg = {id:id,name:name,url:url};
+						(ALBUM.select.images).push(addImg);
+					}
+				break;
+				case "edit"://编辑模式
+					addImg = {id:id,name:name,url:url};
+					ALBUM.edit.images.arr.push(addImg);
+				break;
+				default:
+			}
+		}		
+		if(delImg){
+			T.find(".images .self_"+delImg['id']).removeClass("selected");
+		}
+		if(addImg){
+			T.find(".images .self_"+addImg['id']).addClass("selected");
+		}
+		ALBUM.freshFooter();
+    })
+	function albumDelShowImg(obj){
+		var id= $(obj).parent().data("id");
+		var delImg = ALBUM.checkEsist(id,true);		
+		if(delImg){
+			T.find(".images .self_"+delImg['id']).removeClass("selected");
+			ALBUM.freshFooter();
+		}
+	}
+
+</script>
+</body>
+</html>
