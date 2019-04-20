@@ -1,0 +1,219 @@
+<html>
+<head>
+    <title>相册集</title>
+	<style type="text/css">
+		.web-context-menu {
+			margin:0;
+			padding:0;
+			display:none;
+			font-size:14px;
+			width:180px;
+			position: fixed;
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+			background:#fff;
+			z-index: 1200;
+		}
+		.web-context-menu * {margin:0;padding:0;font-style:normal;}
+		.web-context-menu-items { }
+		.web-context-menu-items .menu-item-line {
+			border-bottom:1px solid #efefef;width:93.5%;margin:0 auto;
+		}
+		.web-context-menu-items .menu-item-line:last-child {
+			display:none;
+		}
+		.web-context-menu-items .web-context-menu-item {
+			position:relative;
+		}
+		.web-context-menu-items .web-context-menu-item:last-child {
+			border:0;
+		}
+		.web-context-menu-items .web-context-menu-item .menu-item-name {
+			display:block;background:;
+			cursor:pointer;padding:7px 10px;
+		}
+		.web-context-menu-items .web-context-menu-item:hover .menu-item-name {
+			background:rgba(0,0,0,.01);
+		}
+		.web-context-menu-items .web-context-menu-item > .web-context-menu-items {
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+			background:#fff;
+		}
+		.web-context-menu-items .web-context-menu-item:hover > .web-context-menu-items {
+			display:block;
+		}
+		.web-context-menu-items .web-context-menu-item .menu-item-name > i {
+			display:inline-block;
+			transform:rotate(90deg);
+			float:right;
+			margin-right:5px;
+			color:#aaa;
+		}
+		.web-context-menu-items .web-context-menu-item > .web-context-menu-items {
+			position:absolute;right:-180px;top:0;
+			width:180px;display:none;
+		}
+	</style>
+    <link rel="stylesheet" type="text/css" href="./album.css"/>
+	<script src="album2.js"></script>
+</head>
+<body>
+<div id="aaass" class="aaaa" style="height: 120px;width: 100%;background-color: red">
+    <a href="">我是底层图</a>
+</div>
+
+<div id="showAlbum">
+</div>
+<script type="text/j-template" id="tmp_album">
+    <div class="album">
+        <div class="header">
+            <div class="title fl">我的图库</div>
+            <div class="shut fr">X</div>
+        </div>
+        <div class="action">
+            <div class="operator fl">
+                <a data-go_mode="select" href="javascript:void(0);" class="btn switch hide">编辑模式</a>
+                <a data-go_mode="edit" href="javascript:void(0);" class="btn switch">选择模式</a>
+                <a href="javascript:void(0);" class="btn upload">上传图片</a>
+            </div>
+            <div class="search fr">
+                <input type="text" name="name" value="">
+                <a href="javascript:void(0);" class="btn">检索</a>
+            </div>
+        </div>
+        <div class="docker">
+            <div class="folder"></div>
+            <div class="images">
+				<div class="list"></div>
+				<div class="page"></div>
+            </div>
+        </div>
+        <div class="footer">
+			<div class="submit">
+			<a class="btn" href="javascript:void(0);">确定</a>
+			</div>
+			<div class="s_show">			
+				<div class="item self_6" data-id="6"><span class="del">X</span><img src="http://img-cdn.7typ.cn/FmTkr3KJom_Q7CLGpMIJ2ggR2ZOG"></div>
+				<div class="item self_6" data-id="6"><img src="http://img-cdn.7typ.cn/FmTkr3KJom_Q7CLGpMIJ2ggR2ZOG"></div>
+			</div>
+		</div>
+    </div>
+</script>
+<!--<script src="https://cdn.7typ.cn/Public/wx/js/jquery1.9.1.min.js?7"></script>-->
+<script type="text/javascript" src="http://plat.yimaidaibang.com/Public/lib/jquery/1.9.1/jquery.min.js"></script>
+
+
+
+
+<!--<script type="text/javascript" src="./album.js"></script>-->
+<script type="text/javascript" src="./key_right.js"></script>
+<script type="text/javascript" src="./album2.js"></script>
+<script>
+
+$(function () {
+//    window.contextMenu(document.querySelector("#aaass"), [{
+//        name:"添加",
+//        id:"menu1",
+//        callback: function() {
+//            alert("添加");
+//        }
+//    }]);
+//   var ib= initAlbum("#showAlbum");
+})
+//    var T = $("#showAlbum"),
+//        O = ALBUM;
+//	O.main_tmp = T;
+//    T.html($("#tmp_album").html());
+//
+//$(".album .docker").css("height", window.document.body.offsetHeight*70/100-80);
+//$(".album .folder").css("height", window.document.body.offsetHeight*70/100-80);
+//
+//$(".album .images .list").css("height", window.document.body.offsetHeight*70/100-80-30);
+//    //切换编辑与选择模式
+//    T.find(".action .switch").on("click", function () {
+//        O.mode = $(this).data("go_mode");
+//        T.find(".action").toggleClass("edit");
+//        T.find(".docker").toggleClass("edit");
+//        $(this).toggleClass("hide");
+//        $(this).siblings().toggleClass("hide");
+//		T.find(".selected").removeClass("selected");
+//    })
+//    //点击文件夹
+//    T.find(".folder .item").on("click", function () {
+//		ALBUM.now_obj = 'folder';
+//		var id = $(this).data("id"),
+//			name = $(this).find("em").html();
+//		if(!id) return false;
+//		switch(O.mode){
+//				case "select"://选择模式下只能单选
+//					if(ALBUM[O.mode].folder_id == id) return false;
+//					ALBUM[O.mode].folder_id = id;
+//					T.find(".folder .selected").removeClass("selected");
+//					$(this).toggleClass("selected");
+//				break;
+//				case "edit"://支持多选
+//					if($(this).hasClass("selected")){//取消
+//						ALBUM.checkEsist(id, true);
+//						$(this).removeClass("selected");
+//					}else{//选择
+//						(ALBUM[O.mode].folder.arr).push({id:id,name:name});
+//						$(this).addClass("selected");
+//					}
+//					ALBUM.freshFooter();
+//				break;
+//				default:
+//		}
+//    });
+//    T.find(".images .item").on("click", function () {
+//		ALBUM.now_obj = 'images';
+//        var id = $(this).data("id"),
+//			url = $(this).find("img").attr("src");
+//			name = $(this).find(".name").html();
+//		if(!id) return false;
+//		var hasSelected = $(this).hasClass("selected");
+//		var delImg = false,
+//			addImg = false;
+//		if(hasSelected){
+//			//取消
+//			delImg = ALBUM.checkEsist(id,true);
+//		}else{
+//			switch(O.mode){
+//				case "select"://选择模式
+//					if(ALBUM.select.allow > 0){
+//						//有限选择图片
+//						if((ALBUM.select.images).length >= ALBUM.select.allow){
+//							//到达可选上限，删除最初选的
+//							delImg = (ALBUM.select.images).shift();
+//						}
+//					}
+//					if(!ALBUM.checkEsist(id)){//数据集中没有才加，有就算了
+//						addImg = {id:id,name:name,url:url};
+//						(ALBUM.select.images).push(addImg);
+//					}
+//				break;
+//				case "edit"://编辑模式
+//					addImg = {id:id,name:name,url:url};
+//					ALBUM.edit.images.arr.push(addImg);
+//				break;
+//				default:
+//			}
+//		}
+//		if(delImg){
+//			T.find(".images .self_"+delImg['id']).removeClass("selected");
+//		}
+//		if(addImg){
+//			T.find(".images .self_"+addImg['id']).addClass("selected");
+//		}
+//		ALBUM.freshFooter();
+//    })
+//	function albumDelShowImg(obj){
+//		var id= $(obj).parent().data("id");
+//		var delImg = ALBUM.checkEsist(id,true);
+//		if(delImg){
+//			T.find(".images .self_"+delImg['id']).removeClass("selected");
+//			ALBUM.freshFooter();
+//		}
+//	}
+
+</script>
+</body>
+</html>

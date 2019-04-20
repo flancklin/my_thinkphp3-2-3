@@ -20,7 +20,7 @@
     line-height: 30px;
     padding: 0 8px;
     height: 30px;
-    font-size: 15px;
+    font-size: 13px;
     text-align: center;
     cursor: pointer;
     background-color: #fff;
@@ -66,16 +66,17 @@
 }
 .album .folder{
     position: relative;
+    float: left;
+    z-index: 1001;
     height: 500px;
     overflow-y: scroll;
 }
-.album .folder{
-    float: left;
-}
 .album .images{
 	position:absolute;
+    width: 99%;
+    -webkit-box-sizing: border-box;
     min-width: 230px;
-    margin-left: 180px;
+    padding-left: 180px;
 }
 .album .list{
 	height:470px;
