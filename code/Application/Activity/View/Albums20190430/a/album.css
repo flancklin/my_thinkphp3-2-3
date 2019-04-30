@@ -1,0 +1,318 @@
+.album{
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -345px 0 0 -520px;
+    width: 1040px;
+    height: 690px;
+    background: #fff;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+/*--------开始------公共定义-----开始--------*/
+.album *{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+.album .fl {
+    float: left;
+}
+.album .fr {
+    float: right;
+}
+.album em{
+    font-style: normal;
+}
+.album .hide{
+    display: none !important;
+}
+
+.album .btn{
+    line-height: 28px;
+    position: relative;
+    display: inline-block;
+    padding: 0 12px;
+    height: 30px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    color: #333;
+    background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    vertical-align: baseline;
+    margin-top: 1px;
+    margin-bottom: 2px;
+}
+.album .btn-primary{
+    background-color: #428bca;
+    border-color: #357ebd;
+    color: #fff;
+}
+.album .btn-danger{
+    background-color: #c9302c;
+    border-color: #ac2925;
+    color: #fff;
+}
+.album .mgl10 {
+    margin-left: 10px;
+}
+
+.album .shade{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: rgba(232, 208, 207, 0.49);
+}
+.album .pencil{
+    display: inline-block;
+    width: 14px;
+    height: 18px;
+    margin-right: .3em;
+    line-height: 14px;
+    vertical-align: -2px;
+    background-image: url(./pencil.png);
+    background-position: 0 -72px;
+    background-repeat: no-repeat;
+}
+.album .icon-folder {
+    display: block;
+    position: absolute;
+    margin: 7px 0;
+    width: 16px;
+    height: 16px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAQCAQAAADdCbXSAAAAmUlEQVR4AcXSaQHCMBQD4EhASiVUwqRMwiTMQF+QUAdUwiTggDngvuGl3CR/s6+78P9wuastGJxF5PK4mjmAIqxwedsjx6VXPJI6wKUuuLQ5RGxQl9uwBlJm8AdWJFDWAFv27qRNWQEpb4BoozuZsFMAuw3QCB9VwIq4yQY48t4iTd0XNB7/Q78R4i33WyBIIEC8wFD/lfB+Vi2dEcS6ysLRAAAAAElFTkSuQmCC) -16px 0 no-repeat;
+}
+.album .selected .icon-folder{
+    background-position: 0 0;
+}
+/*--------结束------公共定义-----结束--------*/
+/*--------开始------头部-----开始--------*/
+
+.album .header {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 700;border-bottom: 1px solid #e5e5e5;
+}
+.album .header .title {
+    width: 25%;
+}
+.album .header .shut {
+    width: 5%;
+    text-align: center;
+}
+/*--------结束------头部-----结束--------*/
+.album .folder{
+    width: 214px;
+    border-right: 1px solid #e5e5e5;
+}
+.album .images{
+    width: 825px;
+    height: 650px;
+    overflow: hidden;
+}
+/*--------开始------左部文件夹-----开始--------*/
+.album .folder .action{
+    height: 45px;
+    line-height: 45px;
+    background: #eee;
+    text-align: center;
+}
+
+.album .folder_tree{
+    position: relative;
+    padding: 10px 0;
+    height: 584px;
+    overflow: auto;
+    margin-left: 15px;
+}
+.album .folder .item{
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 30px;
+}
+.album .folder .sub{
+    margin-left: 25px;
+}
+
+.album .folder .item .desc {
+    padding-left: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.album .folder .item .shade {
+    text-align: right;
+    padding-right: 25px;
+    margin-top: 3px;
+    height: 94%;
+}
+.album .folder .item .pencil {
+    margin-top: 9px;
+    margin-right: -22px;
+}
+/*--------结束------左部文件夹-----结束--------*/
+
+
+/*--------开始------右部图片列表-----开始--------*/
+
+.album .action{
+    position: relative;
+    padding: 7px 10px 0;
+    height: 38px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.album .search{
+    text-align: right;
+    padding-right: 5%;
+    height: 52px;
+    line-height: 45px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.album .search input{
+    width: 210px;
+    padding: 6px;
+    vertical-align: 0;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+}
+.album .image_list{
+    min-height: 150px;
+    position: relative;
+    height: 547px;
+}
+.album .images ul{
+    padding: 10px;
+    margin-right: -10px;
+    list-style: none;
+}
+.album .images li{
+    position: relative;
+    width: 100px;
+    height: 120px;
+    padding: 2px;
+    margin: 0 10px 10px 0;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+    overflow: hidden;
+    background: #fafafa;
+    float: left;
+}
+.album .images img{
+    width: 100px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.album .images p{
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    text-align: center;
+    color: #666;
+}
+
+
+.album .images .selected i{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAjUlEQVR4AZ3KNVJAQRAE0E1xSHG38GdEuByAKyAHIMNzPMLdf23V3vDh7rxkZron/Js5W2q/rrsk7Iav2EUy+lU9KGErfEWOpP6relIUTYUXql7tZXKcv66XJbsKny+ikfDCooTzuxc9EjbCW7ZEHOmUI6kI7znxJDcePlIrAk7C57SIiLLwFZncTPirG1PYeCngxShOAAAAAElFTkSuQmCC) center center no-repeat #1C89D5;
+    border-radius: 30px;
+    z-index: 999;
+}
+
+.album .edit .images i{
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    left: 56%;
+    top: 84%;
+    margin: -15px 0 0 -15px;
+    background: url(./pencil.png) center no-repeat rgba(241, 243, 245, 0);
+    background-position: 1px -67px;
+    border-radius: 30px;
+    z-index: 999;
+}
+.album .images .name{
+    width: 100px;
+    height: 22px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 99;
+    left: 2px;
+    bottom: 0;
+}
+.album .name span{
+    display: none;
+    height: 100%;
+    left: 0;
+    background-color: #ccc;
+}
+
+.album .name p{
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    text-align: center;
+    color: #666;
+}
+
+
+
+
+
+
+.album .images .footer{
+    padding: 10px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.album .images .footer a{
+    display: inline-block;
+    margin-left: -1px;
+    padding: 0 12px;
+    height: 32px;
+    line-height: 32px;
+    color: #428bca;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.album .images .footer .current{
+    display: inline-block;
+    margin-left: -1px;
+    padding: 0 12px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #428bca;
+    color: #fff;
+    border-color: #428bca;
+    margin-right: 1px;
+}
+/*--------开始------右部图片列表-----开始--------*/
+
+
+.album .edit .shade{
+    display: inline-block !important;
+}
+.album .selected .shade{
+    display: inline-block !important;
+}
+
+

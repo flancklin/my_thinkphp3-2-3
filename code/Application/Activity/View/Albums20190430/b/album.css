@@ -1,0 +1,230 @@
+/*开始-公共定义*/
+.album *{
+    margin:0;
+    padding: 0;
+    font-style: normal;
+    text-decoration: none;
+    color: #000000;
+}
+.album .hide{
+    display: none !important;
+}
+.album .fl{
+    float: left;
+}
+.album .fr{
+    float: right;
+}
+.album .btn{
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 8px;
+    height: 30px;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    vertical-align: baseline;
+}
+
+/*结束-公共定义*/
+/*开始-整个框架*/
+.album{
+    z-index: 1000;
+    position: fixed;
+    top: 8%;
+    left: 50%;
+    width: 70%;
+	min-width:420px;
+	max-height:90%;
+    margin-left: -35%;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+.album .header,.action,.docker,.footer{
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    padding: 0 10px;
+}
+.album .header{
+    height: 40px;
+    line-height: 40px;
+}
+.album .action{
+    height: 40px;
+    line-height: 40px;
+}
+.album .footer{
+	height:150px;
+}
+.album .operator,.folder{
+    width: 171px;
+    border-right: 1px solid rgba(0,0,0,.2);
+}
+.album .folder{
+    position: relative;
+    float: left;
+    z-index: 1001;
+    height: 500px;
+    overflow-y: scroll;
+}
+.album .images{
+	position:absolute;
+    width: 99%;
+    -webkit-box-sizing: border-box;
+    min-width: 230px;
+    padding-left: 180px;
+}
+.album .list{
+	height:470px;
+    overflow-y: scroll;
+}
+.album .page{
+	height:30px;
+}
+
+
+.album .edit b{
+    display: inherit;
+}
+.album .selected s{
+    display: inherit;
+}
+.album s{
+    display: none;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    left: 45%;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAjUlEQVR4AZ3KNVJAQRAE0E1xSHG38GdEuByAKyAHIMNzPMLdf23V3vDh7rxkZron/Js5W2q/rrsk7Iav2EUy+lU9KGErfEWOpP6relIUTYUXql7tZXKcv66XJbsKny+ikfDCooTzuxc9EjbCW7ZEHOmUI6kI7znxJDcePlIrAk7C57SIiLLwFZncTPirG1PYeCngxShOAAAAAElFTkSuQmCC) center center no-repeat #1C89D5;
+    border-radius: 30px;
+    z-index: 1001;
+}
+.album b{
+    display: none;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    z-index: 1001;
+    background: rgba(220, 102, 102, 0.14);
+}
+.album .s_show{
+	overflow-x:scroll;
+}
+.album .s_show .item{
+	display:table-cell;
+	position: relative;
+    width: 80px;
+    height: 80px;
+    padding: 2px;
+    margin: 0 10px 10px 0;
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+    background: #fafafa;
+}
+.album .s_show img{
+	width: inherit;
+    height: auto;
+    max-height: 100px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.album .submit{
+	height:137px;
+	float:right;
+	line-height:137px;
+	width:60px;
+	border-left: 1px solid rgba(0, 0, 0, 0.08);
+}
+.album .del{
+	position: absolute;
+    color: red;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    right: 0px;
+	cursor: pointer;
+    background-color: #bdb5b58f;
+    border-radius: 24px;
+    border: 1px solid red;
+}
+/*结束-整个框架*/
+
+/*开始-子模块-operator*/
+.album .operator{
+    text-align: center;
+    width: 161px;/*179+10=180*/
+    height: inherit;
+    padding-right: 10px;/*整个框架都padding10px了*/
+}
+.album a:first-child{
+    margin-top: 4px;
+}
+/*结束-子模块-operator*/
+
+/*开始-子模块-search*/
+.album .search input{
+    height: 28px;/*与【检索】按钮同高*/
+}
+/*结束-子模块-search*/
+
+/*开始-子模块-folder*/
+.album .folder .item{
+    height: 25px;
+    margin-top: 5px;
+    line-height: 25px;
+    width: 90%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.album .folder .sub{
+    margin-left: 20px;
+    width: 80%;
+}
+.album .folder i{
+    float: left;
+    width: 25px;
+    height: 21px;
+    margin-top: 4px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAQCAQAAADdCbXSAAAAmUlEQVR4AcXSaQHCMBQD4EhASiVUwqRMwiTMQF+QUAdUwiTggDngvuGl3CR/s6+78P9wuastGJxF5PK4mjmAIqxwedsjx6VXPJI6wKUuuLQ5RGxQl9uwBlJm8AdWJFDWAFv27qRNWQEpb4BoozuZsFMAuw3QCB9VwIq4yQY48t4iTd0XNB7/Q78R4i33WyBIIEC8wFD/lfB+Vi2dEcS6ysLRAAAAAElFTkSuQmCC) -16px 0 no-repeat;
+}
+.album .folder .name{
+    position: absolute;
+}
+/*结束-子模块-folder*/
+
+
+.album .images .item{
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 120px;
+    padding: 2px;
+    margin: 0 10px 10px 0;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+    overflow: hidden;
+    background: #fafafa;
+}
+.album .images img{
+    width: inherit;
+    height: auto;
+    max-height: 100px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.album .images .name{
+    position: absolute;
+    top: 105px;
+    width: inherit;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+}
+

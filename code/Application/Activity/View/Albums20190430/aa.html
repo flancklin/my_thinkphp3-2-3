@@ -1,0 +1,259 @@
+<html>
+<head>
+    <title>aa</title>
+</head>
+<body>
+<div class="a" id="a">
+    <div class="b" id="b" style="height: 400px;background-color: cadetblue">dfsfds</div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    var Albums = new Object;
+    Albums.tmpLable = '.albums';
+    Albums.model = 'select';
+    Albums.select = {
+        allow: 0,
+        folder_id: 0,
+        select_img: [
+//            {
+//                id:1,
+//                src:'www.baidu.com'
+//            }
+        ]
+    };
+    Albums.edit = {
+        folder: [
+//            {
+//                id:1,
+//                name:'nnn',
+//                parent_id:2,
+//                parent_name:'sds'
+//            }
+        ],
+        img: [
+//            {
+//                id:2,
+//                src:'www.baidu.com'
+//            }
+        ]
+    };
+    Albums.url = {
+        get_img: '',
+        get_folder: '',
+        del_img: '',
+        del_folder: '',
+        move_img: '',
+        move_folder: '',
+    };
+    Albums.page = 1;
+    Albums.page_size = 20;
+    Albums.imgList = {
+//        'p_1':[
+//            {id:1,src:'aaa'},
+//            {id:2,src:'aaa'},
+//        ],
+//        'p_2':[
+//            {id:1,src:'aaa'},
+//            {id:2,src:'aaa'},
+//        ]
+    };
+    Albums.folderList = [
+//        {id:1,name:'aaa'},
+//        {id:2,name:'aaa'},
+//        {id:3,name:'aaa'}
+    ];
+    Albums.clickImg = function (label) {
+        var itemTmpObj = $(this.tmpLable).find(label),
+            id = itemTmpObj.data("id"),
+            src = itemTmpObj.find("img").attr('src'),
+            res = this.hasImg(id, 'img');
+        if (!id) {
+            console.log("点击图片没有找到图片的id");
+            return false;
+        }
+        //有就删除
+        if (typeof(res) === 'object') {
+            var deleteItem = (this[this.model].img)[ret['index']];
+            (this[this.model].img).splice(res['index'], 1);
+            this.cancelItemIcon(deleteItem, 'img');
+        }
+        //没有就添加
+        if (res === false) {
+            if (this.model === 'edit' || this.select.allow === 0 || (this.select.allow > (this.select.img).length)) {
+                var addItem = {id: id, src: src};
+                (this[this.model].img).push(addItem);
+                this.showItemIcon(addItem, 'img');
+            }
+            //选择时，已达到极限。则删除最早的，把新的加进去
+            if (this.select.allow === (this.select.img).length) {
+                var deleteItem = (this[this.model].img).shift();
+                this.cancelItemIcon(deleteItem, 'img');
+                var addItem = {id: id, src: src};
+                (this[this.model].img).push(addItem);
+                this.showItemIcon(addItem, 'img');
+            }
+        }
+    };
+    Albums.clickFolder = function (label) {
+        var itemTmpObj = $(this.tmpLable).find(label),
+            id = itemTmpObj.data("id"),
+            name = itemTmpObj.data("name"),
+            parent_id = itemTmpObj.data("parent_id"),
+            parent_name = itemTmpObj.data("parent_name");
+
+        if (!id) {
+            console.log("点击文件没有找到文件的id");
+            return false;
+        }
+        if (this.model === "edit") {
+            //有就删除
+            var res = this.hasImg(id, 'folder');
+            if (typeof(res) === 'object') {
+                var deleteItem = (this[this.model].folder)[ret['index']];
+                (this[this.model].folder).splice(res['index'], 1);
+                this.cancelItemIcon(deleteItem, 'folder');
+            } else { //没有就添加
+                var addItem = {id: id, name: name, parent_id: parent_id, parent_name: parent_name};
+                (this[this.model].folder).push(addItem);
+                this.showItemIcon(addItem, 'folder');
+            }
+        } else {
+            if (id !== this.select.folder_id) {
+                this.cancelItemIcon({id: this.select.folder_id}, 'folder');
+                this.select.folder_id = id;
+                this.showItemIcon({id: id}, 'folder');
+            } else {
+                //点击勾选的。则没必要操作
+            }
+        }
+    };
+    Albums.showItemIcon = function (objItem, type) {
+        $(this.tmpLable).find(".item_" + type + "_" + objItem['id']).addClass("selected");
+    };
+    Albums.cancelItemIcon = function (objItem, type) {
+        $(this.tmpLable).find(".item_" + type + "_" + objItem['id']).removeClass("selected");
+    };
+    Albums.hasImg = function (id, type) {
+        var data = this[this.model][type];
+        if (!data || data.length < 1) return false;
+        for (var i in data) {
+            var item = (this[this.model][type])[i];
+            if (item['id'] == id) {
+                return {index: i, item: item};//找到就返回索引和数据
+            }
+        }
+        return false;
+    };
+    Albums.delImg = function () {
+        var delData = this.edit.img;
+        if (!delData || delData.length < 1) return this.showMsg('暂未选择图片');
+        this.ajax("del_img", {}, function () {
+            for (var i in this.edit.img) {
+                this.delImg((this.edit.img)[i], 'img');
+            }
+            this.edit.img = [];
+        })
+    };
+    Albums.delFolder = function () {
+        var delData = this.edit.folder;
+        if (!delData || delData.length < 1) return this.showMsg('暂未选择文件夹');
+        this.ajax("del_folder", {}, function () {
+            for (var i in this.edit.folder) {
+                this.cancelItemIcon((this.edit.folder)[i], 'folder');
+            }
+            this.edit.folder = [];
+        })
+    };
+    Albums.delItem = function (objItem, type) {
+        $(this.tmpLable).find(".item_" + type + "_" + objItem['id']).remove();
+    };
+    Albums.moveImg = function (folder_id) {
+        var moveData = this.edit.img;
+        if (!moveData || moveData.length < 1) return this.showMsg('暂未选择图片');
+        this.ajax("move_img", {folder_id: folder_id}, function () {
+            //待续 有两种方案，1，直接从界面上去掉即可，2，重新从服务器拉新数据
+            this.getImg();
+        })
+    };
+    //     Albums.folderList = [];
+    //     Albums.imgList = [];
+    Albums.moveFolder = function (folder_id) {
+        var moveData = this.edit.folder;
+        if (!moveData || moveData.length < 1) return this.showMsg('暂未选择文件夹');
+        this.ajax("move_folder", {folder_id: folder_id}, function () {
+            this.getFolder();
+        })
+    };
+    Albums.getImg = function (page) {
+        if (page > 0) this.page = page;
+        this.ajax("get_img", {}, function (data) {
+            (this.imgList)["p_"+this.page] = data;
+            this.showTmpImg();
+        })
+    };
+    Albums.getFolder = function () {
+        this.ajax("get_folder", {}, function (data) {
+            this.folderList = data;
+            this.showTmp();
+        })
+    };
+    Albums.showTmpImg = function () {
+
+    };
+    Albums.showTmpFolder = function () {
+
+    };
+    Albums.switchButton = function () {
+        //编辑与选择的切换
+    };
+    Albums.showMsg = function (msg) {
+        alert(msg);
+    };
+    Albums.ajax = function (type, param, backFunc) {
+        if (this.model !== "edit") return false;
+        var url = this.url[type], async = true, method = "post", param = param;
+        if (!url) return this.showMsg('操作类型错误');
+        switch (type) {
+            case 'move_img':
+            case 'del_img':
+                param['img'] = this.edit.img;
+                break;
+            case 'move_folder':
+            case 'del_folder':
+                param['folder'] = this.edit.folder;
+                break;
+            default:
+                method = "GET";
+                param = {page: this.page, page_size: this.page_size}
+        }
+        $.ajax({
+            type: method,
+            dataType: "json",
+            url: url,
+            async: async,
+            data: param,
+            error: function (XmlHttpRequest, textStatus, errorThrown) {
+
+            },
+            success: function (ret) {
+                if (ret.msg) this.showmsg(ret.msg);
+                if (ret.status) {
+                    if (!ret.data) ret.data = '';
+                    backFunc(ret.data);
+                }
+            },
+            complete: function () {
+            }
+        });
+        return true;
+    }
+
+    function initAlbum() {
+        var Album = new Albums;
+        Albums.tmpLable = ".albums";
+        //右键不能删除绑定，那就删除元素，重建元素层
+    }
+
+</script>
+</html>

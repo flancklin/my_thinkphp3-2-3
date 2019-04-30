@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style type="text/css">
+        .web-context-menu {
+            margin:0;
+            padding:0;
+            display:none;
+            font-size:14px;
+            width:180px;
+            position: fixed;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+            background:#fff;
+        }
+        .web-context-menu * {margin:0;padding:0;font-style:normal;}
+        .web-context-menu-items { }
+        .web-context-menu-items .menu-item-line {
+            border-bottom:1px solid #efefef;width:93.5%;margin:0 auto;
+        }
+        .web-context-menu-items .menu-item-line:last-child {
+            display:none;
+        }
+        .web-context-menu-items .web-context-menu-item {
+            position:relative;
+        }
+        .web-context-menu-items .web-context-menu-item:last-child {
+            border:0;
+        }
+        .web-context-menu-items .web-context-menu-item .menu-item-name {
+            display:block;background:;
+            cursor:pointer;padding:7px 10px;
+        }
+        .web-context-menu-items .web-context-menu-item:hover .menu-item-name {
+            background:rgba(0,0,0,.01);
+        }
+        .web-context-menu-items .web-context-menu-item > .web-context-menu-items {
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+            background:#fff;
+        }
+        .web-context-menu-items .web-context-menu-item:hover > .web-context-menu-items {
+            display:block;
+        }
+        .web-context-menu-items .web-context-menu-item .menu-item-name > i {
+            display:inline-block;
+            transform:rotate(90deg);
+            float:right;
+            margin-right:5px;
+            color:#aaa;
+        }
+        .web-context-menu-items .web-context-menu-item > .web-context-menu-items {
+            position:absolute;right:-180px;top:0;
+            width:180px;display:none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="div1" style="width:300px;height:300px;background:#036;color:#fff;text-align:center;line-height:300px">
+    在这里鼠标右键
+</div>
+<div id="div2" style="width:300px;height:300px;background:#036;color:#fff;text-align:center;line-height:300px;margin-top:10px">
+    在这里鼠标右键
+</div>
+
+<div id="div3" style="width:300px;height:300px;background:red;color:#fff;text-align:center;line-height:300px;margin-top:10px">
+    在这里鼠标右键
+</div>
+
+<script src="b/key_right.js"></script>
+
+
+<script>
+
+    var menuJson = [
+        {
+            name:"添加",
+            id:"menu1",
+            callback: function() {
+                alert("添加");
+            }
+        },
+        {
+            name:"修改",
+            id:"menu2",
+            callback: function() {
+                alert("修改");
+            }
+        },
+        {
+            name:"删除",
+            id:"menu-delete",
+            callback: function() {
+                alert("删除");
+            }
+        },
+        {
+            name:"查询",
+            id:"menu-query",
+            callback: function() {
+                alert("查询");
+            }
+        },
+
+        // 2
+        {
+            name:"二层子菜单一",
+            id:"menu1Submenu1",
+            parent:"menu1"
+        },
+        {
+            name:"二层子菜单二",
+            id:"menu1Submenu2",
+            parent:"menu1",
+            callback: function() {
+                alert("天才");
+            }
+        },
+        {
+            name:"二层查询菜单",
+            id:"second-level-menu-query",
+            parent:"menu-query",
+            callback: function() {
+                alert("查询第二层");
+            }
+        },
+
+
+        // 3
+        {
+            name:"三层子菜单",
+            id:"menu1Submenu1Submenu",
+            parent:"menu1Submenu1",
+            callback: function() {
+                alert("第三层子菜单");
+            }
+        },
+
+        // 4
+        {
+            name:"第四层子菜单",
+            id:"fourth-menu1",
+            parent:"menu1Submenu1Submenu",
+            callback: function() {
+                alert("第四层子菜单");
+            }
+        },
+    ];
+    window.contextMenu(document.querySelector("#div1"), menuJson);
+
+
+
+
+</script>
+</body>
+</html>

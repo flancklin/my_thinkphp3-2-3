@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>aaa</title>
+    <style type="text/css">
+        .epMenu{ width:120px; background:#f0f0f0; position:fixed; left:0; top:0; box-shadow:2px 2px 2px 2px #807878;}
+        .epMenu a{ display:block; height:25px; line-height:25px; padding-left:15px; border-top:1px solid #e0e0e0; border-bottom:1px solid #fff; font-family:微软雅黑; font-size:14px; cursor:default;}
+        .epMenu a:hover{ background:#fff;}
+    </style>
+</head>
+<body>
+<div class="a" style="height: 200px;background-color: red" onclick="one()">afsd</div>
+<div class="b" style="height: 200px;background-color: blue" onclick="two()">dfsfs</div>
+<script type="text/javascript" src="http://plat.yimaidaibang.com/Public/lib/jquery/1.9.1/jquery.min.js"></script>
+<script>
+    var epMenu={
+        create:function(point,option){
+            var menuNode=document.getElementById('epMenu');
+            if(!menuNode){
+                //没有菜单节点的时候创建一个
+                menuNode=document.createElement("div");
+                menuNode.setAttribute('class','epMenu');
+                menuNode.setAttribute('id','epMenu');
+            }else $(menuNode).html('');//清空里面的内容
+
+            $(menuNode).css({left:point.left+'px',top:point.top+'px'});
+            for(var x in option){
+                var tempNode=document.createElement("a");
+                $(tempNode).text(option[x]['name']).on('click',option[x].action);
+                menuNode.appendChild(tempNode);
+            }
+            $("body").append(menuNode);
+        },
+        destory:function(){
+            $(".epMenu").remove();
+        }
+    };
+
+    function sayhello(){
+        alert("hellokity");
+        epMenu.destory();
+    }
+
+    function hideSysMenu() {
+        return false;
+    }
+    function albumsDelete() {
+        alert("delete");
+    }
+
+    function albumsMove() {
+        alert("move");
+    }
+    function albumsAddFolder() {
+        alert("add");
+    }
+    document.onmousedown = function(e){
+        var menuNode=document.getElementById('epMenu');
+        if(e.button===2){
+            document.oncontextmenu = hideSysMenu;//屏蔽鼠标右键
+            var evt = window.event || arguments[0];
+            var rightedge = evt.clientX;
+            var bottomedge = evt.clientY;
+            epMenu.create({left:rightedge,top:bottomedge},[{name:'删除','action':albumsDelete},{name:'移动到','action':albumsMove},{name:'添加','action':albumsAddFolder}]);
+        }
+//      epMenu.destory();
+    }
+
+</script>
+</body>
+</html>
